@@ -1,0 +1,491 @@
+@import "../../utils/mixes.scss";
+
+.react-modal-content {
+
+    .modalBody {
+        padding: 0 24px 32px;
+        width: 100%;
+
+        .modalTitleStep1 {
+            margin: 0 0 16px;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 26px;
+            color: #4F4F4F;
+        }
+    
+        .modalSubtitle {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 19px;
+            color: #4F4F4F;
+            margin: 0 0 32px;
+        }
+
+        @include mobile {
+            .container-cta-mobile {
+                flex-wrap: wrap;
+
+                > button {
+                    margin: 0 0 .75rem 0;
+                }
+
+            }
+        }
+
+    }
+
+    //header
+    .modalHead {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 47px 0 32px;
+
+        .modalBoxAlert {
+            max-width: calc(100% - 48px);
+            width: 100%;
+            margin-bottom: 2rem;
+            margin-top: 0px !important;
+        }
+    }
+
+    .modalHeadCollapsible {
+        flex-flow: column;
+        background: #0B539E;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: #FFFFFF;
+        align-items: center;
+        padding: 32px 0;
+    }
+    
+    .modalButton {
+        border-radius: 6px;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 17px;
+        text-transform: uppercase;
+        padding: 17px 0;
+        border: solid 2px transparent;
+        background: transparent;
+        cursor: pointer;
+    }
+
+    .modalButtonBGBlue {
+        background: #0B539E;
+        color: #FFFFFF;
+        border-color: #0B539E;
+    }
+
+    .modalButtonBGWhite {
+        border-color: #0B539E;
+        background: #FFFFFF;
+        color: #0B539E;
+    }
+
+    .modalBoxAlert {
+        font-size: 12px;
+        line-height: 15px;
+        color: #000000;
+        padding: 16px;
+        background: #F59096;
+        border-radius: 4px;
+        margin-top: 24px;
+        font-weight: 500;
+    }
+
+    .modalForm{
+
+        &Title {
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 21px;
+            color: #4F4F4F;
+            margin: 0 0 24px;
+        }
+
+        &TitleBlue {
+            color: #0B539E;
+        }
+
+        input {
+            margin: 0 0 16px;
+            background: #F4F4F4;
+            border-radius: 6px;
+            padding: 0 17px;
+            height: 55px;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            color: #828282;
+            border: solid 1px transparent;
+        }
+
+        &TitleStep {
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 20px;
+            color: #4F4F4F;
+            margin: 8px 0 0;
+        }
+
+        &2Input {
+            justify-content: space-between;
+            display: flex;
+    
+            @include mobile {
+                flex-wrap: wrap;
+            }
+
+            input {
+                width: 270px;
+            }
+
+            &CPF {
+                span {
+                    font-weight: 600;
+                    font-size: 14px;
+                    line-height: 18px;
+                    color: #4F4F4F;
+                    margin-bottom: 8px;
+                }
+            }
+            
+        }
+
+        .vtex_label {
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 18px;
+            color: #4F4F4F;
+            margin-bottom: 8px;
+        }
+
+        &RedirectNotAuthorized {
+            font-weight: bold;
+            font-size: 15px;
+            line-height: 21px;
+            color: #4F4F4F;
+            margin: 1rem 0;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    
+        //consumption
+
+        &Consumption {
+
+            &Title {
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 18px;
+                color: #4F4F4F;
+                margin: 0 0 5px;
+            }
+
+            &Value {
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 18px;
+                color: #0B539E;
+                margin: 0 0 8px;
+
+                &Blue {
+                    margin: 0;
+                    color: #0B539E;
+                }
+
+                &Red {
+                    margin: 0;
+                    color: #E9202B;
+                }
+
+            }
+
+            &Values {
+                max-width: 270px;
+                margin: 0 auto;
+                justify-content: space-between;
+                font-weight: 800;
+                font-size: 10px;
+                line-height: 13px;
+            }
+
+            &Line {
+                margin: 0 auto 8px;
+                max-width: 275px;
+
+                .progress {
+                    border-radius: 8px;
+                    background-color: #F4F4F4;
+                    color: #0B539E;
+                    font-size: 11px;
+                    font-weight: 600;
+                    border-radius: 8px;              
+                    line-height: 14px;
+
+                    .progress-bar {
+                        background: #0B539E;
+                        color: #fff;
+                        font-size: 11px;
+                        font-weight: 600;
+                        border-radius: 8px;              
+                        line-height: 14px;
+                    }
+                }
+
+                &Error {
+                    .progress-bar {
+                        background: red;
+                    }
+                }
+
+            }
+
+        }    
+
+        //Form Upload
+
+        &Upload {
+            display: flex;
+            flex-flow: wrap;
+            justify-content: space-between;
+            margin-bottom: 8px;
+
+            &NewPrescription {
+                margin: 24px 0;
+            }
+
+            &Title {
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 18px;
+                color: #4F4F4F;
+                display: flex;
+                flex-flow: column;
+
+                @include mobile() {
+                    width: 100%;
+                }
+            }
+
+            &CheckLabel {
+                background: #F4F4F4;
+                border-radius: 6px;
+                border: solid 1px transparent;
+                padding: 0 17px;
+                height: 55px;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 17px;
+                color: #4F4F4F;
+                justify-content: flex-start;
+                margin: 0 0 12px;
+                width: 266px;
+                display: flex;
+                align-items: center;
+            }
+
+            &CheckPedding {
+                &:before {
+                    content: "";
+                    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='8' fill='%23FF7A00'/%3E%3Cpath d='M8.73994 10.1692H7.25387L7.04334 4H8.95046L8.73994 10.1692ZM7.9969 11.1352C8.29825 11.1352 8.53973 11.2228 8.72136 11.3981C8.90712 11.5734 9 11.7976 9 12.0707C9 12.3397 8.90712 12.5618 8.72136 12.7371C8.53973 12.9124 8.29825 13 7.9969 13C7.69969 13 7.4582 12.9124 7.27245 12.7371C7.09082 12.5618 7 12.3397 7 12.0707C7 11.8016 7.09082 11.5795 7.27245 11.4042C7.4582 11.2249 7.69969 11.1352 7.9969 11.1352Z' fill='white'/%3E%3C/svg%3E%0A");
+                    width: 16px;
+                    height: 16px;
+                    margin-right: 23px;
+                    min-width: 16px;
+                }
+            }
+
+            &CheckFalse {
+
+                &:before {
+                    content: "";
+                    background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='9' cy='9' r='8.5' fill='%23EA212C' stroke='%23EA212C'/%3E%3Crect x='5' y='6.33337' width='1.88562' height='9.42809' rx='0.942809' transform='rotate(-45 5 6.33337)' fill='white'/%3E%3Crect width='1.88562' height='9.42809' rx='0.942809' transform='matrix(-0.707107 -0.707107 -0.707107 0.707107 13 6.33337)' fill='white'/%3E%3C/svg%3E%0A");
+                    width: 18px;
+                    height: 18px;
+                    margin-right: 23px;
+                    min-width: 18px;
+                }
+                
+            }
+
+            &CheckTrue {
+
+                &:before {
+                    content: "";
+                    background-image: url("data:image/svg+xml,%3Csvg width='19' height='18' viewBox='0 0 19 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='9.17969' cy='9' r='8.5' fill='%2355BD97' stroke='%2355BD97'/%3E%3Cpath d='M12.6172 6.8125L7.89062 11.1875L5.74219 9.19886' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+                    width: 19px;
+                    height: 18px;
+                    margin-right: 23px;
+                    min-width: 19px;
+                }
+
+            }
+
+            &Label {
+                max-width: 100%;
+                width: 100%;
+                background: #F4F4F4;
+                border-radius: 6px;
+                border: solid 1px transparent;
+                padding: 18px 17px;
+                font-weight: 500;
+                font-size: 13px;
+                color: #828282;
+                margin: 8px 0 16px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                cursor: pointer;
+                min-width: 266px;
+
+                &:after {
+                    content: "";
+                    background-image: url("data:image/svg+xml,%3Csvg width='11' height='15' viewBox='0 0 11 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.125 4.46875V0.75H0.65625C0.273438 0.75 0 1.05078 0 1.40625V14.0938C0 14.4766 0.273438 14.75 0.65625 14.75H9.84375C10.1992 14.75 10.5 14.4766 10.5 14.0938V5.125H6.78125C6.39844 5.125 6.125 4.85156 6.125 4.46875ZM7.90234 10.4023H6.125V12.5898C6.125 12.8086 5.90625 13.0273 5.6875 13.0273H4.8125C4.56641 13.0273 4.375 12.8086 4.375 12.5898V10.4023H2.57031C2.1875 10.4023 1.99609 9.91016 2.26953 9.63672L4.89453 7.01172C5.08594 6.84766 5.38672 6.84766 5.57812 7.01172L8.20312 9.63672C8.47656 9.91016 8.28516 10.4023 7.90234 10.4023ZM10.3086 3.62109L7.62891 0.941406C7.49219 0.832031 7.32812 0.75 7.16406 0.75H7V4.25H10.5V4.08594C10.5 3.92188 10.418 3.75781 10.3086 3.62109Z' fill='%23E9202B'/%3E%3C/svg%3E%0A");
+                    width: 11px;
+                    height: 15px;
+                    display: block;
+                }
+
+                &Pass {
+                    &:after {
+                        background-image: url("data:image/svg+xml,%3Csvg width='19' height='18' viewBox='0 0 19 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='9.17969' cy='9' r='8.5' fill='%2355BD97' stroke='%2355BD97'/%3E%3Cpath d='M12.6172 6.8125L7.89062 11.1875L5.74219 9.19886' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+                        width: 19px;
+                        height: 18px;
+                        display: block;   
+                    }
+                }
+
+            }
+
+            &RadioBox {
+
+                .vtex-radioGroup {
+
+                    &__fieldset{
+                        display: flex;
+                        flex-flow: column;
+                        align-items: center;
+                        margin: 8px 0 32px;
+                    }
+
+                }
+
+                .vtex-radio {
+                    &__fakeRadio {
+                        border: 1px solid #A5A5A5 !important;
+                        border-radius: 50px;
+                        width: 16px !important;
+                        height: 16px !important;          
+
+                        &Inner {
+                            background: linear-gradient(0deg, #E9202B, #E9202B), linear-gradient( 0deg, #A5A5A5, #A5A5A5), #A5A5A5;
+                            width: 10px !important;
+                            height: 10px !important;
+                        }
+
+                    }
+
+                    &__label {
+                        font-weight: 600;
+                        font-size: 14px;
+                        line-height: 17px;
+                        color: #4F4F4F;
+                    }
+    
+                }
+                    
+
+            }
+
+        }
+
+    }
+
+    .modalBodyCollapsible {
+        padding: 32px 0 24px;        
+        .modalTitleStep1 {
+            font-weight: bold !important;
+            font-size: 17px !important;
+            line-height: 22px !important;
+            color: #0B539E !important;
+            margin: 0 0 32px !important;
+        }
+
+        .modalCollapsibleTitle {
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 18px;
+            color: #4F4F4F;
+            margin-left: 11px;
+        }
+    
+        .modalCollapsibleTitleContent {
+            display: flex;
+            padding: 12px 24px;
+            border-top: solid 1px #EDEDED;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 18px;
+            color: #0B539E;
+            align-items: center;
+            justify-content: space-between;
+
+            &:after {
+                content: "";
+                width: 9px;
+                height: 6px;
+                transition: transform ease-in-out .2s;
+                transform: rotate(0deg);
+                background-image: url("data:image/svg+xml,%3Csvg width='9' height='6' viewBox='0 0 9 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.92383 5.46191C4.16992 5.70801 4.58008 5.70801 4.82617 5.46191L8.54492 1.74316C8.81836 1.46973 8.81836 1.05957 8.54492 0.813477L7.94336 0.18457C7.66992 -0.0615234 7.25977 -0.0615234 7.01367 0.18457L4.36133 2.83691L1.73633 0.18457C1.49023 -0.0615234 1.08008 -0.0615234 0.806641 0.18457L0.205078 0.813477C-0.0683594 1.05957 -0.0683594 1.46973 0.205078 1.74316L3.92383 5.46191Z' fill='%230B539E'/%3E%3C/svg%3E");
+            }
+
+        }
+
+        [aria-expanded="true"] {
+            .modalCollapsibleTitleContent {
+                &:after {
+                    transform: rotate(180deg);
+                }
+            }
+            
+        }
+
+        [role="button"] {
+            .vtex__icon-caret-down, .vtex__icon-caret-up {
+                display: none;
+            }
+        }
+    
+        .modalCollapsibleContent {
+            font-size: 14px;
+            line-height: 20px;
+            color: #4F4F4F;
+            text-align: left;
+            padding: 0 24px;
+        }
+    
+    }
+
+    .modalFooterCollapsible {
+        padding: 0 24px 32px;   
+    }
+
+    .vtex-styleguide-9-x-input {
+        background: #F4F4F4;
+        border-radius: 6px;
+        padding: 0 17px;
+        height: 55px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: #828282;
+        border: solid 1px transparent;
+    }
+
+
+}

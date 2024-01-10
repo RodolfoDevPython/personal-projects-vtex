@@ -1,0 +1,77 @@
+@import "../../utils/mixes.scss";
+
+.react-modal-overlay {
+    background: rgba(0, 0, 0, 0.8);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.react-modal-content {
+    width: 100%;
+    max-width: 600px;
+    max-height: 95vh;
+    overflow-y: scroll;
+    background: #fff;
+    padding: 0;
+    position: relative;
+    border-radius: .25rem;
+    // display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #ededed;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+    &::-webkit-scrollbar-track {
+        background: transparent;
+        border: 1px solid transparent;
+        background-clip: content-box;
+    }
+
+    @include mobile() {
+        max-width: 95vw;
+        max-height: 95vh;
+        overflow: auto;
+        display: block;
+    }
+
+}
+
+.react-modal-close {
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    background: transparent;
+    border: 0;
+    transition: filter .2s;
+    
+
+    &:hover {
+        filter: brightness(.8);
+    }
+
+    svg {
+        width: 9px;
+        height: 9px;
+        display: block;
+    }
+
+}

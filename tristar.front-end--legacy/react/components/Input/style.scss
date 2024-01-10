@@ -1,0 +1,33 @@
+.doc-modal-input-tristar-default {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    span {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 18px;
+        color: #4F4F4F;
+        margin-bottom: 8px;
+    }
+
+    input {
+        background: #F4F4F4;
+        border-radius: 6px;
+        padding: 0 17px;
+        height: 55px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: #828282;
+        border: solid 1px transparent;
+        max-width: 100%;
+    }
+
+    &.error {
+        input {
+            border-color: red;
+        }
+    }
+    
+}
