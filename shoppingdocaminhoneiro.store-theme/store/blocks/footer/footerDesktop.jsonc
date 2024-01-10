@@ -1,0 +1,84 @@
+{
+  "footer-layout.desktop": {
+    "children": [
+      "flex-layout.row#upperFooterDesktop",
+      "flex-layout.row#lowerFooterDesktop"
+    ]
+  },
+  "flex-layout.row#upperFooterDesktop": {
+    "children": [
+      "flex-layout.col#upperFooterCol1",
+      "flex-layout.col#upperFooterCol2"
+    ],
+    "props": {
+      "blockClass": "upperFooterDesktop"
+    }
+  },
+  "flex-layout.col#upperFooterCol1": {
+    "children": ["flex-layout.col#upperFooterNav", "flex-layout.row#payment"]
+  },
+  "flex-layout.col#upperFooterNav": {
+    "children": ["flex-layout.row#upperFooterNav"]
+  },
+  "flex-layout.row#upperFooterNav": {
+    "children": [
+      "flex-layout.row#upperFooterNavContent1",
+      "flex-layout.row#upperFooterNavContent2"
+    ],
+    "props": {
+      "blockClass": "upperFooterNav"
+    }
+  },
+  "flex-layout.row#upperFooterNavContent1": {
+    "children": ["flex-layout.col#upperFooterNavContent1"]
+  },
+  "flex-layout.col#upperFooterNavContent1": {
+    "children": [
+      "rich-text#footerTitleInstitutional",
+      "vtex.menu@2.x:menu#institutional"
+    ]
+  },
+  "flex-layout.row#upperFooterNavContent2": {
+    "children": ["flex-layout.col#upperFooterNavContent2"],
+    "props": {
+      "blockClass": "upperFooterNav"
+    }
+  },
+  "flex-layout.col#upperFooterNavContent2": {
+    "children": [
+      "rich-text#footerTitleCategories",
+      "vtex.menu@2.x:menu#categories"
+    ],
+    "props": {
+      "blockClass": "upperFooterNav"
+    }
+  },
+  "flex-layout.col#upperFooterCol2": {
+    "children": ["flex-layout.col#attendance", "flex-layout.row#socials"],
+    "props": {
+      "blockClass": "contact"
+    }
+  },
+  "flex-layout.col#attendance": {
+    "children": ["link#phone", "link#message"],
+    "props": {
+      "blockClass": "attendance"
+    }
+  },
+  "flex-layout.row#lowerFooterDesktop": {
+    "children": ["flex-layout.col#lowerFooterTextsCol"],
+    "props": {
+      "blockClass": "lowerFooter"
+    }
+  },
+  "flex-layout.col#lowerFooterTextsCol": {
+    "children": [
+      "rich-text#rightReserved",
+      "rich-text#judicialText",
+      "flex-layout.row#madeBy"
+    ],
+    "props": {
+      "blockClass": "lowerFooterTextsCol"
+    }
+  }
+}

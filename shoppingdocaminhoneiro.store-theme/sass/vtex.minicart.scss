@@ -1,0 +1,185 @@
+@import './_transition.scss';
+
+.drawer {
+  z-index: 999;
+  background-color: var(--lightgrey--lighter);
+
+  &Content{
+    background-color: var(--lightgrey--lighter);
+  }
+}
+
+.minicartIconContainer {
+  color: #fff;
+}
+
+.minicartProductListContainer {
+  padding: 0 1.5rem;
+}
+
+.minicartProductListContainer
+  :global(.vtex-flex-layout-0-x-flexRow--cartSummary) {
+  padding: 0;
+}
+
+.minicartProductListContainer
+  :global(.vtex-product-list-0-x-productImageContainer) {
+  height: 96px;
+}
+
+.minicartProductListContainer :global(.vtex-product-list-0-x-productImage) {
+  border-radius: 0;
+}
+
+.minicartProductListContainer :global(.vtex-product-list-0-x-productBrandName) {
+  font-weight: normal;
+  font-size: var(--size-small);
+  line-height: 16px;
+  text-transform: capitalize;
+  color: var(--primary--default);
+}
+
+.minicartProductListContainer :global(.vtex-product-list-0-x-productName) {
+  font-weight: 500;
+  font-size: var(--paragraph--small--medium);
+  line-height: 16px;
+  color: var(--darkgrey--dark);
+}
+
+.closeIconContainer::after {
+  color: var(--darkgrey-dark);
+  content: 'Carrinho';
+  font-weight: 600;
+  font-size: var(--headline--h3);
+  margin-bottom: 1rem;
+}
+
+.closeIcon {
+  width: .9rem;
+  height: .9rem;
+
+  @include transitionHover;
+}
+
+.closeIconButton {
+  margin-right: auto;
+  padding: 1.25rem 0;
+}
+
+.closeIconContainer {
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 0 24px;
+}
+
+.minicartTitle {
+  display: none;
+  opacity: 0;
+}
+
+.openIconContainer {
+  padding: 0;
+}
+
+.openIconContainer :global(.vtex-button) {
+  border: none;
+  border-radius: 0;
+  outline: none;
+}
+
+.minicartSideBarContentWrapper {
+  height: calc(100vh - 5.5rem) !important;
+}
+
+.minicartQuantityBadge {
+  background-color: var(--primary--default);
+  font-family: Poppins;
+  border-radius: 50%;
+  color: #fff;
+  font-weight: 700;
+  width: 14px;
+  height: 14px;
+  left: 16px;
+  top: -6px;
+}
+
+.minicartSummary {
+  padding: 20px 20px 0;
+}
+
+.minicartCheckoutButton {
+  padding: 12px 20px 20px;
+  margin: 0;
+}
+
+.minicartCheckoutButton :global(.vtex-button) {
+  background: var(--primary--default);
+  border: none;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: var(--paragraph--medium--medium);
+  height: 48px;
+  line-height: 28px;
+  outline: none;
+
+  @include transitionHover;
+}
+
+.minicartCheckoutButton :global(.vtex-button__label) {
+  font-size: 0;
+}
+
+.minicartCheckoutButton :global(.vtex-button__label) {
+
+  &::after {
+    content: 'Finalizar compra';
+    display: block;
+    font-weight: bold;
+    font-size: var(--paragraph--medium--medium);
+    line-height: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+  }
+
+  &::before {
+    content: '';
+    display: flex;
+    width: 1.25rem;
+    height: 1.25rem;
+    background-image: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.95889 5.3335L4.06956 1.3335H1.49756' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M7.30783 16.2802L4.9585 5.3335H21.8358C22.6852 5.3335 23.3172 6.11616 23.1398 6.94683L21.1372 16.2802C21.0052 16.8948 20.4625 17.3335 19.8332 17.3335H8.6105C7.9825 17.3335 7.43983 16.8948 7.30783 16.2802Z' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M20.2866 22.1667C20.0106 22.1667 19.7866 22.3907 19.7892 22.6667C19.7892 22.9427 20.0132 23.1667 20.2892 23.1667C20.5652 23.1667 20.7892 22.9427 20.7892 22.6667C20.7879 22.3907 20.5639 22.1667 20.2866 22.1667' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8.80774 22.1667C8.53174 22.1667 8.30774 22.3907 8.31041 22.6667C8.30908 22.9427 8.53308 23.1667 8.80908 23.1667C9.08508 23.1667 9.30908 22.9427 9.30908 22.6667C9.30908 22.3907 9.08508 22.1667 8.80774 22.1667' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-size: 100% 100%;
+    margin-right: 10px;
+  }
+
+}
+.minicartWrapperContainer {
+  width: auto;
+  height: 3rem;
+
+  &:hover {
+    background: var(--lightgrey--lighter);
+  }
+}
+
+.openIconContainer {
+  :global(.vtex-button__label){
+    padding: 0;
+  }
+}
+
+@media (max-width: 64rem) {
+  .openIconContainer {
+    padding: 0;
+  }
+
+  .drawer {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 100% !important;
+  }
+}
+
+.opened {
+  z-index: 9999999;
+}

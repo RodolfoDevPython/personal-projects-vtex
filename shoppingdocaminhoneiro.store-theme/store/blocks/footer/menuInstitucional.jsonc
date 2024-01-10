@@ -1,0 +1,100 @@
+{
+  "vtex.menu@2.x:menu#institutional": {
+    "props": {
+      "blockClass": "footerMenu",
+      "items": [
+        {
+          "id": "footer-item-1",
+          "type": "custom",
+          "iconId": null,
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/sobre",
+            "noFollow": false,
+            "tagTitle": "Sobre nós",
+            "text": "Sobre nós"
+          }
+        },
+        {
+          "id": "footer-item-2",
+          "type": "custom",
+          "iconId": null,
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/account#/orders",
+            "noFollow": false,
+            "tagTitle": "Trocas e Devoluções",
+            "text": "Trocas e Devoluções"
+          }
+        },
+        {
+          "id": "footer-item-3",
+          "type": "custom",
+          "iconId": null,
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/",
+            "noFollow": false,
+            "tagTitle": "Política de Privacidade",
+            "text": "Política de Privacidade"
+          }
+        },
+        {
+          "id": "footer-item-4",
+          "type": "custom",
+          "iconId": null,
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/",
+            "noFollow": false,
+            "tagTitle": "Acesso Restrito",
+            "text": "Acesso Restrito"
+          }
+        },
+        {
+          "id": "footer-item-5",
+          "type": "custom",
+          "iconId": null,
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/",
+            "noFollow": false,
+            "tagTitle": "Acesso Restrito - Meu RH",
+            "text": "Acesso Restrito - Meu RH"
+          }
+        },
+        {
+          "id": "footer-item-6",
+          "type": "custom",
+          "iconId": null,
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/",
+            "noFollow": false,
+            "tagTitle": "Central de Atendimento",
+            "text": "Central de Atendimento"
+          }
+        },
+        {
+          "id": "footer-item-7",
+          "type": "custom",
+          "iconId": null,
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/",
+            "noFollow": false,
+            "tagTitle": "Fale Conosco",
+            "text": "Fale Conosco"
+          }
+        }
+      ]
+    }
+  }
+}

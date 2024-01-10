@@ -1,0 +1,42 @@
+/* Link Seller */
+
+.linkSellerContainer--default {
+  display: block;
+  flex-direction: initial;
+}
+
+.linkSeller--default {
+  background-color: var(--fresh-blue-lightest);
+  border: 0.0625rem solid var(--lines-light);
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--black-medium);
+  text-decoration: none;
+  padding: 1.1875rem 1.25rem;
+  width: 100%;
+}
+
+.linkSeller--default::after {
+  width: 0.4375rem;
+  height: 0.75rem;
+  background-color: transparent;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("data:image/svg+xml,%3Csvg width='7' height='12' viewBox='0 0 7 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 11L6 6L1 1' stroke='%230067C7' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  content: '';
+  display: inline-block;
+}
+
+.linkSellerText--default {
+  font-size: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.linkSellerText--default::before {
+  font-size: 0.875rem;
+  content: 'See from other sellers';
+}

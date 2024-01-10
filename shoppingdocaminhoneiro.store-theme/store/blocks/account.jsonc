@@ -1,0 +1,37 @@
+{
+  "store.account": {
+    "children": [
+      "flex-layout.row#fakeBreadcrumb",
+      "my-account",
+      "flex-layout.row#newsletter"
+    ]
+  },
+  "flex-layout.row#fakeBreadcrumb": {
+    "children": ["link#home", "icon-caret", "rich-text#myAccountBread"],
+    "props": {
+      "blockClass": "fakeBreadcrumb",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "colGap": 3
+    }
+  },
+  "link#home": {
+    "props": {
+      "href": "/",
+      "label": "Home",
+      "blockClass": "fakeBreadcrumbLink"
+    }
+  },
+  "rich-text#myAccountBread": {
+    "props": {
+      "text": "Minha Conta",
+      "blockClass": "myAccountBread"
+    }
+  },
+  "icon-caret": {
+    "props": {
+      "orientation": "right"
+    }
+  }
+}

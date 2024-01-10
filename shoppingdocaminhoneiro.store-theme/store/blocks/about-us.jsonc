@@ -1,0 +1,284 @@
+{
+  "store.custom#about-us": {
+    "blocks": [
+      "responsive-layout.mobile#about-us",
+      "responsive-layout.desktop#about-us"
+    ]
+  },
+  "responsive-layout.desktop#about-us": {
+    "children": [
+      "flex-layout.row#hero",
+      "flex-layout.row#first-section",
+      "flex-layout.row#second-section",
+      "flex-layout.row#third-section",
+      "flex-layout.row#fourth-section",
+      "flex-layout.row#newsletter"
+    ]
+  },
+  "responsive-layout.mobile#about-us": {
+    "children": ["flex-layout.row#wrapper"]
+  },
+  "flex-layout.row#wrapper": {
+    "children": ["flex-layout.col#wrapper"],
+    "props": {
+      "blockClass": "aboutUs_mobileRow"
+    }
+  },
+  "flex-layout.col#wrapper": {
+    "children": [
+      "flex-layout.col#mobile-hero",
+      "flex-layout.col#mobile-first-section",
+      "flex-layout.col#mobile-second-section",
+      "flex-layout.col#mobile-third-section",
+      "flex-layout.col#mobile-fourth-section",
+      "flex-layout.row#newsletter"
+    ],
+    "props": {
+      "blockClass": "aboutUs_mobileColumn"
+    }
+  },
+  "flex-layout.row#hero": {
+    "children": ["flex-layout.col#hero"],
+    "props": {
+      "blockClass": "aboutUs_hero"
+    }
+  },
+  "flex-layout.col#hero": {
+    "children": ["rich-text#hero-title", "image#hero-image-desktop"]
+  },
+  "image#hero-image-desktop": {
+    "props": {
+      "src": "assets/placeholders/aboutUs-image.jpg"
+    }
+  },
+  "rich-text#hero-title": {
+    "props": {
+      "text": "Quem somos",
+      "blockClass": "aboutUs_sectionTitle"
+    }
+  },
+  "flex-layout.row#first-section": {
+    "children": [
+      "rich-text#first-section-title",
+      "rich-text#first-section-text"
+    ],
+    "props": {
+      "colSizing": "auto",
+      "blockClass": ["aboutUs__flexLayout--white", "aboutUs--grid"]
+    }
+  },
+  "rich-text#first-section-title": {
+    "props": {
+      "text": "Competência e modernidade",
+      "blockClass": "aboutUs_sectionTitle"
+    }
+  },
+  "rich-text#first-section-text": {
+    "props": {
+      "text": "**A PagBem é uma empresa de soluções integradas voltadas para a automatização e padronização de pagamentos eletrônicos. Investimos em capacitação e alta tecnologia para facilitar a administração de frete rodoviário e pedágio, com múltiplas funções de utilização.**<br/><br/>A nossa gama de produtos vai além do atendimento à exigência legal, desenvolvemos soluções flexíveis e específicas para atender às necessidades de cada cliente.<br/><br/>Nossa plataforma tecnológica conta com sistemas de desenvolvimento e procedimentos que proporcionam a integridade, segurança e qualidade das suas informações, além de um ótimo desempenho.<br/><br/>Atendemos todas especificações de segurança da informação e gestão da qualidade de software do sistema ISO (ISO 27.001 e ISO 25.030). Toda a nossa operação está baseada em nuvem e nossa infraestrutura alocada na Amazon Web Services, garantindo, assim, um sistema seguro, com excelente performance e disponibilidade.<br/><br/>Todo ambiente PagBem (plataforma, app, portais) é permanentemente monitorado e está assegurado pelo Site Blindado.",
+      "blockClass": "aboutUs_sectionText"
+    }
+  },
+  "flex-layout.row#second-section": {
+    "children": [
+      "rich-text#second-section-title",
+      "flex-layout.col#misson-texts"
+    ],
+    "props": {
+      "colSizing": "auto",
+      "blockClass": ["aboutUs__flexLayout--green", "aboutUs--grid"]
+    }
+  },
+  "flex-layout.col#misson-texts": {
+    "children": [
+      "rich-text#second-section-text",
+      "flex-layout.row#first-value",
+      "flex-layout.row#second-value",
+      "flex-layout.row#third-value",
+      "flex-layout.row#fourth-value"
+    ]
+  },
+  "flex-layout.row#first-value": {
+    "children": ["image#first-value-image", "rich-text#first-value-text"],
+    "props": {
+      "colSizing": "auto",
+      "blockClass": "aboutUs__layout--iconValue"
+    }
+  },
+  "image#first-value-image": {
+    "props": {
+      "src": "assets/placeholders/aboutUs-value-client.png",
+      "blockClass": "aboutUs_valueImage"
+    }
+  },
+  "rich-text#first-value-text": {
+    "props": {
+      "text": "Foco no cliente"
+    }
+  },
+
+  "flex-layout.row#second-value": {
+    "children": ["image#second-value-image", "rich-text#second-value-text"],
+    "props": {
+      "colSizing": "auto",
+      "blockClass": "aboutUs__layout--iconValue"
+    }
+  },
+  "image#second-value-image": {
+    "props": {
+      "src": "assets/placeholders/aboutUs-value-protectionSecurity.png",
+      "blockClass": "aboutUs_valueImage"
+    }
+  },
+  "rich-text#second-value-text": {
+    "props": {
+      "text": "Foco na solução"
+    }
+  },
+  "flex-layout.row#third-value": {
+    "children": ["image#third-value-image", "rich-text#third-value-text"],
+    "props": {
+      "colSizing": "auto",
+      "blockClass": "aboutUs__layout--iconValue"
+    }
+  },
+  "image#third-value-image": {
+    "props": {
+      "src": "assets/placeholders/aboutUs-value-delivery.png",
+      "blockClass": "aboutUs_valueImage"
+    }
+  },
+  "rich-text#third-value-text": {
+    "props": {
+      "text": "Compromisso com a entrega"
+    }
+  },
+  "flex-layout.row#fourth-value": {
+    "children": ["image#fourth-value-image", "rich-text#fourth-value-text"],
+    "props": {
+      "colSizing": "auto",
+      "blockClass": "aboutUs__layout--iconValue"
+    }
+  },
+  "image#fourth-value-image": {
+    "props": {
+      "src": "assets/placeholders/aboutUs-value-heartSearch.png",
+      "blockClass": "aboutUs_valueImage"
+    }
+  },
+  "rich-text#fourth-value-text": {
+    "props": {
+      "text": "Transparência e Respeito"
+    }
+  },
+  "rich-text#second-section-title": {
+    "props": {
+      "text": "Missão, Visão e Valores",
+      "blockClass": "aboutUs_sectionTitle"
+    }
+  },
+  "rich-text#second-section-text": {
+    "props": {
+      "text": "Ser uma plataforma simples, que oferece os produtos e serviços aderentes às necessidades de nossos clientes. Trazer o setor de logística rodoviária para o Século XXI tendo em mente:",
+      "blockClass": ["aboutUs_sectionText", "aboutUs_missionText"]
+    }
+  },
+  "flex-layout.row#third-section": {
+    "children": [
+      "rich-text#third-section-title",
+      "rich-text#third-section-text"
+    ],
+    "props": {
+      "colSizing": "auto",
+      "blockClass": ["aboutUs__flexLayout--white", "aboutUs--grid"]
+    }
+  },
+  "rich-text#third-section-title": {
+    "props": {
+      "text": "Estrutura Tecnológica",
+      "blockClass": "aboutUs_sectionTitle"
+    }
+  },
+  "rich-text#third-section-text": {
+    "props": {
+      "text": "A nossa gama de produtos vai além do atendimento à exigência legal, desenvolvemos soluções flexíveis e específicas para atender às necessidades de cada cliente.<br/>Nossa plataforma tecnológica conta com sistemas de desenvolvimento e procedimentos que proporcionam a integridade, segurança e qualidade das suas informações, além de um ótimo desempenho.<br/><br/>Atendemos todas especificações de segurança da informação e gestão da qualidade de software do sistema ISO (ISO 27.001 e ISO 25.030). Toda a nossa operação está baseada em nuvem e nossa infraestrutura alocada na Amazon Web Services, garantindo, assim, um sistema seguro, com excelente performance e disponibilidade.<br/><br/>Todo ambiente PagBem (plataforma, app, portais) é permanentemente monitorado e está assegurado pelo Site Blindado.",
+      "blockClass": "aboutUs_sectionText"
+    }
+  },
+  "flex-layout.row#fourth-section": {
+    "children": [
+      "rich-text#fourth-section-title",
+      "rich-text#fourth-section-text"
+    ],
+    "props": {
+      "colSizing": "auto",
+      "blockClass": ["aboutUs__flexLayout--white", "aboutUs--grid"]
+    }
+  },
+  "rich-text#fourth-section-title": {
+    "props": {
+      "text": "Estrutura Societária",
+      "blockClass": "aboutUs_sectionTitle"
+    }
+  },
+  "rich-text#fourth-section-text": {
+    "props": {
+      "text": "A PagBem faz parte do Grupo Omni, uma instituição reconhecida por possuir um dos melhores serviços de crédito do Brasil e com mais de 25 anos de atuação na área de Operações de Crédito.<br/><br/>Com agentes exclusivos em todo território nacional, a Omni se consolidou como um dos principais players no financiamento de veículos (motos, leves e pesados), crédito varejista, linhas de crédito pessoal e leasing para máquinas e equipamentos. Sua operação também se segmentou para atender os consumidores com menor acesso ao crédito, que buscam a realização de seus planos pessoais e profissionais.<br/><br/>Inovadora, a empresa investe constantemente em tecnologia e novas ideias para transformar tendências em produtos e negócios, sem abrir mão, no entanto, do relacionamento pessoal que mantém com seus clientes e parceiros.",
+      "blockClass": "aboutUs_sectionText"
+    }
+  },
+  "flex-layout.col#mobile-hero": {
+    "children": ["rich-text#hero-title", "image#hero-image-desktop"],
+    "props": {
+      "blockClass": "aboutUs_hero"
+    }
+  },
+  "flex-layout.col#mobile-first-section": {
+    "children": [
+      "rich-text#first-section-title",
+      "rich-text#first-section-text"
+    ],
+    "props": {
+      "blockClass": [
+        "aboutUs__flexLayout--white",
+        "aboutUs__flexLayout--mobile"
+      ]
+    }
+  },
+  "flex-layout.col#mobile-second-section": {
+    "children": [
+      "rich-text#second-section-title",
+      "flex-layout.col#misson-texts"
+    ],
+    "props": {
+      "blockClass": [
+        "aboutUs__flexLayout--green",
+        "aboutUs__flexLayout--mobile"
+      ]
+    }
+  },
+  "flex-layout.col#mobile-third-section": {
+    "children": [
+      "rich-text#third-section-title",
+      "rich-text#third-section-text"
+    ],
+    "props": {
+      "blockClass": [
+        "aboutUs__flexLayout--white",
+        "aboutUs__flexLayout--mobile"
+      ]
+    }
+  },
+  "flex-layout.col#mobile-fourth-section": {
+    "children": [
+      "rich-text#fourth-section-title",
+      "rich-text#fourth-section-text"
+    ],
+    "props": {
+      "blockClass": [
+        "aboutUs__flexLayout--white",
+        "aboutUs__flexLayout--mobile"
+      ]
+    }
+  }
+}

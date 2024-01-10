@@ -1,0 +1,287 @@
+{
+  "drawer": {
+    "children": ["flex-layout.row#menu-header"],
+    "blocks": ["drawer-trigger"],
+    "props": {
+      "blockClass": "menuDrawer",
+      "maxWidth": 364,
+      "isFullWidth": true
+    }
+  },
+  "drawer#mobile": {
+    "children": ["flex-layout.row#menu-header"],
+    "blocks": ["drawer-trigger"],
+    "props": {
+      "blockClass": "menuDrawer",
+      "maxWidth": 312,
+      "isFullWidth": true
+    }
+  },
+  "drawer-trigger": {
+    "children": ["icon-menu"]
+  },
+  "flex-layout.row#menu-header": {
+    "props": {
+      "blockClass": "menuHeader"
+    },
+    "children": ["flex-layout.col#menu-header"]
+  },
+  "flex-layout.col#menu-header": {
+    "children": [
+      "challenge-block#drawerMenu",
+      "rich-text#all-products",
+      "menu#drawerMenus"
+    ],
+    "props": {
+      "blockClass": "drawerInnerCol"
+    }
+  },
+
+  "menu#drawer-unauthenticated": {
+    "props": {
+      "blockClass": "menuDrawer"
+    },
+    "children": [
+      "menu-item#create-account",
+      "menu-item#login"
+    ]
+  },
+  "menu-item#login": {
+    "props": {
+      "blockClass": "departItem",
+      "id": "menu-item-my-orders",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/login",
+        "noFollow": false,
+        "tagTitle": "Login",
+        "text": "Login"
+      }
+    }
+  },
+  "menu-item#create-account": {
+    "props": {
+      "blockClass": "departItem",
+      "id": "menu-item-my-orders",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/login",
+        "noFollow": false,
+        "tagTitle": "Criar minha conta",
+        "text": "Criar minha conta"
+      }
+    }
+  },
+  "menu#drawer": {
+    "props": {
+      "blockClass": "menuDrawer"
+    },
+    "children": [
+      "menu-item#my-account",
+      "menu-item#my-list",
+      "menu-item#logout"
+    ]
+  },
+  "menu-item#my-account": {
+    "props": {
+      "blockClass": "departItem",
+      "id": "menu-item-my-account",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/account#/profile",
+        "noFollow": false,
+        "tagTitle": "Minha Conta",
+        "text": "Minha Conta"
+      }
+    }
+  },
+  "menu-item#my-list": {
+    "props": {
+      "blockClass": "departItem",
+      "id": "menu-item-my-list",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/account#/wishlist",
+        "noFollow": false,
+        "tagTitle": "Meus Favoritos",
+        "text": "Meus Favoritos"
+      }
+    }
+  },
+  "menu-item#logout": {
+    "props": {
+      "blockClass": "departItem",
+      "id": "menu-item-my-account",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/logout",
+        "noFollow": false,
+        "tagTitle": "Sair",
+        "text": "Sair"
+      }
+    }
+  },
+  "rich-text#all-products": {
+    "props": {
+      "blockClass": "menuTitle",
+      "text": "Departamentos [Ver Todos](#)"
+    }
+  },
+  "menu#drawer-blusas": {
+    "props": {
+      "blockClass": "menuDrawerProducts"
+    },
+    "children": ["menu-item#blusas"]
+  },
+  "menu#drawer-vestidos": {
+    "props": {
+      "blockClass": "menuDrawerProducts"
+    },
+    "children": ["menu-item#vestidos"]
+  },
+  "menu#drawer-calcas": {
+    "props": {
+      "blockClass": "menuDrawerProducts"
+    },
+    "children": ["menu-item#calcas"]
+  },
+  "menu#drawer-macacao": {
+    "props": {
+      "blockClass": "menuDrawerProducts"
+    },
+    "children": ["menu-item#macacao"]
+  },
+  "menu#drawer-bermudas-e-shorts": {
+    "props": {
+      "blockClass": "menuDrawerProducts"
+    },
+    "children": ["menu-item#bermudas-e-shorts"]
+  },
+  "menu#drawer-blazers-e-jaquetas": {
+    "props": {
+      "blockClass": "menuDrawerProducts"
+    },
+    "children": ["menu-item#blazers-e-jaquetas"]
+  },
+  "menu-item#blusas": {
+    "props": {
+      "blockClass": ["departItem"],
+      "id": "menu-item-blusas",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Blusas",
+        "text": "Blusas"
+      }
+    }
+  },
+  "menu-item#vestidos": {
+    "props": {
+      "blockClass": ["departItem"],
+      "id": "menu-item-vestidos",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Vestidos",
+        "text": "Vestidos"
+      }
+    }
+  },
+  "menu-item#calcas": {
+    "props": {
+      "blockClass": ["departItem"],
+      "id": "menu-item-calcas",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Calças",
+        "text": "Calças"
+      }
+    }
+  },
+  "menu-item#macacao": {
+    "props": {
+      "blockClass": ["departItem"],
+      "id": "menu-item-macacao",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Macacão",
+        "text": "Macacão"
+      }
+    }
+  },
+  "menu-item#bermudas-e-shorts": {
+    "props": {
+      "blockClass": ["departItem"],
+      "id": "menu-item-bermidas-e-shorts",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Bermudas e Shorts",
+        "text": "Bermudas e Shorts"
+      }
+    }
+  },
+  "menu-item#blazers-e-jaquetas": {
+    "props": {
+      "blockClass": ["departItem"],
+      "id": "menu-item-blazers-e-jaquetas",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Blazers e Jaquetas",
+        "text": "Blazers e Jaquetas"
+      }
+    }
+  },
+  "vtex.menu@2.x:submenu#blusas": {
+    "children": ["menu-item#sub-blusas-1"],
+    "props": {
+      "blockClass": "drawerSubmenu"
+    }
+  },
+  "menu-item#sub-blusas-1": {
+    "props": {
+      "blockClass": ["departItem"],
+      "id": "menu-item-blazers-e-jaquetas",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Blazers e Jaquetas",
+        "text": "Blazers e Jaquetas"
+      }
+    }
+  }
+}

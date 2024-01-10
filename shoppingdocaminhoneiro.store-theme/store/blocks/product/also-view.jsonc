@@ -1,0 +1,158 @@
+{
+  "flex-layout.row#alsoView": {
+    "children": ["flex-layout.col#alsoView"],
+    "props": {
+      "blockClass": ["relative", "bg-base", "z-998", "alsoView"]
+    }
+  },
+  "flex-layout.col#alsoView": {
+    "children": [
+      "flex-layout.row#shelfControlsProduct",
+      "list-context.product-list#alsoView"
+    ]
+  },
+  "flex-layout.row#shelfControlsProduct": {
+    "children": ["rich-text#alsoViewTitle", "link#shelfLink"],
+    "props": {
+      "preventVerticalStretch": true,
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "blockClass": "shelfControls"
+    }
+  },
+  "rich-text#alsoViewTitle": {
+    "props": {
+      "text": "### Produtos visitados por quem procura este item",
+      "blockClass": "productShelfTitle",
+      "textPosition": "LEFT",
+      "textAlignment": "LEFT"
+    }
+  },
+  "list-context.product-list#alsoView": {
+    "children": ["slider-layout#alsoView"],
+    "blocks": ["product-summary.shelf#normal"],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC",
+      "maxItems": 12
+    }
+  },
+  "slider-layout#alsoView": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 5,
+        "tablet": 3,
+        "phone": 2
+      },
+      "infinite": false,
+      "fullWidth": true,
+      "blockClass": "shelfAlsoView",
+      "showNavigationArrows": "desktopOnly"
+    }
+  },
+  "flex-layout.row#alsoBougth": {
+    "children": ["flex-layout.col#alsoBougth"],
+    "props": {
+      "blockClass": ["relative", "bg-base", "z-998", "alsoBougth"]
+    }
+  },
+  "flex-layout.col#alsoBougth": {
+    "children": [
+      "flex-layout.row#shelfControlsAlsoBougthProduct",
+      "list-context.product-list#alsoBougth"
+    ]
+  },
+  "flex-layout.row#shelfControlsAlsoBougthProduct": {
+    "children": ["rich-text#alsoBougthTitle", "link#shelfLink"],
+    "props": {
+      "preventVerticalStretch": true,
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "blockClass": "shelfControls"
+    }
+  },
+  "rich-text#alsoBougthTitle": {
+    "props": {
+      "text": "### Mais populares",
+      "blockClass": "productShelfTitle",
+      "textPosition": "LEFT",
+      "textAlignment": "LEFT"
+    }
+  },
+  "list-context.product-list#alsoBougth": {
+    "children": ["slider-layout#alsoBougth"],
+    "blocks": ["product-summary.shelf#normal"],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC",
+      "maxItems": 12
+    }
+  },
+  "slider-layout#alsoBougth": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 5,
+        "tablet": 3,
+        "phone": 2
+      },
+      "infinite": false,
+      "fullWidth": true,
+      "blockClass": "alsoBougth",
+      "showNavigationArrows": "desktopOnly"
+    }
+  },
+  "flex-layout.row#alsoViewMobile": {
+    "children": ["flex-layout.col#alsoViewMobile"],
+    "props": {
+      "blockClass": ["relative", "bg-base", "z-998", "alsoView"]
+    }
+  },
+  "flex-layout.col#alsoViewMobile": {
+    "children": [
+      "flex-layout.row#shelfHeadViewMobile",
+      "list-context.product-list#alsoView"
+    ]
+  },
+  "flex-layout.row#shelfHeadViewMobile": {
+    "children": ["rich-text#alsoViewTitleMobile"],
+    "props": {
+      "preserveLayoutOnMobile": true,
+      "preventVerticalStretch": true,
+      "preventHorizontalStretch": true,
+      "blockClass": "shelfHeadMobile"
+    }
+  },
+  "flex-layout.row#shelfHeadBougthMobile": {
+    "children": ["rich-text#alsoBougthTitleMobile"],
+    "props": {
+      "preserveLayoutOnMobile": true,
+      "preventVerticalStretch": true,
+      "preventHorizontalStretch": true,
+      "blockClass": "shelfHeadMobile"
+    }
+  },
+  "rich-text#alsoViewTitleMobile": {
+    "props": {
+      "text": "### Produtos visitados por quem procura este item",
+      "blockClass": "shelvesTitleMobile"
+    }
+  },
+  "rich-text#alsoBougthTitleMobile": {
+    "props": {
+      "text": "### Mais Vistos",
+      "blockClass": "shelvesTitleMobile"
+    }
+  },
+  "flex-layout.row#alsoBougthMobile": {
+    "children": ["flex-layout.col#alsoBougthMobile"],
+    "props": {
+      "preserveLayoutOnMobile": true,
+      "preventVerticalStretch": true,
+      "blockClass": ["relative", "bg-base", "z-998", "alsoBougth"]
+    }
+  },
+  "flex-layout.col#alsoBougthMobile": {
+    "children": [
+      "flex-layout.row#shelfHeadBougthMobile",
+      "list-context.product-list#alsoBougth"
+    ]
+  }
+}

@@ -1,0 +1,42 @@
+.challengeContentWrapper {
+  & :global(.vtex-login-2-x-profile) {
+    font-size: var(--headline--h2);
+    color: var(--darkgrey--dark);
+    font-weight: 700;
+    line-height: 2rem;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0;
+    max-width: 280px;
+    padding-left: 4px;
+  }
+
+  & :global(.vtex-button__label) {
+    padding: 0 !important;
+  }
+
+  & :global(.vtex-login-2-x-buttonLink) :global(.vtex-button) {
+    padding: 0 !important;
+
+    &:hover {
+      background: none;
+    }
+  }
+
+  & :global(.vtex-login-2-x-container) {
+    margin-bottom: 1rem;
+
+    :global(.vtex-button){
+      padding: 0 !important;
+      pointer-events: none !important;
+    }
+  }
+
+  & :global(.vtex-product-summary-2-x-priceContainer) {
+    margin-bottom: 0.75rem;
+  }
+
+  &--priceChallenge {
+    margin-top: auto;
+  }
+}

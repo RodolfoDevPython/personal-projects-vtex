@@ -1,0 +1,63 @@
+{
+  "flex-layout.row#product-availability-and-quantity": {
+    "children": [
+      "product-quantity",
+      "flex-layout.row#availability-text"
+    ],
+    "props": {
+      "blockClass": ["items-center", "product-availability-and-quantity"],
+      "colGap": 0,
+      "preserveLayoutOnMobile": true,
+      "preventVerticalStretch": true,
+      "preventHorizontalStretch": true
+    }
+  },
+
+  "flex-layout.col#product-availability-and-quantity-mobile": {
+    "children": [
+      "flex-layout.row#box-quantity-mobile",
+      "flex-layout.row#availability-text"
+    ],
+    "props": {
+      "blockClass": ["items-center", "product-availability-and-quantity"],
+      "colGap": 0,
+      "preserveLayoutOnMobile": true,
+      "preventVerticalStretch": true,
+      "preventHorizontalStretch": true
+    }
+  },
+
+  "flex-layout.row#box-quantity-mobile": {
+    "children": [
+      "product-quantity"
+    ]
+  },
+
+  "flex-layout.row#availability-text": {
+    "children": ["flex-layout.col#availability-text"]
+  },
+
+  "flex-layout.col#availability-text": {
+    "children": ["product-availability#desktop"],
+    "props": {
+      "preventVerticalStretch": true
+    }
+  },
+
+  "product-availability#desktop": {
+    "props": {
+      "blockClass": "count-availability",
+      "threshold": "10",
+      "lowStockMessage": "Apenas {quantity} no estoque",
+      "highStockMessage": "Em estoque!"
+    }
+  },
+
+  "product-quantity": {
+    "props": {
+      "blockClass": ["quantity-select"],
+      "selectorType": "dropdown",
+      "showLabel": false
+    }
+  }
+}

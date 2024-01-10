@@ -1,0 +1,125 @@
+@import 'media-queries';
+
+.trigger {
+  cursor: pointer;
+
+  &--disclosure-trigger {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
+    background: none;
+    outline: none;
+    border-radius: 0;
+    padding: 0;
+    position: relative;
+
+    :global(.vtex-rich-text-0-x-paragraph) {
+      font-size: var(--headline--h3);
+      color: var(--darkgrey--dark);
+      line-height: 28px;
+      margin: 0;
+      font-weight: 600;
+      width: 100%;
+    }
+
+    :global(.vtex-rich-text-0-x-paragraph--descriptionGroup-title)::after,
+    :global(.vtex-rich-text-0-x-paragraph--specification-title)::after {
+      position: absolute;
+      right: 1rem;
+      top: 7px;
+      content: '';
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M8 2V14' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M2 8H14' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      width: 1rem;
+      height: 1rem;
+      transition: all 0.2s ease-out;
+      display: block;
+    }
+  }
+
+  &--disclosure-trigger--visible {
+    :global(.vtex-rich-text-0-x-paragraph--descriptionGroup-title)::after,
+    :global(.vtex-rich-text-0-x-paragraph--specification-title)::after {
+      transform: rotate(-180deg);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M2 8H14' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    }
+  }
+
+  &--departTrigger {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
+    background: none;
+    outline: none;
+    border-radius: 0;
+    padding: 12px 0;
+
+    &::after {
+      content: url('assets/icons/chevronRight.svg');
+    }
+  }
+
+  &--departTriggerClose {
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0;
+    margin-right: 0.5rem;
+
+    & :global(.vtex-store-icons-0-x-arrowBackIcon) {
+      display: block;
+      width: 24px;
+      height: 32px;
+    }
+  }
+}
+
+.content {
+  &--departContent {
+    position: absolute;
+    width: 100%;
+    box-sizing: border-box;
+    display: block !important;
+    top: 0;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    background: var(--white);
+    height: 100%;
+
+    &--visible {
+      transform: translateX(0);
+    }
+  }
+
+  &--specification,
+  &--description {
+    transition: opacity 250ms ease-in-out, height 250ms ease-in-out,
+      transform 250ms ease-in-out;
+    opacity: 0;
+    height: 0;
+    transform: translate3d(-10%, 0, 0);
+  }
+
+  &--specification[data-enter],
+  &--description[data-enter] {
+    opacity: 1;
+    height: fit-content;
+    transform: translate3d(0, 0, 0);
+  }
+
+  &--specification[data-leave],
+  &--description[data-leave] {
+    height: 0;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+  }
+
+  @include mobile {
+    :global(.vtex-store-components-3-x-productDescriptionContainer) {
+      margin-top: 28px;
+    }
+  }
+}

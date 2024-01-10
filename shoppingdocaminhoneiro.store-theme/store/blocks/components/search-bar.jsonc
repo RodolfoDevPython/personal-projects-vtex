@@ -1,0 +1,30 @@
+{
+  "search-bar#default": {
+    "blocks": ["autocomplete-result-list.v2#default"],
+    "props": {
+      "compactMode": true,
+      "placeholder": "Pesquise por produtos ou marcas",
+      "autoFocus": false,
+      "openAutocompleteOnFocus": false,
+      "maxWidth": "100%",
+      "autocompleteAlignment": "center",
+      "autocompleteFullWidth": true,
+      "displayMode": "search-button",
+      "containerMode": "container"
+    }
+  },
+  "search-bar#mobile": {
+    "blocks": ["autocomplete-result-list.v2#default"],
+    "props": {
+      "compactMode": true,
+      "placeholder": "Buscar",
+      "autoFocus": false,
+      "openAutocompleteOnFocus": false,
+      "maxWidth": "100%",
+      "autocompleteAlignment": "center",
+      "autocompleteFullWidth": true,
+      "displayMode": "search-button",
+      "containerMode": "container"
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "flex-layout.row#reviews-and-ratings": {
+    "children": ["flex-layout.col#reviews-and-ratings"],
+    "props": {
+      "blockClass": "reviews-and-ratings"
+    }
+  },
+
+  "flex-layout.col#reviews-and-ratings": {
+    "children": ["rich-text#reviewsTitle", "product-reviews"]
+  },
+
+  "flex-layout.row#reviews": {
+    "children": ["flex-layout.col#reviews"],
+    "props": {
+      "preventHorizontalStretch": true,
+      "blockClass": "reviewsRow"
+    }
+  },
+
+  "flex-layout.col#reviews": {
+    "children": ["rich-text#reviewsTitle", "flex-layout.row#reviews-content"],
+    "props": {
+      "blockClass": "reviewContent"
+    }
+  },
+
+  "rich-text#reviewsTitle": {
+    "props": {
+      "text": "### Avaliação dos clientes",
+      "blockClass": "reviewsTitle"
+    }
+  },
+
+  "flex-layout.row#reviews-content": {
+    "children": [
+      "flex-layout.col#ratings-only",
+      "flex-layout.col#reviews-only"
+    ],
+    "props": {
+      "colGap": 10,
+      "colSizing": "auto",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true
+    }
+  },
+
+  // This is a nasty workaround because `product-reviews.vtex` doesn't have composability
+  // and it doesn't respect `blockClass` either.
+
+  "flex-layout.col#ratings-only": {
+    "children": ["product-reviews"],
+    "props": {
+      "blockClass": ["ratings-only"]
+    }
+  },
+
+  "flex-layout.col#reviews-only": {
+    "children": ["rich-text#reviewsOnlyTitle", "product-reviews"],
+    "props": {
+      "blockClass": ["reviews-only"]
+    }
+  },
+
+  "rich-text#reviewsOnlyTitle": {
+    "props": {
+      "text": "### Avaliações",
+      "blockClass": "reviewsOnlyTitle"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "flex-layout.row#product-details": {
+    "children": ["flex-layout.row#main"],
+    "props": {
+      "blockClass": "product",
+      "colGap": 0
+    }
+  }
+}

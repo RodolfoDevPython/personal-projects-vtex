@@ -1,0 +1,25 @@
+{
+  "flex-layout.row#price-and-ship": {
+    "children": ["condition-layout.product#price-and-ship"]
+  },
+  "condition-layout.product#price-and-ship": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "isProductAvailable"
+        }
+      ],
+      "Then": "flex-layout.row#product-available",
+      "Else": "flex-layout.row#product-unavailable"
+    }
+  },
+  "flex-layout.row#product-available": {
+    "children": [
+      "flex-layout.row#box-mobile",
+      "flex-layout.row#seller-simulate-shipping"
+    ]
+  },
+  "flex-layout.row#product-unavailable": {
+    "children": ["flex-layout.row#availability"]
+  }
+}

@@ -1,0 +1,281 @@
+{
+  "flex-layout.row#tipbar": {
+    "props": {
+      "blockClass": "shopByCategorySection"
+    },
+    "children": ["experimental__visibility-layout#tipbar"]
+  },
+  "flex-layout.col#tipbar": {
+    "props": {
+      "blockClass": "shopByTrend"
+    },
+    "children": ["slider-layout#tipbar"]
+  },
+  "slider-layout#tipbar": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 2,
+        "tablet": 2,
+        "phone": 2
+      },
+      "infinite": false,
+      "showNavigationArrows": "desktopOnly",
+      "blockClass": "tipbarCarousel"
+    },
+    "children": [
+      "link#trend",
+      "link#trend2",
+      "link#trend3",
+      "link#trend4",
+      "link#trend5",
+      "link#trend6"
+    ]
+  },
+  "image#trend": {
+    "props": {
+      "src": "assets/placeholders/trendImage.png",
+      "blockClass": "trendImage"
+    }
+  },
+  "rich-text#trendTitle": {
+    "props": {
+      "text": "Em até 10x sem juros",
+      "blockClass": "trendTitle",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER"
+    }
+  },
+  "rich-text#tipbarubTitle": {
+    "props": {
+      "text": "Nos cartões de crédito",
+      "blockClass": "tipbarubTitle",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER"
+    }
+  },
+  "rich-text#trendTitle2": {
+    "props": {
+      "text": "Compra 100% segura",
+      "blockClass": "trendTitle",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER"
+    }
+  },
+  "rich-text#tipbarubTitle2": {
+    "props": {
+      "text": "Faça suas compras \n com comodidade",
+      "blockClass": "tipbarubTitle",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER"
+    }
+  },
+  "rich-text#trendTitle3": {
+    "props": {
+      "text": "Entrega em todo Brasil",
+      "blockClass": "trendTitle",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER"
+    }
+  },
+  "rich-text#tipbarubTitle3": {
+    "props": {
+      "text": "Qualidade e agilidade",
+      "blockClass": "tipbarubTitle",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER"
+    }
+  },
+  "rich-text#trendTitle4": {
+    "props": {
+      "text": "Mais de 5 anos de história",
+      "blockClass": "trendTitle",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER"
+    }
+  },
+  "rich-text#tipbarubTitle4": {
+    "props": {
+      "text": "Experiência, tradição \n e confiabilidade",
+      "blockClass": "tipbarubTitle",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER"
+    }
+  },
+  "rich-text#trendTitle5": {
+    "props": {
+      "text": "5% de desconto",
+      "blockClass": "trendTitle",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER"
+    }
+  },
+  "rich-text#tipbarubTitle5": {
+    "props": {
+      "text": "No boleto bancário",
+      "blockClass": "tipbarubTitle",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER"
+    }
+  },
+  "rich-text#trendTitle6": {
+    "props": {
+      "text": "1º troca grátis",
+      "blockClass": "trendTitle",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER"
+    }
+  },
+  "rich-text#tipbarubTitle6": {
+    "props": {
+      "text": "Confira a política \n de trocas",
+      "blockClass": "tipbarubTitle",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER"
+    }
+  },
+  // Desktop
+  "flex-layout.row#tipbarDesktop": {
+    "children": ["experimental__visibility-layout#tipbarDesktop"],
+    "props": {
+      "blockClass": "tipbarDesktopRow"
+    }
+  },
+  "flex-layout.col#tipbarDesktop": {
+    "children": ["flex-layout.row#trendLinks"],
+    "props": {
+      "blockClass": "tipbarDesktopCol"
+    }
+  },
+  "flex-layout.row#trendLinks": {
+    "children": [
+      "link#trend",
+      "link#trend2",
+      "link#trend3",
+      "link#trend4",
+      "link#trend5",
+      "link#trend6"
+    ],
+    "props": {
+      "horizontalAlign": "center",
+      "preventHorizontalStretch": true
+    }
+  },
+  "link#trend": {
+    "children": [
+      "image#trendDesktop",
+      "rich-text#trendTitle",
+      "rich-text#tipbarubTitle"
+    ],
+    "props": {
+      "href": "#",
+      "blockClass": "linkTrend"
+    }
+  },
+  "link#trend2": {
+    "children": [
+      "image#trendDesktop2",
+      "rich-text#trendTitle2",
+      "rich-text#tipbarubTitle2"
+    ],
+    "props": {
+      "href": "#",
+      "blockClass": "linkTrend"
+    }
+  },
+  "link#trend3": {
+    "children": [
+      "image#trendDesktop3",
+      "rich-text#trendTitle3",
+      "rich-text#tipbarubTitle3"
+    ],
+    "props": {
+      "href": "#",
+      "blockClass": "linkTrend"
+    }
+  },
+  "link#trend4": {
+    "children": [
+      "image#trendDesktop4",
+      "rich-text#trendTitle4",
+      "rich-text#tipbarubTitle4"
+    ],
+    "props": {
+      "href": "#",
+      "blockClass": "linkTrend"
+    }
+  },
+  "link#trend5": {
+    "children": [
+      "image#trendDesktop5",
+      "rich-text#trendTitle5",
+      "rich-text#tipbarubTitle5"
+    ],
+    "props": {
+      "href": "#",
+      "blockClass": "linkTrend"
+    }
+  },
+  "link#trend6": {
+    "children": [
+      "image#trendDesktop6",
+      "rich-text#trendTitle6",
+      "rich-text#tipbarubTitle6"
+    ],
+    "props": {
+      "href": "#",
+      "blockClass": "linkTrend"
+    }
+  },
+  "image#trendDesktop": {
+    "props": {
+      "src": "assets/icons/creditCard.svg",
+      "blockClass": "trendImage"
+    }
+  },
+  "image#trendDesktop2": {
+    "props": {
+      "src": "assets/icons/lock.svg",
+      "blockClass": "trendImage"
+    }
+  },
+  "image#trendDesktop3": {
+    "props": {
+      "src": "assets/icons/delivery.svg",
+      "blockClass": "trendImage"
+    }
+  },
+  "image#trendDesktop4": {
+    "props": {
+      "src": "assets/icons/hands.svg",
+      "blockClass": "trendImage"
+    }
+  },
+  "image#trendDesktop5": {
+    "props": {
+      "src": "assets/icons/bankSlip.svg",
+      "blockClass": "trendImage"
+    }
+  },
+  "image#trendDesktop6": {
+    "props": {
+      "src": "assets/icons/arrowRotate.svg",
+      "blockClass": "trendImage"
+    }
+  },
+
+  "experimental__visibility-layout#tipbarDesktop": {
+    "title": "Tipbar Desktop",
+    "children": ["flex-layout.col#tipbarDesktop"],
+    "props": {
+      "visible": true
+    }
+  },
+
+  "experimental__visibility-layout#tipbar": {
+    "title": "Tipbar Mobile",
+    "children": ["flex-layout.col#tipbar"],
+    "props": {
+      "visible": true
+    }
+  }
+}

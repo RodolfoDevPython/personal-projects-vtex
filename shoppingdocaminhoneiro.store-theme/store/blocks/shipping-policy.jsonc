@@ -1,0 +1,27 @@
+{
+  "store.custom#shipping-policy": {
+    "blocks": ["flex-layout.row#shipping-policy-wrapper"]
+  },
+  "flex-layout.row#shipping-policy-wrapper": {
+    "children": [
+      "rich-text#shipping-policy-title",
+      "rich-text#shipping-policy-paragraph1"
+    ],
+    "props": {
+      "blockClass": "institutional__wrapper",
+      "preventHorizontalStretch": true
+    }
+  },
+  "rich-text#shipping-policy-title": {
+    "props": {
+      "text": "Política de Privacidade",
+      "blockClass": "institutional__title"
+    }
+  },
+  "rich-text#shipping-policy-paragraph1": {
+    "props": {
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan malesuada sapien, eget interdum leo dictum imperdiet. Sed viverra, orci dapibus pulvinar pellentesque, lectus leo faucibus erat, vel rhoncus massa purus in velit. Mauris ut sollicitudin dui. Fusce mattis leo lectus, mattis mattis sem tincidunt ut. Proin aliquet malesuada neque, quis lacinia magna. Duis at ipsum tincidunt, tincidunt ipsum euismod, ullamcorper nibh. Nunc semper tincidunt felis, in commodo enim ultricies nec. Sed interdum ex purus, imperdiet fringilla tortor venenatis non. Donec eleifend odio at elementum sodales.",
+      "blockClass": "institutional__paragraph"
+    }
+  }
+}

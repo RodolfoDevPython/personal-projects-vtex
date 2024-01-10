@@ -1,0 +1,103 @@
+{
+  "header": {
+    "blocks": ["header-layout.desktop", "header-layout.mobile"]
+  },
+
+  "header.full": {
+    "blocks": ["header-layout.desktop", "header-layout.mobile"]
+  },
+
+  "flex-layout.row#telemarketing": {
+    "children": ["telemarketing"],
+    "props": {
+      "blockClass": ["bg-blue-medium"],
+      "fullWidth": true
+    }
+  },
+
+  "header-layout.mobile": {
+    "children": [
+      "sticky-layout#mobile",
+      "shopper-location",
+      "flex-layout.row#popup-lgpd-mobile"
+    ]
+  },
+
+  "sticky-layout#mobile": {
+    "children": ["flex-layout.row#mobileHeader"],
+    "props": {
+      "blockClass": "headerMobile"
+    }
+  },
+
+  "flex-layout.row#mobileHeader": {
+    "children": ["flex-layout.col#mobileHeader"]
+  },
+
+  "flex-layout.col#mobileHeader": {
+    "children": ["flex-layout.row#mobile", "search-bar#mobile"],
+    "props": {
+      "blockClass": "main-header-mobile"
+    }
+  },
+
+  "flex-layout.row#mobile": {
+    "children": [
+      "drawer#mobile",
+      "logo#mobile",
+      "flex-layout.col#spacer",
+      "minicart.v2"
+    ],
+    "props": {
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "colSizing": "auto",
+      "fullWidth": true
+    }
+  },
+
+  "link#orderQuote": {
+    "props": {
+      "label": "Order quote",
+      "href": "/orderquote",
+      "blockClass": "orderQuote"
+    }
+  },
+
+  "link#profile": {
+    "children": ["icon-profile"],
+    "props": {
+      "href": "/account",
+      "blockClass": "accountLink"
+    }
+  },
+
+  "login#desktop": {
+    "props": {
+      "iconLabel": "Minha Conta",
+      "blockClass": "loginWrapper",
+      "showIconProfile": true
+    }
+  },
+
+  "login#mobile": {
+    "props": {
+      "blockClass": "mobile"
+    }
+  },
+  "link#wishlist": {
+    "children": ["image#wishlist"],
+    "props": {
+      "href": "/wishlist",
+      "label": "Meus Favoritos",
+      "blockClass": "wishList"
+    }
+  },
+  "image#wishlist": {
+    "props": {
+      "src": "assets/icons/heartIcon.svg",
+      "blockClass": "wishlist__icon"
+    }
+  }
+}

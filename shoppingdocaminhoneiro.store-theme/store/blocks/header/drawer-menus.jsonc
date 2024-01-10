@@ -1,0 +1,92 @@
+{
+  "menu#drawerMenus": {
+    "children": [
+      "menu-item#truck",
+      "menu-item#home",
+      "menu-item#service"
+    ],
+    "props": {
+      "blockClass": "categoryMenu",
+      "orientation": "vertical"
+    }
+  },
+  "menu-item#truck": {
+    "props": {
+      "blockClass": "departItem",
+      "id": "category-item-1",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/",
+        "noFollow": false,
+        "tagTitle": "Para seu Caminhão",
+        "text": "Para seu Caminhão"
+      }
+    },
+    "blocks": ["vtex.menu@2.x:submenu.accordion#truck"]
+  },
+  "menu-item#home": {
+    "props": {
+      "blockClass": "departItem",
+      "id": "category-item-2",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/",
+        "noFollow": false,
+        "tagTitle": "Para sua Casa",
+        "text": "Para sua Casa"
+      }
+    },
+    "blocks": ["vtex.menu@2.x:submenu.accordion#truck"]
+  },
+  "menu-item#service": {
+    "props": {
+      "blockClass": "departItem",
+      "id": "category-item-3",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/",
+        "noFollow": false,
+        "tagTitle": "Serviços",
+        "text": "Serviços"
+      }
+    },
+    "blocks": ["vtex.menu@2.x:submenu.accordion#truck"]
+  },
+  "vtex.menu@2.x:submenu.accordion#truck": {
+    "children": [
+      "vtex.menu@2.x:menu#submenuTruck"
+    ],
+    "props": {
+      "blockClass": "category"
+    }
+  },
+  "vtex.menu@2.x:menu#submenuTruck": {
+    "children": [
+      "menu-item#pneu"
+    ],
+    "props": {
+      "orientation": "vertical"
+    }
+  },
+  "menu-item#pneu": {
+    "props": {
+      "blockClass": "departItem",
+      "id": "menu-item-for-truck-1",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/",
+        "noFollow": false,
+        "tagTitle": "Pneus",
+        "text": "Pneus"
+      }
+    }
+  }
+}

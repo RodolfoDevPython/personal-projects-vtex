@@ -1,0 +1,108 @@
+{
+  "vtex.menu@2.x:menu#stripeMenu": {
+    "children": [
+      "menu-item#stripeItem-1",
+      "menu-item#stripeItem-2",
+      "menu-item#stripeItem-3"
+    ],
+    "props": {
+      "blockClass": "stripeMenu"
+    }
+  },
+  "menu-item#stripeItem-1": {
+    "props": {
+      "id": "stripe-menu-item-1",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/#",
+        "noFollow": false,
+        "tagTitle": "Para seu Caminhão",
+        "text": "Para seu Caminhão"
+      },
+      "blockClass": "stripeItem"
+    },
+    "blocks": ["vtex.menu@2.x:submenu#item1"]
+  },
+  "menu-item#stripeItem-2": {
+    "props": {
+      "id": "stripe-menu-item-2",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/account#/orders",
+        "noFollow": false,
+        "tagTitle": "Para sua Casa",
+        "text": "Para sua Casa"
+      },
+      "blockClass": "stripeItem"
+    },
+    "blocks": ["vtex.menu@2.x:submenu#item2"]
+  },
+  "menu-item#stripeItem-3": {
+    "props": {
+      "id": "stripe-menu-item-3",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/account#/orders",
+        "noFollow": false,
+        "tagTitle": "Serviços",
+        "text": "Serviços"
+      },
+      "blockClass": "stripeItem"
+    },
+    "blocks": ["vtex.menu@2.x:submenu#item3"]
+  },
+  "vtex.menu@2.x:submenu#item1": {
+    "children": ["vtex.menu@2.x:menu#submenu-1", "image#stripeSubImage"],
+    "props": {
+      "blockClass": "stripeSubMenu"
+    }
+  },
+  "vtex.menu@2.x:submenu#item2": {
+    "children": ["vtex.menu@2.x:menu#submenu-1", "image#stripeSubImage"],
+    "props": {
+      "blockClass": "stripeSubMenu"
+    }
+  },
+  "vtex.menu@2.x:submenu#item3": {
+    "children": ["vtex.menu@2.x:menu#submenu-1", "image#stripeSubImage"],
+    "props": {
+      "blockClass": "stripeSubMenu"
+    }
+  },
+  "image#stripeSubImage": {
+    "props": {
+      "src": "assets/placeholders/stripeSubImage.png"
+    }
+  },
+  "vtex.menu@2.x:menu#submenu-1": {
+    "children": ["menu-item#submenuItem-1"],
+    "props": {
+      "isOpen": true,
+      "orientation": "vertical"
+    }
+  },
+  "menu-item#submenuItem-1": {
+    "props": {
+      "id": "stripe-submenu-item-1",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/pneu",
+        "noFollow": false,
+        "tagTitle": "Pneus",
+        "text": "Pneus"
+      }
+    }
+  }
+}

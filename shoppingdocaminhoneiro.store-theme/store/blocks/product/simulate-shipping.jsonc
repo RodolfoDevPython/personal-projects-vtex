@@ -1,0 +1,10 @@
+{
+  "flex-layout.row#seller-simulate-shipping": {
+    "props": {
+      "blockClass": "shipping-container"
+    },
+    "children": [
+      "shipping-simulator"
+    ]
+  }
+}

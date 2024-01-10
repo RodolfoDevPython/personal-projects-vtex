@@ -1,0 +1,47 @@
+{
+  "flex-layout.row#topBar": {
+    "children": ["flex-layout.row#topBarPhone", "flex-layout.row#topBarHours"],
+    "props": {
+      "preventHorizontalStretch": true,
+      "blockClass": "topBar"
+    }
+  },
+  "flex-layout.row#topBarPhone": {
+    "children": ["image#phoneIcon", "rich-text#phoneNumber"],
+    "props": {
+      "preventVarticalStretch": true,
+      "preventHorizontalStretch": true
+    }
+  },
+  "flex-layout.row#topBarHours": {
+    "children": ["image#clockIcon", "rich-text#hoursText"],
+    "props": {
+      "preventHorizontalStretch": true,
+      "preventVarticalStretch": true
+    }
+  },
+  "image#phoneIcon": {
+    "props": {
+      "src": "assets/icons/phoneIconGreen.svg",
+      "blockClass": "topBarIcon"
+    }
+  },
+  "rich-text#phoneNumber": {
+    "props": {
+      "text": "[0800 591 1036](tel:08005911036)",
+      "blockClass": "topBarText"
+    }
+  },
+  "image#clockIcon": {
+    "props": {
+      "src": "assets/icons/clockIcon.svg",
+      "blockClass": "topBarIcon"
+    }
+  },
+  "rich-text#hoursText": {
+    "props": {
+      "text": "Seg. a Sex. - 9h às 18h",
+      "blockClass": "topBarText"
+    }
+  }
+}

@@ -1,0 +1,46 @@
+.socialNetworkImage {
+  display: none;
+}
+
+.footerLayout {
+  padding-top: 3rem;
+  background: var(--lightgrey--lighter);
+}
+
+.socialNetworkLink {
+  margin: 0;
+  transition: all 300ms;
+  height: 36px;
+  width: 36px;
+  background-size: 20px 20px;
+  background-color: var(--darkgrey--light);
+  background-position: center;
+  border-radius: 30px;
+  display: block;
+  background-repeat: no-repeat;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &--facebook {
+    background-image: url('assets/icons/facebookIcon.svg');
+  }
+
+  &--instagram {
+    background-image: url('assets/icons/instagramIcon.svg');
+  }
+
+  &--linkedin {
+    background-image: url('assets/icons/linkedinIcon.svg');
+    background-size: 36px;
+  }
+
+  &--youtube {
+    background-image: url('assets/icons/youtubeIcon.svg');
+  }
+
+  &:not(:last-child) {
+    margin-right: 1rem;
+  }
+}

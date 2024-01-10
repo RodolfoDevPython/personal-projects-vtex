@@ -1,0 +1,8 @@
+{
+  "flex-layout.row#availability": {
+    "children": ["availability-subscriber"],
+    "props": {
+      "blockClass": "box-unavailable"
+    }
+  }
+}

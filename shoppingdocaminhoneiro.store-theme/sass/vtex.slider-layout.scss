@@ -1,0 +1,229 @@
+@import 'media-queries';
+@import '_transition';
+
+// bannerfull home
+.sliderLeftArrow--homeSlider,
+.sliderRightArrow--homeSlider,
+.sliderLeftArrow--searchBanners,
+.sliderRightArrow--searchBanners {
+  border-radius: 100%;
+  padding: 0;
+  width: 48px;
+  height: 48px;
+  background: rgba(229, 229, 229, 0.5) !important;
+
+  @include transitionHover;
+}
+
+.sliderLeftArrow--homeSlider,
+.sliderLeftArrow--searchBanners {
+  left: 0.5rem;
+  padding: 0.5rem 0 0 0.8rem;
+}
+
+.sliderRightArrow--homeSlider,
+.sliderRightArrow--searchBanners {
+  right: 0.5rem;
+  padding: 0.5rem 0 0 0.8rem;
+}
+
+.paginationDotsContainer--homeSlider {
+  width: 100px;
+  margin: 0 auto;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  background: var(--white);
+  margin-bottom: 1rem;
+}
+
+.paginationDotsContainer--searchBanners {
+  display: none;
+}
+
+.paginationDot--homeSlider,
+.paginationDot--dotsCustom {
+  padding: 0;
+  width: 6px !important;
+  height: 6px !important;
+  display: block;
+  background: var(--lightgrey--medium);
+  @include transitionHover;
+
+  &--isActive {
+    background: var(--primary--default);
+  }
+}
+
+.caretIcon--homeSlider {
+  color: var(--white);
+}
+// end bannerfull home
+
+.sliderLayoutContainer--tipbarCarousel {
+  padding-bottom: 2.5rem;
+}
+
+.slideChildrenContainer--tipbarCarousel {
+  align-items: flex-start;
+}
+
+.paginationDotsContainer--tipbarCarousel {
+  bottom: 0;
+}
+
+.paginationDot--shelfAlsoView,
+.paginationDot--alsoBougth,
+.paginationDot--shelfPopular,
+.paginationDot--shelfStyle1 {
+  margin-right: 1rem;
+}
+
+.paginationDot--shelfAlsoView,
+.paginationDot--alsoBougth,
+.paginationDot--shelfPopular,
+.paginationDot--shelfStyle1,
+.paginationDot--tipbarCarousel {
+  padding: 0;
+  width: 6px !important;
+  height: 6px !important;
+  display: block;
+  background-color: var(--lightgrey--medium);
+
+  &--isActive {
+    background-color: var(--primary--default);
+  }
+}
+
+.sliderLayoutContainer--shelfStyle1 {
+  padding-bottom: 2.875rem;
+  margin-bottom: 3.5rem;
+
+  @include mobile {
+    padding-bottom: 2.125rem;
+    margin-bottom: 3rem;
+  }
+}
+
+.sliderArrows--alsoBougth,
+.sliderArrows--shelfAlsoView,
+.sliderArrows--shelfPopular,
+.sliderArrows--shelfStyle1 {
+  top: 35%;
+  margin: 0;
+  padding: 0;
+  color: var(--primary--dark);
+  background-color: var(--lightgrey--lighter-more) !important;
+  height: 32px;
+  width: 32px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  border-radius: 100%;
+}
+
+.sliderLeftArrow--alsoBougth,
+.sliderLeftArrow--shelfAlsoView,
+.sliderLeftArrow--shelfPopular,
+.sliderLeftArrow--shelfStyle1 {
+  left: 1rem;
+  transform: translateX(-100%);
+  padding-left: 11px;
+}
+
+.sliderRightArrow--alsoBougth,
+.sliderRightArrow--shelfAlsoView,
+.sliderRightArrow--shelfPopular,
+.sliderRightArrow--shelfStyle1 {
+  right: 1rem;
+  transform: translateX(100%);
+  padding-left: 12px;
+}
+
+.slide--shelfStyle1 {
+  background-color: var(--white);
+  margin-right: 2rem;
+  @include mobile {
+    min-width: auto;
+    margin-right: 16px;
+    max-width: 160px;
+  }
+
+  &:last-child {
+    @include mobile {
+      margin-right: 0;
+    }
+  }
+}
+
+.slideChildrenContainer--shelfStyle1 {
+  padding-bottom: 16px;
+  @include mobile {
+    padding-bottom: 0;
+  }
+}
+
+.sliderTrackContainer--shelfStyle1 {
+  margin-left: 34px;
+  @include mobile {
+    margin-left: 0;
+  }
+}
+
+.slider {
+  &Layout {
+    &Container {
+      &--shelfPopular {
+        height: 100%;
+        align-items: flex-start;
+
+        @include mobile {
+          padding-bottom: 1.875rem;
+          margin-bottom: 3rem;
+        }
+      }
+
+      &--alsoBougth,
+      &--shelfAlsoView {
+        padding-bottom: 46px;
+
+        @include mobile {
+          padding-bottom: 30px;
+        }
+      }
+    }
+  }
+}
+
+.paginationDotsContainer--shelfPopular {
+  bottom: -44px;
+
+  @include mobile() {
+    bottom: -13px;
+  }
+}
+
+// wishlist
+.sliderLayoutContainer--shelfWishlist {
+  @include mobile {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+
+  :global(.vtex-store-components-3-x-container) {
+    padding: unset;
+  }
+
+  @include desktop {
+    width: 90%;
+    margin: 0 auto;
+
+    &Page {
+      max-width: 1440px;
+      width: 95%;
+      margin: 0 auto 2rem auto;
+    }
+  }
+}

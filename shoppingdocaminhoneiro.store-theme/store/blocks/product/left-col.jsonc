@@ -1,0 +1,21 @@
+{
+  "flex-layout.col#left-col": {
+    "children": [
+      "product-images#desktop",
+      "add-to-list-btn",
+      "responsive-layout.desktop#hover-text"
+    ],
+    "props": {
+      "blockClass": ["left-col", "pdp"]
+    }
+  },
+  "responsive-layout.desktop#hover-text": {
+    "children": ["rich-text#hover-text"]
+  },
+  "rich-text#hover-text": {
+    "props": {
+      "text": "Passe o mouse na imagem para aproximar",
+      "blockClass": "hover"
+    }
+  }
+}

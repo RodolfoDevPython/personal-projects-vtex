@@ -1,0 +1,33 @@
+.specificationName,
+.specificationValue {
+  font-size: 14px;
+}
+
+@media (max-width: 1025px) {
+  .specificationName {
+    font-weight: 600;
+  }
+
+  .specificationValue--specText {
+    font-size: 12px !important;
+    line-height: 1rem;
+  }
+}
+
+.specificationValue {
+  color: #000;
+}
+
+.specificationName--bullet-list {
+  display: block;
+  columns: auto 2;
+  line-height: 2.5;
+  width: 100%;
+  white-space: pre-wrap;
+}
+
+.specificationValue--specText,
+.specificationName--specText {
+  font-size: var(--paragraph--medium--medium);
+  color: var(--darkgrey--dark);
+}

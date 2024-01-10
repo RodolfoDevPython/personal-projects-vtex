@@ -1,0 +1,129 @@
+@mixin autocomplete() {
+  .biggy {
+    /**
+     * Biggy Autocomplete
+     * HTML Element: section
+     * CSS Namespace: .vtex-search-2-x-biggy-autocomplete
+     */
+    &-autocomplete {
+      box-shadow: none;
+      border-radius: 1.5rem;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      padding: 0 1.5rem 1.5rem;
+      left: 0;
+
+      /**
+       * Biggy Autocomplete Wrapper
+       * HTML Element: div
+       * CSS Namespace: .vtex-search-2-x-biggy-autocomplete-wrapper
+       */
+      &-wrapper {
+        @include ns {
+          max-width: 336px;
+        }
+      }
+
+      /**
+       * Biggy Autocomplete Close Button
+       * HTML Element: button
+       * CSS Namespace: .vtex-search-2-x-close-btn
+       */
+      .close-btn {
+        display: none;
+      }
+
+      /**
+       * Biggy Autocomplete Item List (Suggested Terms)
+       * HTML Element: article
+       * CSS Namespace: .vtex-search-2-x-itemList
+       */
+      .itemList {
+        // https://github.com/vtex-apps/search/blob/master/react/components/Autocomplete/components/ItemList/styles.css#L4
+        font-family: inherit !important;
+        border-top: 1px solid $lightgrey--light;
+
+        /**
+         * Biggy Autocomplete Item List Title
+         * HTML Element: p
+         * CSS Namespace: .vtex-search-2-x-itemListTitle
+         */
+        &Title {
+          margin: 0;
+          margin-top: 1rem;
+          padding: 0;
+        }
+
+        /**
+         * Biggy Autocomplete Item List Link
+         * HTML Element: a
+         * CSS Namespace: .vtex-search-2-x-itemListLink
+         */
+        &Link {
+          height: 2.25rem;
+
+          /**
+           * Biggy Autocomplete Item List Link Title
+           * HTML Element: span
+           * CSS Namespace: .vtex-search-2-x-itemListLinkTitle
+           */
+          &Title {
+            font-size: 0.875rem;
+            line-height: 1.4285714286;
+            :not(:global(.vtex-fake)) {
+              font-weight: inherit;
+            }
+          }
+
+          &:hover {
+            background-color: $lightgrey--light;
+          }
+        }
+
+        /**
+         * Biggy Autocomplete Item List List
+         * HTML Element: ol
+         * CSS Namespace: .vtex-search-2-x-itemListList
+         */
+        &List {
+          border-color: $lightgrey--light;
+        }
+        &--suggestion {
+          //
+        }
+      }
+
+      /**
+       * Biggy Autocomplete Title List (Suggested Products)
+       * HTML Element: article
+       * CSS Namespace: .vtex-search-2-x-itemList
+       */
+      .tileList {
+        border: 0;
+
+        /**
+         * HTML Element: ul
+         * CSS Namespace: vtex-search-2-x-tileListList
+         */
+        &List {
+          padding: 0;
+          margin: 0;
+        }
+        &Title {
+          //
+        }
+        &Footer {
+          display: none;
+        }
+      }
+
+      /**
+       * Biggy Autocomplete Wrapper for Product Summary
+       */
+      .element {
+        padding: 0;
+        margin: 0;
+      }
+    }
+  }
+}

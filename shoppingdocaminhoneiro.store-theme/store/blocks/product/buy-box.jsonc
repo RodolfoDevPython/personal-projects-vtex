@@ -1,0 +1,8 @@
+{
+  "flex-layout.row#buyBox": {
+    "children": ["flex-layout.col#buyBox"]
+  },
+  "flex-layout.col#buyBox": {
+    "children": ["rich-text#buyBox", "seller-table"]
+  }
+}

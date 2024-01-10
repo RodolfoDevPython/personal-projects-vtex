@@ -1,0 +1,22 @@
+{
+  "logo#default": {
+    "props": {
+      "title": "Shopping do Caminhoneiro",
+      "href": "/",
+      "url": "assets/logo.svg",
+      "width": 142,
+      "height": 34,
+      "mobileWidth": 76,
+      "mobileHeight": 30
+    }
+  },
+  "logo#mobile": {
+    "props": {
+      "title": "Shopping do Caminhoneiro",
+      "href": "/",
+      "url": "assets/logo.svg",
+      "width": 80,
+      "height": 40
+    }
+  }
+}

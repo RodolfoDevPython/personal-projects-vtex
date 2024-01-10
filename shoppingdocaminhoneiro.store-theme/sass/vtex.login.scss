@@ -1,0 +1,188 @@
+.portalWrapper--loginWrapper .box {
+  right: initial !important;
+  left: 2.5rem;
+  transform: translateX(-50%);
+}
+
+.portalWrapper--loginWrapper .arrowUp {
+  right: 45%;
+}
+
+.portalWrapper--loginWrapper :global(.vtex-button) {
+  background: var(--primary--dark);
+  color: #fff;
+  border-radius: 4px;
+  border: 0;
+  outline: 0;
+}
+
+.portalWrapper--loginWrapper :global(.vtex-input-prefix__group) {
+  border: 0;
+  border-bottom: 1px solid var(--darkgrey--dark);
+}
+
+.portalWrapper--loginWrapper :global(.vtex-login-2-x-formFooter) {
+  border: 0;
+}
+
+.accountOptions .button {
+  padding: 0;
+  color: var(--darkgrey--dark);
+  height: 2rem;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+}
+
+.accountOptions :global(.vtex-button){
+  background: var(--primary--dark);
+}
+
+.content--emailVerification .accessCodeOptionBtn :global(.vtex-button) {
+  background-color: var(--primary--dark);
+  color: #fff;
+  font-size: var(--cta--medium);
+  border-radius: 4px;
+  border: 0;
+  outline: 0;
+  height: 56px;
+}
+
+.content--emailAndPassword .accessCodeOptionBtn :global(.vtex-button) {
+  background-color: var(--primary--dark);
+  font-size: var(--cta--medium);
+  border-radius: 4px;
+  color: #fff;
+  border: 0;
+  outline: 0;
+  height: 48px;
+}
+
+.content--emailAndPassword :global(.vtex-input-prefix__group) {
+  border: 0;
+  border-bottom: 1px solid var(--darkgrey--dark);
+}
+
+.content--emailAndPassword .formFooter {
+  border: 0;
+}
+
+.content--emailVerification .emailPasswordOptionBtn :global(.vtex-button__label),
+.content--emailVerification .accessCodeOptionBtn :global(.vtex-button__label) {
+  padding: 0;
+}
+
+.content--emailVerification .emailPasswordOptionBtn :global(.vtex-button) {
+  background-color: var(--primary--dark);
+  font-size: var(--cta--medium);
+  color: var(--white);
+  border: 0;
+  outline: 0;
+  border-radius: 4px;
+  height: 48px;
+}
+
+.content--emailVerification .accessCodeOptionBtn :global(.vtex-button) {
+  background-color: var(--primary--dark);
+  font-size: var(--cta--medium);
+  color: var(--white);
+  border: 0;
+  outline: 0;
+  border-radius: 4px;
+  height: 48px;
+}
+
+.content--emailVerification :global(.vtex-input-prefix__group) {
+  border: 0;
+  border-bottom: 1px solid var(--darkgrey--dark);
+}
+
+.content--emailVerification .formFooter {
+  border: 0;
+}
+
+.content--codeConfirmation .accessCodeOptionBtn :global(.vtex-button) {
+  background-color: var(--primary--dark);
+  color: #fff;
+  border: 0;
+  outline: 0;
+  border-radius: 4px;
+  height: 56px;
+}
+
+.content--codeConfirmation :global(.vtex-input-prefix__group) {
+  border: 0;
+  border-bottom: 1px solid var(--darkgrey--dark);
+}
+
+.content--codeConfirmation .formFooter {
+  border: 0;
+}
+
+.profile {
+  color: var(--darkgrey--dark);
+  text-transform: capitalize;
+}
+
+.sendButton :global(.vtex-button) {
+  background: var(--primary--dark);
+  border-radius: 4px;
+  border: none;
+}
+
+@media (max-width: 64rem) {
+  .container :global(.vtex-button)::before {
+    display: none;
+  }
+
+  .profile {
+    display: block;
+  }
+
+  .label {
+    font-size: 14px;
+    line-height: 32px;
+    font-weight: 500;
+  }
+
+  .contentForm {
+    margin-bottom: 2rem;
+  }
+}
+
+.buttonLink :global(.vtex-button) {
+  min-height: 2rem;
+}
+
+.container * {
+  border: none;
+  outline: none;
+}
+
+.container :global(.vtex-button__label) {
+  padding: 0 !important;
+}
+
+.container {
+  button {
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+    padding-right: 4px;
+    height: 48px;
+
+    &:hover {
+      background: var(--lightgrey--lighter);
+    }
+  }
+}
+
+.label {
+  text-transform: capitalize;
+  font-size: var(--paragraph--medium--regular);
+  color: var(--primary--dark);
+  display: block;
+  font-weight: normal;
+  line-height: 20px;
+  text-align: center;
+  padding-left: 0;
+}

@@ -1,0 +1,115 @@
+{
+  "responsive-layout.mobile": {
+    "children": [
+      "flex-layout.row#imageList--mobile",
+      "flex-layout.row#imageList--doubleBanner",
+      "flex-layout.row#tipbar",
+      "flex-layout.row#firstShelfContainer",
+      "flex-layout.row#popular-picks-wrapper",
+      "flex-layout.row#secondShelfContainer",
+      "flex-layout.row#imageBannersMosaicoMobile",
+      "flex-layout.row#popular-picks-wrapper.banner-invertido",
+      "flex-layout.row#newsletter"
+    ]
+  },
+  "flex-layout.row#imageBannersMosaicoMobile": {
+    "title": "Banners Mosaico - Mobile",
+    "props": {
+      "blockClass": ["imageBannersMosaicoMobile"]
+    },
+    "children": ["flex-layout.col#imageBannersMosaicoMobile"]
+  },
+  "flex-layout.col#imageBannersMosaicoMobile": {
+    "props": {
+      "blockClass": "imageBannersMosaicoMobile"
+    },
+    "children": [
+      "flex-layout.row#largeBannerMobile",
+      "flex-layout.row#doubleSmallBannersMobile"
+    ]
+  },
+  "flex-layout.row#largeBannerMobile": {
+    "props": {
+      "blockClass": "largeBannerMobile"
+    },
+    "children": ["image#bannerFirstMobile"]
+  },
+  "flex-layout.row#doubleSmallBannersMobile": {
+    "props": {
+      "blockClass": "smallBannersMobile"
+    },
+    "children": ["image#bannerSecondMobile", "image#bannerThirdMobile"]
+  },
+
+  "image#bannerFirstMobile": {
+    "props": {
+      "width": "100%",
+      "src": "assets/placeholders/largeBannerMobile.jpg",
+      "blockClass": "bannerFirst"
+    }
+  },
+  "image#bannerSecondMobile": {
+    "props": {
+      "width": "100%",
+      "src": "assets/placeholders/smallBannerOneMobile.jpg",
+      "blockClass": "bannerSecond"
+    }
+  },
+  "image#bannerThirdMobile": {
+    "props": {
+      "width": "100%",
+      "src": "assets/placeholders/smallBannerTwoMobile.jpg",
+      "blockClass": "bannerThird"
+    }
+  },
+  "flex-layout.row#imageList--doubleBanner": {
+    "title": "Dois Banners - Mobile",
+    "props": {
+      "blockClass": ["doubleBanner", "doubleBanners-mobile"],
+      "fullWidth": true
+    },
+    "children": ["list-context.image-list#doubleBanners"]
+  },
+  "list-context.image-list#doubleBanners": {
+    "children": ["slider-layout#demo-images"],
+    "props": {
+      "height": 528,
+      "images": [
+        {
+          "width": "100%",
+          "image": "assets/placeholders/left-banner-desktop-mobile.jpg",
+          "description": "something something"
+        },
+        {
+          "width": "100%",
+          "image": "assets/placeholders/left-banner-desktop-mobile.jpg",
+          "description": "something something"
+        }
+      ]
+    }
+  },
+
+  "flex-layout.row#popular-picks--mobile": {
+    "children": ["flex-layout.col#popular-picks--mobile"]
+  },
+
+  "flex-layout.col#popular-picks--mobile": {
+    "children": [
+      "flex-layout.row#popular-picks-head",
+      "flex-layout.row#popular-picks"
+    ]
+  },
+  "flex-layout.row#shelfMobile": {
+    "children": ["list-context.product-list#productSliderMobile"],
+    "props": {
+      "blockClass": "shelfComplete"
+    }
+  },
+  "list-context.product-list#productSliderMobile": {
+    "blocks": ["product-summary.shelf#normal"],
+    "children": ["slider-layout#productsMobile"],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC"
+    }
+  }
+}

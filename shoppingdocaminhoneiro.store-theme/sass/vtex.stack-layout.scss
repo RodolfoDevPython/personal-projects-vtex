@@ -1,0 +1,13 @@
+@import './media-queries';
+
+.stackItem--savingPercentage {
+  left: 10px;
+  bottom: initial;
+  top: 8px !important;
+  position: absolute;
+
+  @include mobile {
+    left: 0;
+    top: 0 !important;
+  }
+}

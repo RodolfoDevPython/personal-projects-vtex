@@ -1,0 +1,301 @@
+@import './transition';
+@import './media-queries';
+
+.sellerMasterContainer {
+  max-width: 1440px;
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.sellerHead {
+  border-radius: 0.25rem;
+  background: var(--lightgrey--light);
+
+  &:hover {
+    background: var(--lightgrey--light);
+  }
+}
+
+.sellerHeadText {
+  font-size: var(--paragraph--medium--medium);
+  padding: 0.875rem 0 0.875rem 1.5rem;
+  text-align: left;
+  font-weight: 500;
+}
+
+.sellerRow {
+  padding: 1rem 0;
+  border: none;
+  border-bottom: 1px solid #dee7ef;
+  font-size: var(--paragraph--medium--regular);
+}
+
+.sellerList,
+.sellerHead {
+  margin-left: 0;
+  margin-right: 0;
+  flex: 100%;
+}
+
+.sellerPrice {
+  text-align: left;
+}
+
+.sellerPriceShippingText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+
+.sellerBuyContainer :global(.vtex-button) {
+  height: 48px;
+  border-radius: 4px;
+  font-size: var(--paragraph--large--medium);
+  background: var(--primary--default);
+  border: none;
+  outline: none;
+  font-weight: 700;
+
+  :global(.vtex-button__label) {
+    &::before {
+      content: '';
+      width: 23px;
+      height: 25px;
+      display: inline-block;
+      background: url('assets/icons/cartIconB2B.svg');
+      background-size: 100%;
+      background-repeat: no-repeat;
+      margin-right: 0.75rem;
+    }
+  }
+}
+
+.sellerBuyContainer {
+  @include transitionHover;
+}
+
+.simulateShipping,
+.sellerMasterContainer
+  :global(.vtex-store-components-3-x-productNameContainer) {
+  flex: 50%;
+}
+
+.sellerMasterContainer
+  :global(.vtex-store-components-3-x-productNameContainer) {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.sellerName {
+  text-align: left;
+  font-weight: normal;
+}
+
+@include desktop {
+  .sellerHeadText--sellerBuyContainer {
+    padding-left: 0;
+  }
+
+  .sellerHeadCell--sellerPrice,
+  .sellerPrice {
+    min-width: 10%;
+    width: 10% !important;
+  }
+
+  .sellerHeadCell--sellerName,
+  .sellerName {
+    min-width: 15%;
+    width: 15% !important;
+  }
+
+  .sellerHeadCell--sellerBuyContainer,
+  .sellerBuyContainer {
+    min-width: 26%;
+    width: 26% !important;
+    padding-left: 0;
+  }
+}
+
+// simulate shipping
+
+.simulateShipping {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--lightgrey--light);
+  padding: 1rem 2rem;
+  border-radius: 0.25rem;
+  margin-top: 0;
+
+  @include mobile {
+    padding: 1rem;
+  }
+
+  :global(.vtex-input__label) {
+    font-size: 0;
+
+    &::before {
+      content: 'Entrega';
+      font-weight: 700;
+      color: var(--darkgrey--dark);
+      font-size: var(--paragraph--medium--semibold);
+    }
+  }
+
+  :global(.vtex-input-prefix__group) {
+    height: 48px;
+    border: 1px solid var(--lightgrey--medium);
+    border-radius: 0.25rem;
+  }
+
+  :global(.vtex__icon-external-link) {
+    display: none;
+  }
+
+  // :global(.c-link) {
+  //   color: red;
+  // }
+
+  :global(.vtex-button) {
+    margin: 0;
+    border: none;
+    height: 48px;
+    background: var(--primary--default);
+    margin-top: 16px;
+    outline: none;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: var(--paragraph--large--bold);
+
+    @include transitionHover;
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  :global(.vtex-address-form__postalCode) :not(:global(.vtex-fake)):last-child {
+    display: flex;
+    justify-content: center;
+
+    :not(:global(.vtex-fake)):first-child {
+      font-size: var(--link--default-small);
+      line-height: var(--link--default-large);
+      color: var(--darkgrey--medium);
+      font-weight: 500;
+
+      :focus {
+        text-decoration: none;
+      }
+
+      :not(:global(.vtex-fake)):first-child {
+        display: none;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .sellerMasterContainer
+    :global(.vtex-store-components-3-x-productNameContainer) {
+    text-align: left;
+  }
+
+  .sellerRow {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1rem;
+    border: 1px solid var(--lightgrey--light);
+    border-radius: 0.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .sellerBuyContainer {
+    grid-column: 1 / -1;
+    padding: 0;
+
+    & :global(.vtex-button) {
+      height: 56px;
+    }
+  }
+
+  .sellerName,
+  .sellerPrice,
+  .sellerShipping,
+  .sellerPriceShipping {
+    padding: 0;
+    margin-bottom: 0.75rem;
+    text-align: left;
+    background-color: var(--white);
+
+    &::before {
+      font-size: var(--paragraph--medium--medium);
+      font-weight: 600;
+      color: var(--darkgrey-dark);
+      display: block;
+      background: var(--lightgrey--light);
+      padding: 0.5rem;
+      text-align: left;
+      margin-bottom: 0.75rem;
+    }
+
+    @include mobile {
+      margin-left: 5px;
+    }
+  }
+
+  .sellerName {
+    &::before {
+      content: 'Vendedor';
+      border-top-left-radius: 0.25rem;
+      border-bottom-left-radius: 0.25rem;
+      @include mobile {
+        margin-left: -9px;
+      }
+    }
+  }
+  .sellerPrice {
+    &::before {
+      content: 'Preço';
+      border-top-right-radius: 0.25rem;
+      border-bottom-right-radius: 0.25rem;
+
+      @include mobile {
+        padding-left: 0;
+      }
+    }
+  }
+  .sellerShipping {
+    &::before {
+      content: 'Entrega';
+      border-top-left-radius: 0.25rem;
+      border-bottom-left-radius: 0.25rem;
+      @include mobile {
+        margin-left: -9px;
+      }
+    }
+  }
+  .sellerPriceShipping {
+    &::before {
+      content: 'Preço com Entrega';
+      border-top-right-radius: 0.25rem;
+      border-bottom-right-radius: 0.25rem;
+      white-space: nowrap;
+      @include mobile {
+        padding-left: 0;
+      }
+    }
+  }
+
+  // simulate shipping
+  .simulateShipping {
+    margin: 0 0 2rem;
+  }
+}

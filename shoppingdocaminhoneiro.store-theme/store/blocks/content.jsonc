@@ -1,0 +1,42 @@
+{
+  "store.custom#content": {
+    "blocks": [
+      "responsive-layout.mobile#content",
+      "responsive-layout.desktop#content"
+    ]
+  },
+  "responsive-layout.mobile#content": {
+    "children": ["flex-layout.row#mobile-wrapper"]
+  },
+  "responsive-layout.desktop#content": {
+    "children": ["flex-layout.row#content"]
+  },
+  "flex-layout.row#content": {
+    "children": ["rich-text#content-title", "rich-text#content"],
+    "props": {
+      "blockClass": "customContent",
+      "colSizing": "auto"
+    }
+  },
+  "rich-text#content-title": {
+    "props": {
+      "text": "Política de Privacidade",
+      "blockClass": "customContent__textTitle"
+    }
+  },
+  "rich-text#content": {
+    "props": {
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan malesuada sapien, eget interdum leo dictum imperdiet. Sed viverra, orci dapibus pulvinar pellentesque, lectus leo faucibus erat, vel rhoncus massa purus in velit. Mauris ut sollicitudin dui. Fusce mattis leo lectus, mattis mattis sem tincidunt ut. Proin aliquet malesuada neque, quis lacinia magna. Duis at ipsum tincidunt, tincidunt ipsum euismod, ullamcorper nibh. Nunc semper tincidunt felis, in commodo enim ultricies nec. Sed interdum ex purus, imperdiet fringilla tortor venenatis non. Donec eleifend odio at elementum sodales.<br/><br/><br/>Section Title<br/><br/>Sed ut dictum lorem, ut blandit enim. Nunc dignissim vestibulum hendrerit. Proin ex elit, pretium non lorem non, feugiat pretium enim. Curabitur tempus quis felis eget condimentum. Aliquam erat volutpat. Vivamus consectetur convallis lorem eu lobortis.<br/><br/><br/>Aliquam eget aliquam risus. Aenean quis facilisis lectus, sed efficitur neque. Vestibulum gravida malesuada quam sit amet mattis. Etiam ut tortor vel felis blandit porta at ut massa. Nunc rutrum vulputate semper. Sed id malesuada ipsum. Nulla facilisi. Proin pharetra libero quis ornare tempus. Mauris purus mi, tempus eget eros ac, ullamcorper venenatis ex. Phasellus a sem sed lacus accumsan blandit. Sed egestas commodo sem, a dictum orci. Sed mollis enim et nisl interdum, quis vulputate odio blandit. Praesent tristique turpis nec libero faucibus, quis ullamcorper enim rutrum. Vestibulum convallis ac ante eget feugiat. Morbi ornare convallis velit, condimentum molestie augue tempor id.<br/><br/>Morbi rutrum varius purus, molestie finibus turpis dictum a. Ut a rutrum sem. Nullam laoreet dui ut metus mollis, commodo commodo sapien posuere. Sed pulvinar hendrerit tellus, vel tempor turpis pellentesque vel. Donec felis ante, rhoncus quis luctus quis, facilisis vulputate lorem. Praesent molestie suscipit libero vel cursus. Maecenas mattis sem a tristique semper. Pellentesque eu dictum sem. Phasellus vehicula suscipit dignissim. Quisque viverra lorem in turpis euismod, eget scelerisque odio semper. Vestibulum nec turpis auctor mi sodales semper.",
+      "blockClass": "customContent__text"
+    }
+  },
+  "flex-layout.row#mobile-wrapper": {
+    "children": ["flex-layout.col#mobile-content"],
+    "props": {
+      "blockClass": "customContent--mobile"
+    }
+  },
+  "flex-layout.col#mobile-content": {
+    "children": ["rich-text#content-title", "rich-text#content"]
+  }
+}

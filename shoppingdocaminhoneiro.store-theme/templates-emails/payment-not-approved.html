@@ -1,0 +1,333 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- URL: #/templates/vtexcommerce-payment-denied -->
+  </head>
+
+  <body>
+    <table width="640" border="0" cellpadding="0" cellspacing="0" align="center" style="border: none; font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;">
+      <tr>
+        <td align="center">
+          <table width="640" border="0" cellpadding="0" cellspacing="0" align="center" style="border: none; font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;">
+            <tr>
+              <td bgcolor="#fff" style="padding: 24px 48px 14px;">
+                <a href="http://loja.pagbem.com.br/" target="_blank">
+                  <img width="133" src="https://shoppingdocaminhoneiro.myvtex.com/arquivos/logo-pagbem-email.png" alt="" />
+                </a>
+              </td>
+
+              <td bgcolor="#fff" style="padding: 24px 48px 0; text-align: right; color: #25282a; font-weight: normal; font-size: 16px;">Pedido nº <b style="color: #25282a;">{{orderId}}</b></td>
+            </tr>
+
+            <tr>
+              <td bgcolor="#009444" colspan="2" style="padding: 15px 0;"></td>
+            </tr>
+
+            <tr>
+              <td bgcolor="#009444" colspan="2" style="text-align: center;">
+                <font style="display: block; font-weight: bold; font-size: 36px; line-height: 48px; text-align: center; letter-spacing: 0.1px; color: #ffffff; margin: 0; text-align: center;">
+                  Pagamento Recusado
+                </font>
+                <br />
+
+                <font style="display: block; font-weight: normal; font-size: 16px; line-height: 24px; text-align: center; color: #ffffff; margin: 4px 0; text-align: center;">
+                  Tente uma nova forma de pagamento ou entre em contato<br />
+                  com a administradora do seu cartão.
+                </font>
+              </td>
+            </tr>
+
+            <tr>
+              <td bgcolor="#009444" colspan="2" style="padding: 20px 48px 0px;">
+                <hr style="height: 0.1px; width: 100%; background-color: #fff; opacity: 0.4; margin: 0;" />
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+
+      <tr bgcolor="#006B39">
+        <td style="padding: 24px 48px;">
+          <table width="545">
+            <tr>
+              <td>
+                <table>
+                  <tr style="filter: brightness(2);">
+                    <td>
+                      <img width="24" height="24" src="https://shoppingdocaminhoneiro.myvtex.com/arquivos/check-circle.png" />
+                    </td>
+
+                    <td>
+                      <font style="margin: 0; padding-left: 17px; font-weight: bold; font-size: 14px; color: #fff;"> Pedido</font>
+                      <font style="margin: 0; padding-left: 17px; font-weight: bold; font-size: 14px; color: #fff;"> realizado</font>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+
+              <td>
+                <table>
+                  <tr>
+                    <td style="padding: 0 20px;">
+                      <img width="27" height="24" src="https://shoppingdocaminhoneiro.myvtex.com/arquivos/exclamation-triangle.png" />
+                    </td>
+
+                    <td>
+                      <font style="margin: 0; font-weight: 700; font-size: 14px; color: #ffffff;"> Pagamento</font>
+                      <font style="margin: 0; font-weight: 700; font-size: 14px; color: #ffffff;"> recusado</font>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+              <td>
+                <table>
+                  <tr style="opacity: 0.4;">
+                    <td style="padding: 0 20px;">
+                      <img width="17" height="5" src="https://shoppingdocaminhoneiro.myvtex.com/arquivos/ellipsis-h.png" />
+                    </td>
+
+                    <td>
+                      <font style="margin: 0; font-weight: 700; font-size: 14px; color: #ffffff;"> Pedido</font>
+                      <font style="margin: 0; font-weight: 700; font-size: 14px; color: #ffffff;"> faturado</font>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+              <td>
+                <table>
+                  <tr style="opacity: 0.4;">
+                    <td style="padding: 0 20px;">
+                      <img width="17" height="5" src="https://shoppingdocaminhoneiro.myvtex.com/arquivos/ellipsis-h.png" />
+                    </td>
+
+                    <td>
+                      <font style="margin: 0; font-weight: 700; font-size: 14px; color: #ffffff;"> Pedido</font>
+                      <font style="margin: 0; font-weight: 700; font-size: 14px; color: #ffffff;"> enviado</font>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+
+      <tr>
+        <td style="padding: 32px 48px 16px;">
+          <font style="font-size: 18px; color: 222222; font-weight: normal; margin: 0 0 7px; display: block;"> Olá, <b>{{clientProfileData.firstName}}.</b> </font>
+          <font style="font-weight: normal; font-size: 12px; color: #11111180; margin: 0; display: block;">
+            Poxa, infelizmente o pagamento do seu pedido foi recusado. Não sabemos o motivo, mas você pode tentar novamente. Confira algumas coisas que podem ocasionar problemas no pagamento:
+          </font>
+
+          <ul style="padding: 0 16px; margin-bottom: 0;">
+            <li style="color: #009444; font-size: 12px; font-weight: bold; line-height: 24px; text-align: left;">
+              Os dados no pagamento devem ser todos do titular do cartão
+            </li>
+            <li style="color: #009444; font-size: 12px; font-weight: bold; line-height: 24px; text-align: left;">
+              Compra com valor além do limite do cartão.
+            </li>
+            <li style="color: #009444; font-size: 12px; font-weight: bold; line-height: 24px; text-align: left;">
+              Compra de alto valor fora do normal.
+            </li>
+          </ul>
+        </td>
+      </tr>
+
+      <tr>
+        <td style="padding: 32px 48px 16px;">
+          <table style="width: 100%;">
+            <thead>
+              <tr>
+                <th style="font-weight: normal; font-size: 12px; color: 222222; padding: 0; text-align: left;">
+                  Produto
+                </th>
+                <th style="font-weight: normal; font-size: 12px; color: 222222; padding: 0; text-align: right; padding-right: 23px;">
+                  Qtde.
+                </th>
+              </tr>
+            </thead>
+
+            <tbody>
+              {{#each items}}
+              <tr>
+                <td colspan="2" style="padding: 10px 0 0;">
+                  <table style="border: 1px solid #eeeeee; padding: 16px; width: 100%; border-radius: 4px;">
+                    <tr>
+                      <td>
+                        <div style="display: flex; align-items: center;">
+                          <img style="height: 48px; width: 48px; margin-right: 16px;" src="{{imageUrl}}" />
+                          <div>
+                            <font style="display: block; font-size: 12px; color: 111111; font-weight: 400; margin: 0 0 4px;"> {{name}}</font>
+                            <font style="display: block; font-size: 12px; color: #11111180; font-weight: 400; margin: 0 0 4px;">
+                              Entrega em até <span style="color: #009444; font-weight: 700;">{{replace ../shippingData.logisticsInfo.0.slas.0.transitTime "bd" " dias úteis"}}</span>
+                            </font>
+                          </div>
+                        </div>
+                      </td>
+                      <td style="font-size: 14px; color: #111111;">
+                        {{quantity}}
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              {{/each}}
+            </tbody>
+          </table>
+        </td>
+      </tr>
+
+      <tr>
+        <td style="padding: 32px 48px 16px;">
+          <table style="width: 100%;">
+            <tr style="vertical-align: top;">
+              <td>
+                <a
+                  href="http://loja.pagbem.com.br/account/orders"
+                  target="_blank"
+                  style="font-size: 16px; text-align: center; color: rgb(255, 255, 255); cursor: pointer; background: #009444; display: block; padding: 19px; text-decoration: none; border-radius: 7px;"
+                >
+                  Acompanhar meu pedido
+                </a>
+              </td>
+
+              <td style="padding: 0 7px;"></td>
+
+              <td>
+                <table style="border: 1px solid #eeeeee; padding: 12px 24px; width: 100%; border-radius: 4px;">
+                  {{#each totals}} {{#if value}}
+                  <tr style="vertical-align: top;">
+                    <td style="font-weight: normal; font-size: 14px; color: #11111180; padding: 0 0 10px;">
+                      {{#eq id "Items"}}Subtotal: {{/eq}} {{#eq id "Shipping"}}Frete: {{/eq}} {{#eq id "Discounts"}}Desconto: {{/eq}} {{#eq id "Tax"}}Taxa: {{/eq}}
+                    </td>
+
+                    <td style="font-size: 14px; text-align: right; color: #11111180;">
+                      R$ {{formatCurrency value}}
+                    </td>
+                  </tr>
+                  {{/if}} {{/each}}
+
+                  <tr>
+                    <td style="font-weight: normal; font-size: 14px; color: #222222; padding: 0 0 10px;">
+                      Total
+                    </td>
+                    <td style="font-size: 14px; text-align: right; color: #009444;"><b>R$ {{formatCurrency value}}</b></td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+
+      <tr>
+        <td style="padding: 15px 48px;">
+          <table style="width: 100%;">
+            <tr>
+              <td style="border: 1px solid #eeeeee; padding: 18px 24px; width: 100%; border-radius: 4px;">
+                <font style="display: block; font-size: 14px; font-weight: bold; color: #222222; padding: 0 0 11px;"> Endereço de entrega</font>
+
+                <font style="font-size: 12px; color: #616161; padding: 0 0 3px; display: block;">
+                  {{shippingData.address.street}} - {{shippingData.address.number}} - {{#if shippingData.address.complement}} - ({{shippingData.address.complement}}){{/if}} - {{shippingData.address.neighborhood}}
+                </font>
+                <font style="font-size: 12px; color: #616161; padding: 0 0 3px; display: block;"> {{shippingData.address.neighborhood}} - {{shippingData.address.city}} - {{shippingData.address.state}}</font>
+                <font style="font-size: 12px; color: #616161; padding: 0 0 3px; display: block;"> {{shippingData.address.postalCode}}</font>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+
+      <tr>
+        <td style="padding: 0 48px;">
+          <table style="width: 100%;">
+            <tr>
+              <td style="border: 1px solid #eeeeee; padding: 18px 24px; width: 100%; border-radius: 4px;">
+                <font style="display: block; font-size: 14px; font-weight: bold; color: #222222; padding: 0 0 11px;"> Forma de pagamento</font>
+
+                <table style="width: 100%;">
+                  <tr style="vertical-align: top;">
+                    <td style="width: 38px;">
+                      {{#each paymentData.transactions.0.payments}} {{#eq paymentSystemName 'Boleto Bancário'}}
+                      <img src="https://balcaorural.vteximg.com.br/arquivos/email-icon-boleto.png?v=1" alt="" />
+                      {{else}}
+                      <img src="https://balcaorural.vteximg.com.br/arquivos/email-icon-card.png?v=1" alt="" />
+                      {{/eq}} {{/each}}
+                    </td>
+
+                    <td style="width: 50%;">
+                      {{#each paymentData.transactions.0.payments}}
+                      <font style="font-size: 12px; color: #222222; padding: 0 0 5px; display: block;">
+                        {{paymentSystemName}}
+                      </font>
+
+                      <font style="font-size: 12px; color: #616161; padding: 0 0 5px; display: block;">
+                        R$ {{formatCurrency value}}
+                      </font>
+                      {{/each}}
+                    </td>
+
+                    <td align="right">
+                      {{#each paymentData.transactions.0.payments}} {{#eq paymentSystemName 'Boleto Bancário'}}
+                      <a
+                        href="{{replace url '{Installment}' installments}}"
+                        target="_blank"
+                        style="font-size: 16px; text-align: center; color: rgb(255, 255, 255); cursor: pointer; background: #074b79; display: block; padding: 19px; text-decoration: none; border-radius: 4px;"
+                      >
+                        Imprimir boleto
+                      </a>
+                      {{/eq}} {{/each}}
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+
+      <tr>
+        <td style="padding: 30px 48px;">
+          {{#each paymentData.transactions.0.payments}} {{#eq paymentSystemName 'Boleto Bancário'}}
+          <font style="font-size: 12px; line-height: 18px; color: #222222;">
+            <b style="color: #009444;">Atenção</b>: Após o vencimento do boleto, o mesmo não poderá ser pago e o seu pedido será cancelado automaticamente. Caso queira efetuar a compra após o vencimento, você precisará realizar um novo
+            pedido. O prazo de entrega será considerado somente após a confirmação do pagamento ou imediato em caso de bônus.
+          </font>
+          {{else}}
+          <font style="font-size: 12px; line-height: 18px; color: #222222;"> <b style="color: #009444;">Atenção</b>: O prazo de entrega será considerado somente após a confirmação do pagamento ou imediato em caso de bônus. </font>
+          {{/eq}} {{/each}}
+
+          <font style="font-size: 12px; color: #222222; display: block; padding: 20px 0 5px;">Atenciosamente,</font>
+          <font style="font-size: 12px; font-weight: bold; display: block; padding: 0 0 30px;">Telecall</font>
+        </td>
+      </tr>
+
+      <tr bgcolor="#F0F0F0">
+        <td align="center">
+          <table width="640" border="0" cellpadding="0" cellspacing="0" align="center" style="border: none; font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;">
+            <tr>
+              <td bgcolor="#F0F0F0" style="font-size: 18px; font-weight: 700; padding: 20px 48px; color: #999999;">
+                0800 724 2360
+              </td>
+
+              <td bgcolor="#F0F0F0" style="text-align: end; padding-right: 48px;">
+                <a href="https://www.instagram.com/viajebemcompagbem/" target="_blank" style="text-decoration: none;">
+                  <img src="https://shoppingdocaminhoneiro.myvtex.com//arquivos/instagram_icon.png" style="margin-right: 7px;" alt="" />
+                </a>
+                <a href="https://www.facebook.com/viajebemcomPagBem/" target="_blank" style="text-decoration: none;">
+                  <img src="https://shoppingdocaminhoneiro.myvtex.com//arquivos/facebook_icon.png" style="margin-right: 7px;" alt="" />
+                </a>
+                <a href="https://www.linkedin.com/company/pagbem/mycompany/" target="_blank" style="text-decoration: none;">
+                  <img src="https://shoppingdocaminhoneiro.myvtex.com//arquivos/linkedin_icon.png" style="margin-right: 7px;" alt="" />
+                </a>
+                <a href="https://www.youtube.com/channel/UCP4E9-AOVIPp1r50qjuyL9g" target="_blank" style="text-decoration: none;">
+                  <img src="https://shoppingdocaminhoneiro.myvtex.com//arquivos/youtube_icon.png" alt="" />
+                </a>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

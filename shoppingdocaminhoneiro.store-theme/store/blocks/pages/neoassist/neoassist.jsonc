@@ -1,0 +1,30 @@
+{
+  "store.custom#neoassist": {
+    "blocks": [
+      "responsive-layout.desktop#neoassist",
+      "responsive-layout.mobile#neoassist"
+    ]
+  },
+  "responsive-layout.desktop#neoassist": {
+    "children": ["flex-layout.row#container-neoassist-desktop"]
+  },
+  "responsive-layout.mobile#neoassist": {
+    "children": ["flex-layout.row#container-neoassist-mobile"]
+  },
+  "flex-layout.row#container-neoassist-desktop": {
+    "children": ["iframe#neoassist.desktop"],
+    "props": {
+      "marginTop": 3,
+      "marginBottom": 3,
+      "fullWidth": true
+    }
+  },
+  "flex-layout.row#container-neoassist-mobile": {
+    "children": ["iframe#neoassist.mobile"],
+    "props": {
+      "marginTop": 3,
+      "marginBottom": 3,
+      "fullWidth": true
+    }
+  }
+}

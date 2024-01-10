@@ -1,0 +1,20 @@
+@import 'media-queries';
+
+.lowStockText,
+.lowStockHighlight,
+.highStockText {
+  font-size: var(--paragraph--small--medium);
+  color: var(--system--alert-default);
+  line-height: 1rem;
+  font-weight: 600;
+}
+
+.container--count-availability {
+  padding: 0;
+
+  @include mobile {
+    display: inherit;
+    padding: 1rem 0;
+    text-align: center;
+  }
+}

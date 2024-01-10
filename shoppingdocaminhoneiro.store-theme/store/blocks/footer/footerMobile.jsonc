@@ -1,0 +1,187 @@
+{
+  "footer-layout.mobile": {
+    "children": [
+      "flex-layout.row#upperFooterRow",
+      "flex-layout.row#lowerFooterRow"
+    ]
+  },
+  "flex-layout.row#upperFooterRow": {
+    "children": ["flex-layout.col#upperFooterCol"]
+  },
+  "flex-layout.col#upperFooterCol": {
+    "children": [
+      "flex-layout.row#footerMenu",
+      "flex-layout.row#attendance",
+      "flex-layout.row#payment",
+      "flex-layout.row#socials"
+    ]
+  },
+  "flex-layout.row#footerMenu": {
+    "children": ["flex-layout.row#footerMenu1", "flex-layout.row#footerMenu2"],
+    "props": {
+      "blockClass": "footerMenu"
+    }
+  },
+  "flex-layout.row#footerMenu1": {
+    "children": [
+      "rich-text#footerTitleInstitutional",
+      "vtex.menu@2.x:menu#institutional"
+    ],
+    "props": {
+      "blockClass": "footerMenuRow2",
+      "title": "Menu Institucional"
+    }
+  },
+  "flex-layout.row#footerMenu2": {
+    "children": [
+      "rich-text#footerTitleCategories",
+      "vtex.menu@2.x:menu#categoriesMob"
+    ],
+    "props": {
+      "blockClass": "footerMenuRow1"
+    }
+  },
+  "rich-text#footerTitleCategories": {
+    "props": {
+      "text": "### Categorias",
+      "blockClass": "footerTitle"
+    }
+  },
+  "rich-text#footerTitleInstitutional": {
+    "props": {
+      "text": "### Institucional",
+      "blockClass": "footerTitle"
+    }
+  },
+  "flex-layout.row#attendance": {
+    "children": ["link#phone", "link#message"],
+    "props": {
+      "blockClass": "attendance"
+    }
+  },
+  "link#phone": {
+    "props": {
+      "label": "Contato",
+      "blockClass": "attendancePhone",
+      "href": "tel:+123456789"
+    }
+  },
+  "link#message": {
+    "props": {
+      "label": "Envie uma mensagem",
+      "blockClass": "attendanceMessage",
+      "href": "mailto:mail@to.com"
+    }
+  },
+  "flex-layout.row#socials": {
+    "children": ["social-networks"],
+    "props": {
+      "preserveLayoutOnMobile": true,
+      "preventHorizontalStretch": true,
+      "blockClass": "socials"
+    }
+  },
+  "social-networks": {
+    "props": {
+      "socialNetworks": [
+        {
+          "url": "https://twitter.com/foo",
+          "name": "Instagram"
+        },
+        {
+          "url": "https://facebook.com/foo",
+          "name": "Facebook"
+        },
+        {
+          "url": "https://twitter.com/foo",
+          "name": "Twitter"
+        },
+        {
+          "url": "https://twitter.com/foo",
+          "name": "Youtube"
+        }
+      ]
+    }
+  },
+  "flex-layout.row#payment": {
+    "children": ["image#payments"],
+    "props": {
+      "blockClass": "paymentsRow",
+      "preventHorizontalStretch": true
+    }
+  },
+  "image#payments": {
+    "props": {
+      "src": "assets/placeholders/paymentMethods.png",
+      "width": 202,
+      "height": 24
+    }
+  },
+  "flex-layout.row#lowerFooterRow": {
+    "children": ["flex-layout.col#lowerFooterCol"],
+    "props": {
+      "blockClass": "lowerFooter"
+    }
+  },
+  "flex-layout.col#lowerFooterCol": {
+    "children": [
+      "rich-text#rightReserved",
+      "rich-text#judicialText",
+      "flex-layout.row#madeBy"
+    ]
+  },
+  "rich-text#rightReserved": {
+    "props": {
+      "text": "2021 @ Todos os direitos reservados",
+      "blockClass": "rightReserved",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER"
+    }
+  },
+  "rich-text#judicialText": {
+    "props": {
+      "text": "Eventuais promoções, descontos e prazos de pagamentos expostos aqui sao válidos apenas para compras via internet. As fotos, textos e layout aqui veiculados são de propriedade da Loja. É proibida a utilização total ou parcial sem prévia autorização. ",
+      "blockClass": "judicialText",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER"
+    }
+  },
+  "flex-layout.row#madeBy": {
+    "children": [
+      "rich-text#madeWith",
+      "image#vtex",
+      "rich-text#buildBy",
+      "image#b8one"
+    ],
+    "props": {
+      "preserveLayoutOnMobile": true,
+      "preventVerticalStretch": true,
+      "preventHorizontalStretch": true,
+      "blockClass": "madeByRow"
+    }
+  },
+  "rich-text#madeWith": {
+    "props": {
+      "text": "Made with",
+      "blockClass": "madeBuild"
+    }
+  },
+  "rich-text#buildBy": {
+    "props": {
+      "text": "Build by",
+      "blockClass": "madeBuild"
+    }
+  },
+  "image#vtex": {
+    "props": {
+      "src": "assets/icons/vtexLogo.svg",
+      "blockClass": "vtex"
+    }
+  },
+  "image#b8one": {
+    "props": {
+      "src": "assets/icons/b8oneLogoBlack.svg",
+      "blockClass": "build"
+    }
+  }
+}

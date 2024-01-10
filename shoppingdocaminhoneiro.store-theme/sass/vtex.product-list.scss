@@ -1,0 +1,53 @@
+@import './_transition.scss';
+
+.removeButtonContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.productName--minicart {
+  color: var(--darkgrey-dark);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+.productImage {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.productImageAnchor {
+  display: block;
+}
+
+.productImageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.productBrandName {
+  color: var(--primary-default);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 20px;
+  text-transform: capitalize;
+}
+
+.removeButton {
+  align-items: flex-end;
+  display: flex;
+}
+
+.removeButton .deleteIcon {
+  overflow: visible;
+}
+
+.deleteIcon{
+  height: 1.125rem;
+  @include transitionHover;
+
+}

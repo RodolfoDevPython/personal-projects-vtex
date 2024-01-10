@@ -1,0 +1,52 @@
+{
+  "shopper-location": {
+    "children": ["modal-trigger#address"]
+  },
+  "modal-trigger#address": {
+    "children": ["user-address", "modal-layout#address"]
+  },
+  "user-address": {
+    "props": {
+      "variation": "bar",
+      "showStreet": false,
+      "showCityAndState": true,
+      "showPostalCode": true,
+      "showPrefix": false,
+      "showIfEmpty": true
+    }
+  },
+  "modal-layout#address": {
+    "children": ["modal-header#address", "modal-content#address"],
+    "props": {
+      "blockClass": "modalAddressChange"
+    }
+  },
+  "modal-header#address": {
+    "children": ["flex-layout.row#address-header"]
+  },
+  "flex-layout.row#address-header": {
+    "children": ["flex-layout.col#address-header"],
+    "props": {
+      "paddingTop": 5,
+      "paddingBottom": 5
+    }
+  },
+  "flex-layout.col#address-header": {
+    "children": ["rich-text#address-header"],
+    "props": {
+      "paddingLeft": {
+        "desktop": 5,
+        "mobile": 0
+      }
+    }
+  },
+  "rich-text#address-header": {
+    "props": {
+      "text": "### Alterar endereço",
+      "blockClass": "address-header"
+    }
+  },
+  "modal-content#address": {
+    "children": ["change-location"]
+  }
+}

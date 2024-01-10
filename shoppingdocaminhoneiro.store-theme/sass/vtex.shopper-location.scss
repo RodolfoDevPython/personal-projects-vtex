@@ -1,0 +1,71 @@
+@import './media-queries';
+
+.changeLocationFormContainer {
+  padding-left: 0;
+
+  @include mobile {
+    padding: 0;
+  }
+}
+
+.changeLocationGeoContainer {
+  :global(.vtex-button) {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: var(--primary--default);
+    color: var(--white);
+  }
+
+  :global(.vtex-button__label) {
+    @include mobile {
+      font-size: var(--paragraph--small--regular);
+    }
+  }
+}
+
+.changeLocationAddressContainer {
+  :global(.vtex-styleguide-9-x-input) {
+    padding-left: 4px;
+    border-color: var(--lightgrey--light);
+  }
+
+  :global(.vtex-input__label) {
+    font-size: var(--paragraph--small--regular);
+    color: var(--primary--dark);
+  }
+}
+
+.changeLocationSubmitContainer {
+  :global(.vtex-button) {
+    font-size: var(--cta--medium);
+    border: none;
+    outline: none;
+    background: var(--primary--default);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 16px;
+    max-width: 160px;
+    width: 100%;
+    margin-right: initial;
+    margin-left: auto;
+
+    &::before {
+      content: 'Alterar';
+      font-size: var(--cta--medium);
+      color: var(--white);
+      text-transform: uppercase;
+    }
+
+    @include mobile {
+      max-width: 100%;
+    }
+  }
+
+  :global(.vtex-button__label) {
+    display: none;
+    opacity: 0;
+  }
+}

@@ -1,0 +1,131 @@
+@import 'media-queries';
+
+.sellingPrice--desktop {
+  font-size: var(--headline--h2);
+  font-weight: normal;
+  line-height: 32px;
+  color: #000;
+}
+
+.sellingPrice .sellingPriceValue--desktop {
+  display: none;
+}
+
+.listPrice--desktop {
+  font-size: var(--paragraph--medium--regular);
+  color: var(--darkgrey--light);
+  line-height: 1.25rem;
+  text-decoration-line: line-through;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.sellingPrice--desktop--hasListPrice {
+  font-size: var(--headline--h2);
+  color: var(--primary--dark);
+  line-height: 2rem;
+  font-weight: 400;
+}
+
+.savings--desktop {
+  font-size: 14px;
+  line-height: 20px;
+  color: #717786;
+}
+
+.savingsValue--desktop {
+  color: #468a2e;
+  font-weight: 500;
+}
+
+.savings--savingSummary {
+  display: block;
+  background: #e5f1e1;
+  color: #468a2e;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 500;
+  padding: 0 8px;
+  border-radius: 10px;
+}
+
+@media (max-width: 64rem) {
+  .savings--savingPercent {
+    color: #000;
+  }
+
+  .currencyContainer--sticky {
+    font-size: 20px;
+    line-height: 28px;
+    color: #000;
+    font-weight: bold;
+  }
+}
+
+/* Seller Name */
+
+.sellerNameContainer--default {
+  font-size: 0.875rem;
+  color: var(--black-medium);
+  margin-bottom: 0.5rem;
+}
+
+.sellerName--default {
+  color: var(--black-dark);
+  font-weight: 500;
+}
+
+/* ==== TVZ ==== */
+
+.savings--savingPercentage {
+  background: var(--darkgrey--dark);
+  padding: 4px 8px;
+  position: absolute;
+  border-radius: 0;
+  font-size: var(--cta--small);
+  color: var(--primary--light);
+  line-height: 1rem;
+}
+
+.sellingPriceValue--pdp {
+  font-size: var(--headline--h2);
+  color: var(--black-dark);
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.listPrice--pdp {
+  font-size: var(--paragraph--medium--regular);
+  color: var(--darkgrey--light);
+  line-height: 20px;
+  font-weight: 500;
+  margin-right: 8px;
+}
+
+.savings--pdp {
+  font-size: var(--cta--small);
+  color: var(--system--alert-default);
+  font-weight: 700;
+  background: var(--system--alert-light);
+  padding: 4px;
+  text-transform: uppercase;
+  border-radius: 4px;
+}
+.sellerNameContainer {
+  font-size: var(--paragraph--small--medium);
+  font-weight: 500;
+  line-height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--darkgrey--medium);
+
+  @include mobile() {
+    line-height: 2rem;
+  }
+
+  :global(.vtex-product-price-1-x-sellerName) {
+    margin-left: 4px;
+  }
+}

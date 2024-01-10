@@ -1,0 +1,117 @@
+{
+  "flex-layout.row#popular-picks-wrapper": {
+    "title": "Imagem e Prateleira 1",
+    "props": {
+      "blockClass": "popularPicksWrapper"
+    },
+    "children": ["flex-layout.col#popular-picks-wrapper"]
+  },
+  "flex-layout.row#popular-picks-wrapper.banner-invertido": {
+    "title": "Imagem e Prateleira 2",
+    "props": {
+      "blockClass": "popularPicksWrapper"
+    },
+    "children": ["flex-layout.col#popular-picks-wrapper.banner-invertido"]
+  },
+  "flex-layout.col#popular-picks-wrapper": {
+    "children": [
+      "flex-layout.row#popular-picks-head",
+      "flex-layout.row#popular-picks-content"
+    ]
+  },
+  "flex-layout.col#popular-picks-wrapper.banner-invertido": {
+    "children": [
+      "flex-layout.row#popular-picks-head",
+      "flex-layout.row#popular-picks-content.banner-invertido"
+    ]
+  },
+  "flex-layout.row#popular-picks-content.banner-invertido": {
+    "children": [
+      "flex-layout.row#popular-picks",
+      "flex-layout.row#side-banner"
+    ],
+    "props": {
+      "blockClass": ["popular-picks-content", "shelfInvertBanner"]
+    }
+  },
+  "flex-layout.row#popular-picks-content": {
+    "children": [
+      "flex-layout.row#side-banner",
+      "flex-layout.row#popular-picks"
+    ],
+    "props": {
+      "blockClass": "popular-picks-content"
+    }
+  },
+  "flex-layout.row#side-banner": {
+    "props": {
+      "blockClass": "sideBanner"
+    },
+    "children": ["image#side-banner-image"]
+  },
+  "image#side-banner-image": {
+    "props": {
+      "src": "assets/placeholders/side-banner.png",
+      "blockClass": "sideBannerImage"
+    }
+  },
+  "flex-layout.row#popular-picks": {
+    "children": ["flex-layout.col#popular-picks"],
+    "props": {
+      "blockClass": "popularPicksShelf"
+    }
+  },
+  "flex-layout.col#popular-picks": {
+    "children": ["list-context.product-list#popular-picks"]
+  },
+  "flex-layout.row#popular-picks-head": {
+    "children": ["rich-text#popular-picksTitle", "link#popular-picks-link"],
+    "props": {
+      "blockClass": "popularHead",
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true
+    }
+  },
+  "rich-text#popular-picksTitle": {
+    "props": {
+      "text": "### Além do visual",
+      "blockClass": "popularTitle"
+    }
+  },
+  "link#popular-picks-link": {
+    "props": {
+      "label": "Veja todos",
+      "href": "/popular",
+      "blockClass": "popularLink"
+    }
+  },
+  "list-context.product-list#popular-picks": {
+    "blocks": ["product-summary.shelf#normal"],
+    "children": ["slider-layout#popular-picks-products"],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC"
+    }
+  },
+  "list-context.product-list#popular-picks-mobile": {
+    "blocks": ["product-summary.shelf#normal"],
+    "children": ["slider-layout#popular-picks-products"],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC",
+      "maxItems": 4
+    }
+  },
+  "slider-layout#popular-picks-products": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 3,
+        "tablet": 3,
+        "phone": 2
+      },
+      "infinite": false,
+      "fullWidth": true,
+      "blockClass": "shelfPopular",
+      "showNavigationArrows": "desktopOnly",
+      "showPaginationDots": "always"
+    }
+  }
+}

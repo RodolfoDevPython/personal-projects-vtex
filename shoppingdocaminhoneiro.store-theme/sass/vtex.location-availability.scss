@@ -1,0 +1,39 @@
+.shippingHeader--desktop {
+  font-size: 0;
+  display: block;
+  position: relative;
+
+  &::before {
+    content: 'Entrega';
+    font-size: var(--paragraph--large--regular);
+    color: var(--primary--dark);
+    line-height: 1.25rem;
+  }
+}
+
+.shippingListEmptyMessage--desktop {
+  font-size: 0;
+  margin: 0;
+  display: block;
+  position: relative;
+  margin-bottom: 1rem;
+
+  &::before {
+    content: 'Receba em casa ou retire seus produtos em uma de nossas lojas';
+    font-size: var(--paragraph--small--regular);
+    color: var(--darkgrey--light);
+    line-height: 1rem;
+  }
+}
+
+.shippingListItem--desktop {
+  display: none;
+}
+
+.shippingListItem--desktop:first-child {
+  display: block;
+}
+
+.shippingListContainer {
+  margin: 0;
+}

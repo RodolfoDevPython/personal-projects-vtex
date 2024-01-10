@@ -1,0 +1,195 @@
+{
+  "product-summary.shelf#complete": {
+    "props": {
+      "blockClass": "summaryComplete"
+    },
+    "children": [
+      "flex-layout.row#stackSavings",
+      "product-summary-name",
+      "challenge-block#priceChallenge"
+    ]
+  },
+  "product-summary.shelf#completeSearch": {
+    "props": {
+      "blockClass": ["summaryComplete", "summarySearchMobile"]
+    },
+    "children": [
+      "flex-layout.row#stackSavings",
+      "product-summary-name",
+      "challenge-block#priceChallenge",
+      "product-location-availability"
+    ]
+  },
+  "product-location-availability": {
+    "props": {
+      "maxItems": 3,
+      "orderBy": "cheaper",
+      "pickupFirst": false
+    }
+  },
+  "challenge-block#priceChallenge": {
+    "blocks": ["challenge-content#loggedIn", "challenge-fallback#loggedOut"]
+  },
+  "challenge-content#loggedIn": {
+    "children": ["product-summary-price", "product-location-availability"],
+    "props": {
+      "blockClass": "priceChallenge"
+    }
+  },
+  "challenge-fallback#loggedOut": {
+    "children": ["rich-text#loggedOutLabel"]
+  },
+  "rich-text#loggedOutLabel": {
+    "props": {
+      "text": "Faça login ou cadastre-se para ver os preços",
+      "blockClass": "loggedOutLabel",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER"
+    }
+  },
+
+  "flex-layout.row#stackSavings": {
+    "children": ["stack-layout#summary"]
+  },
+  "stack-layout#summary": {
+    "children": ["product-summary-image", "product-price-savings#discount"],
+    "props": {
+      "zIndexOffset": 3,
+      "blockClass": ["savingsStack"]
+    }
+  },
+  "product-price-savings#discount": {
+    "props": {
+      "message": "-{savingsPercentage}",
+      "blockClass": "savingPercentage"
+    }
+  },
+  "product-price-savings#summary": {
+    "props": {
+      "blockClass": "savingSummary"
+    }
+  },
+
+  "product-summary-brand": {
+    "props": {
+      "displayMode": "text"
+    }
+  },
+  "product-summary.shelf#normal": {
+    "props": {
+      "blockClass": "summaryComplete"
+    },
+    "children": [
+      "add-to-list-btn",
+      "flex-layout.row#stackSavings",
+      "flex-layout.col#summaryInfo"
+    ]
+  },
+
+  "flex-layout.col#summaryInfo": {
+    "children": [
+      "product-summary-name",
+      "product-rating-summary",
+      "product-summary-price",
+      "flex-layout.col#product-buy-button"
+    ],
+    "props": {
+      "preventVerticalStretch": true
+    }
+  },
+  "flex-layout.col#product-buy-button": {
+    "children": ["add-to-cart-button"],
+    "props": {
+      "blockClass": "buyButtonContainer"
+    }
+  },
+  "add-to-cart-button": {
+    "props": {
+      "text": "comprar",
+      "onClickBehavior": "go-to-product-page"
+    }
+  },
+  "product-summary-quantity": {
+    "props": {
+      "showLabel": false,
+      "blockClass": "qtd-shelf"
+    }
+  },
+  "product-summary.shelf#trending": {
+    "children": ["flex-layout.row#summaryTrending"],
+    "props": {
+      "blockClass": "trendingSummary"
+    }
+  },
+  "flex-layout.row#summaryTrending": {
+    "children": [
+      "product-summary-image#trending",
+      "product-summary-column#summaryTrending"
+    ],
+    "props": {
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true
+    }
+  },
+  "product-summary-column#summaryTrending": {
+    "props": {
+      "blockClass": "summaryCol"
+    },
+    "children": [
+      "product-summary-name#trending",
+      "product-rating-summary",
+      "product-summary-price",
+      "product-availability"
+    ]
+  },
+  "product-summary-name#trending": {
+    "props": {
+      "width": {
+        "desktop": 96,
+        "mobile": 96
+      },
+      "height": {
+        "desktop": 96,
+        "mobile": 96
+      }
+    }
+  },
+  "product-availability": {
+    "props": {
+      "threshold": "10",
+      "lowStockMessage": "Only {quantity} left in stock",
+      "highStockMessage": "Order now!"
+    }
+  },
+  "product-summary-image#trending": {
+    "props": {
+      "width": 96,
+      "height": 96,
+      "showBadge": false
+    }
+  },
+  "product-summary.shelf#minimum": {
+    "children": [
+      "product-summary-image",
+      "product-rating-summary",
+      "product-summary-price"
+    ],
+    "props": {
+      "blockClass": "minimumSummary"
+    }
+  },
+  "product-summary-image": {
+    "props": {
+      "showBadge": false,
+      "width": {
+        "desktop": 184,
+        "mobile": 136
+      },
+      "height": {
+        "desktop": 184,
+        "mobile": 136
+      },
+      "aspectRatio": "1:1.5"
+    }
+  }
+}

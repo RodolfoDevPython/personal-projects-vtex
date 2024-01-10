@@ -1,0 +1,92 @@
+@import './media-queries';
+@import './transition';
+
+.popupLgpd {
+  &Container {
+    position: fixed;
+    bottom: 0;
+    background: #fff;
+    padding: 0.75rem 1.5rem;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 14px 66px rgba(1, 162, 146, 0.16);
+    width: 100%;
+    display: flex;
+    z-index: 9999;
+
+    @include mobile {
+      flex-direction: column;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    &--active {
+      background: red;
+    }
+  }
+
+  &Text {
+    max-width: 928px;
+    font-size: var(--paragraph--medium--regular);
+    color: var(--darkgrey--dark);
+    line-height: 1.25rem;
+    margin: 0;
+
+    @include mobile {
+      margin-bottom: 0.5rem;
+      font-size: var(--paragraph--small--regular);
+      line-height: 1rem;
+    }
+  }
+
+  &Phrase {
+    display: block;
+
+    @include mobile {
+      display: inline;
+    }
+  }
+
+  &Link {
+    font-size: var(--paragraph--medium--regular);
+    line-height: 1.25rem;
+    color: var(--primary--default);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    @include transitionHover;
+
+    @include mobile {
+      font-size: var(--paragraph--small--regular);
+      line-height: 1rem;
+    }
+  }
+
+  &Button {
+    border: none;
+    width: 225px;
+    background: var(--primary--default);
+    color: var(--white);
+    text-transform: uppercase;
+    text-align: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: var(--paragraph--medium--semibold);
+    line-height: 1.5rem;
+    box-shadow: 0 4px 8px rgba(1, 162, 146, 0.16);
+    border-radius: 0.2rem;
+    cursor: pointer;
+    height: 56px;
+
+    @include transitionHover;
+
+    @include mobile {
+      height: 40px;
+      font-size: var(--paragraph--small--regular);
+      line-height: 1rem;
+    }
+  }
+}

@@ -1,0 +1,202 @@
+@import '_transition';
+@import '_media-queries';
+
+:global(.vtex-account) .menu {
+  padding: 2rem;
+}
+
+:global(.vtex-account) .boxContainer {
+  border: 1px solid #e5e5e5;
+}
+
+:global(.vtex-account) .userInfo {
+  align-items: center;
+}
+
+:global(.vtex-account_menu-link) {
+  font-weight: normal;
+  font-size: 14px;
+  color: var(--primary--default);
+}
+
+:global(.vtex-account) :global(.vtex-account) .menuLink {
+  color: var(--primary--default);
+}
+
+:global(.vtex-account) :global(.vtex-account_menu-link.b--action-primary) {
+  border-color: var(--primary--default);
+}
+
+:global(.vtex-account) :global(.vtex-account__page) {
+  padding: 1rem 0 2rem 0;
+}
+
+:global(.vtex-account) :global(.vtex-pageHeader__title) {
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 28px;
+  color: var(--primary--default);
+}
+
+:global(.vtex-account) :global(.vtex-account__page-body) span {
+  font-size: 18px;
+  color: var(--primary--default);
+  font-weight: normal;
+}
+
+:global(.vtex-account) :global(.vtex-account__order-details) span {
+  font-size: 12px;
+  background-color: transparent;
+}
+
+:global(.vtex-account) :global(.vtex-my-orders-app-3-x-productName) {
+  text-decoration: none;
+  color: #111;
+  font-weight: normal;
+}
+
+:global(.vtex-account) h2,
+:global(.vtex-account) th,
+:global(.vtex-account) h3 {
+  font-weight: normal;
+}
+
+:global(.vtex-account) :global(.vtex-pageHeader__children) > a > button {
+  background: var(--primary--default);
+  border: 0;
+  border-radius: .25rem;
+}
+
+:global(.vtex-account) :global(.vtex-rich-text-0-x-headingLevel2) {
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 28px;
+  color: #3c3c3b;
+}
+
+:global(.vtex-account) :global(.vtex-button__label) {
+  outline: 0;
+
+  @include transitionHover;
+}
+
+:global(.vtex-account) :global(.vtex-input-prefix__group) > input {
+  border: 0;
+  border-bottom: 1px solid var(--primary--default);
+}
+
+:global(.vtex-account) :global(.vtex-dropdown) > label > div {
+  border: 1px solid #e5e5e5;
+}
+
+:global(.vtex-account)
+  :global(.vtex-profile-form-3-x-profileContainer)
+  > :global(.vtex-button) {
+  background: var(--darkgrey--dark);
+  color: #fff;
+  border: 0;
+}
+
+:global(.vtex-account)
+  :global(.vtex-profile-form-3-x-toggleBusinessButtonWrapper) {
+  margin-bottom: 1rem;
+}
+
+:global(.vtex-account)
+  :global(.vtex-profile-form-3-x-toggleBusinessButtonWrapper)
+  > button {
+  background: var(--darkgrey--dark);
+  color: #fff;
+}
+
+:global(.vtex-account) :global(.vtex-input-prefix__group) {
+  border: 0;
+}
+
+:global(.vtex-account) :global(.vtex-address-form__postalCode) {
+  margin-bottom: 1rem;
+}
+
+:global(.vtex-account)
+  :global(.vtex-my-account-1-x-boxContainerBody)
+  :global(.vtex-button) {
+  background: var(--primary--default);
+  color: #fff;
+  border: 0;
+  border-radius: .25rem;
+}
+
+:global(.vtex-checkbox__inner-container.b--action-primary.bg-action-primary){
+  background: var(--primary--default);
+  border-color: var(--primary--default);
+}
+
+:global(.vtex-my-account-1-x-boxContainerFooter) :global(.vtex-button__label){
+  color: var(--primary--default);
+}
+
+
+:global(.vtex-account) :global(.vtex-my-orders-app-3-x-detailsBtn) {
+  background-color: #111;
+}
+
+:global(.vtex-account) :global(.vtex-my-orders-app-3-x-detailsBtn) > span {
+  color: #fff;
+}
+
+:global(.vtex-modal__confirmation) {
+  & > :global(.vtex-button){
+    background: var(--primary--default);
+    border: none;
+    border-radius: .25rem;
+
+    @include transitionHover;
+  }
+}
+
+:global(.vtex-account) > div > div {
+    @include desktop {
+      max-width: 60%;
+    }
+
+    @include ns {
+      max-width: 80%;
+    }
+}
+
+@media (min-width: 64rem) {
+  :global(.vtex-account) .menu {
+    border-right: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    max-width: 350px;
+    width: 100%;
+  }
+
+  :global(.vtex-account) > div {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 0;
+    padding-bottom: 3rem;
+  }
+
+  :global(.vtex-account) :global(.vtex-account__page-body) {
+    margin-left: 1.5rem;
+  }
+
+  :global(.vtex-account) :global(.vtex-pageHeader__title) {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 28px;
+    color: var(--primary--default);
+  }
+
+  :global(.vtex-account) :global(.vtex-pageHeader__container) {
+    padding-top: 0;
+  }
+
+  :global(.vtex-account) :global(.vtex-rich-text-0-x-headingLevel2) {
+    margin-top: 0;
+    padding-top: 3rem;
+  }
+}

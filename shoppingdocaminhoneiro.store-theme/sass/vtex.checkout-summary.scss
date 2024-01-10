@@ -1,0 +1,24 @@
+@import 'variables';
+
+.summaryItemContainer {
+  margin-bottom: 12px;
+  margin-top: 0;
+}
+
+.summaryItemLabel {
+  color: var(--darkgrey--dark);
+  font-weight: 500;
+  font-size: var(--paragraph--medium--regular);
+  line-height: 20px;
+}
+
+.summaryItemPrice {
+  color: var(--darkgrey--dark);
+  font-weight: 600;
+  font-size: var(--headline--h3);
+  line-height: 24px;
+}
+
+.summarySmallDisclaimer {
+  display: none;
+}

@@ -1,0 +1,23 @@
+{
+  "challenge-block#drawerMenu": {
+    "blocks": [
+      "challenge-content#drawerMenuLoggedIn",
+      "challenge-fallback#drawerMenuLoggedOut"
+    ]
+  },
+
+  "challenge-content#drawerMenuLoggedIn": {
+    "children": ["login#mobile", "menu#drawer"]
+  },
+
+  "challenge-fallback#drawerMenuLoggedOut": {
+    "children": ["rich-text#greeting", "menu#drawer-unauthenticated"]
+  },
+
+  "rich-text#greeting": {
+    "props": {
+      "text": "## Olá! 👋",
+      "blockClass": "greeting"
+    }
+  }
+}

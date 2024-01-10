@@ -1,0 +1,102 @@
+@import './media-queries';
+
+.openIconContainer {
+  &--orderByDrawer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0;
+  }
+
+  &--menuDrawer {
+    padding: 0;
+
+    @include mobile {
+      margin-right: 1.25rem;
+    }
+  }
+}
+
+.drawerTriggerContainer {
+  &--orderByDrawerTrigger {
+    width: 100%;
+    max-width: 106px;
+    height: 40px;
+    background:  var(--darkgrey--dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    border-radius: .25rem;
+  }
+}
+
+.childrenContainer--orderByDrawer {
+  padding: 0 1rem;
+}
+
+.childrenContainer--menuDrawer {
+  padding: 0 20px;
+}
+
+.closeIcon {
+  &Button {
+    &--orderByDrawer {
+      padding-left: 1rem;
+      padding-top: 1.25rem;
+    }
+  }
+
+  &--orderByDrawer {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.closeIcon--menuDrawer {
+  width: 20px;
+  height: 20px;
+}
+
+.openIconContainer--drawerSearch {
+  padding: 0;
+
+  .drawerTriggerContainer {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  :global(.vtex-store-icons-0-x-searchIcon) {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.drawer--drawerSearch {
+  height: 0;
+  left: 0;
+  transform: initial !important;
+  transition: height 0.3s ease;
+  background: none;
+
+  &.opened {
+    height: 48px;
+  }
+
+  .closeIconContainer--drawerSearch {
+    display: none;
+    opacity: 0;
+  }
+
+  :global(.vtex-store-components-3-x-searchBarInnerContainer) {
+    border-radius: 4px;
+    padding: 0 16px;
+
+    :global(.vtex-store-components-3-x-autoCompleteOuterContainer) {
+      padding: 0;
+    }
+  }
+}

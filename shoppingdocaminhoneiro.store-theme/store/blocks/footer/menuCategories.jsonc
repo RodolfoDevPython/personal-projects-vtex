@@ -1,0 +1,165 @@
+{
+  "vtex.menu@2.x:menu#categories": {
+    "props": {
+      "blockClass": ["footerMenu", "footerMenuCategories"],
+      "items": [
+        {
+          "id": "footer-item-1",
+          "type": "custom",
+          "iconId": null,
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/#",
+            "noFollow": false,
+            "tagTitle": "Pneus",
+            "text": "Pneus"
+          }
+        },
+        {
+          "id": "footer-item-2",
+          "type": "custom",
+          "iconId": null,
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/account#/orders",
+            "noFollow": false,
+            "tagTitle": "Farol e iluminação",
+            "text": "Farol e iluminação"
+          }
+        },
+        {
+          "id": "footer-item-3",
+          "type": "custom",
+          "iconId": null,
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/",
+            "noFollow": false,
+            "tagTitle": "Autopeças",
+            "text": "Autopeças"
+          }
+        },
+        {
+          "id": "footer-item-4",
+          "type": "custom",
+          "iconId": null,
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/",
+            "noFollow": false,
+            "tagTitle": "Alarme e segurança",
+            "text": "Alarme e segurança"
+          }
+        },
+        {
+          "id": "footer-item-5",
+          "type": "custom",
+          "iconId": null,
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/",
+            "noFollow": false,
+            "tagTitle": "Elétrica",
+            "text": "Elétrica"
+          }
+        },
+        {
+          "id": "footer-item-6",
+          "type": "custom",
+          "iconId": null,
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/",
+            "noFollow": false,
+            "tagTitle": "Ferramentas e equipamentos",
+            "text": "Ferramentas e equipamentos"
+          }
+        },
+        {
+          "id": "footer-item-7",
+          "type": "custom",
+          "iconId": null,
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/",
+            "noFollow": false,
+            "tagTitle": "Som e vídeo",
+            "text": "Som e vídeo"
+          }
+        },
+        {
+          "id": "footer-item-8",
+          "type": "custom",
+          "iconId": null,
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/",
+            "noFollow": false,
+            "tagTitle": "Lubrificantes e aditivos",
+            "text": "Lubrificantes e aditivos"
+          }
+        },
+        {
+          "id": "footer-item-9",
+          "type": "custom",
+          "iconId": null,
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/",
+            "noFollow": false,
+            "tagTitle": "Acessórios externos",
+            "text": "Acessórios externos"
+          }
+        },
+        {
+          "id": "footer-item-10",
+          "type": "custom",
+          "iconId": null,
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/",
+            "noFollow": false,
+            "tagTitle": "Motocicleta",
+            "text": "Motocicleta"
+          }
+        },
+        {
+          "id": "footer-item-11",
+          "type": "custom",
+          "iconId": null,
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/",
+            "noFollow": false,
+            "tagTitle": "Acessórios internos",
+            "text": "Acessórios internos"
+          }
+        },
+        {
+          "id": "footer-item-12",
+          "type": "custom",
+          "iconId": null,
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/",
+            "noFollow": false,
+            "tagTitle": "Hiper ofertas",
+            "text": "Hiper ofertas"
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,53 @@
+@import './media-queries';
+
+.wishlistIconContainer {
+  top: 0;
+  right: 12px;
+  position: absolute;
+  z-index: 50;
+  display: block;
+
+  @include mobile {
+    width: auto !important;
+    top: 12px;
+  }
+}
+
+.vtex-wish-list-1-x-wishlistIcon.vtex-wish-list-1-x-outline
+  .wishlistIconContainer
+  :global(.vtex-button):hover,
+.wishlistIconContainer :global(.vtex-button) {
+  outline: none;
+  background: none;
+  border: none;
+}
+
+.wishlistIconContainer :global(.vtex-button__label) {
+  padding: 0 !important;
+}
+
+.wishlistIcon.outline {
+  background: url('assets/icons/wishlistIcon.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+}
+
+.wishlistIcon.fill {
+  background: url('assets/icons/wishlistIconColorful.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+}
+
+.emptyMessage {
+  padding: 2rem;
+  margin: auto;
+  max-width: 1440px;
+
+  @include mobile {
+    padding: 1rem;
+  }
+}

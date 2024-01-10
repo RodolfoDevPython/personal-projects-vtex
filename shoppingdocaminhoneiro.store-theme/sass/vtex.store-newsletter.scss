@@ -1,0 +1,99 @@
+@import 'media-queries';
+
+.newsletterForm {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+
+  @include mobile {
+    flex-flow: column nowrap;
+  }
+}
+
+.emailInputContainer {
+  max-width: 545px;
+  width: 100%;
+  margin-right: 1rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  & :global(.vtex-input-prefix__group) {
+    border: none;
+    border-radius: 0;
+    height: 3rem;
+  }
+
+  & :global(.vtex-styleguide-9-x-input) {
+    padding: 20px 4rem;
+    height: 48px;
+    border-radius: 4px;
+
+    @include mobile() {
+      text-align: left;
+      padding: 20px 1rem 20px 5rem;
+    }
+  }
+
+  &::before {
+    content: '';
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32' fill='none'%3E%3Cpath d='M5.6 5H26.4C27.83 5 29 6.2375 29 7.75V24.25C29 25.7625 27.83 27 26.4 27H5.6C4.17 27 3 25.7625 3 24.25V7.75C3 6.2375 4.17 5 5.6 5Z' stroke='%23E5E5E5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M29 7.75L16 17.375L3 7.75' stroke='%23E5E5E5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    height: 32px;
+    width: 32px;
+    position: absolute;
+    left: 15px;
+
+    @include mobile() {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='33' height='32' viewBox='0 0 33 32' fill='none'%3E%3Cpath d='M6.09969 5H26.8997C28.3297 5 29.4997 6.2375 29.4997 7.75V24.25C29.4997 25.7625 28.3297 27 26.8997 27H6.09969C4.66969 27 3.49969 25.7625 3.49969 24.25V7.75C3.49969 6.2375 4.66969 5 6.09969 5Z' stroke='%23009444' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M29.4997 7.75L16.4997 17.375L3.49969 7.75' stroke='%23009444' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      left: 10%;
+      top: 10px;
+    }
+  }
+
+  &::placeholder {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    color: var(--darkgrey--light);
+  }
+
+  @include mobile {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 0.75rem;
+  }
+
+  & :global(.vtex-input__error) {
+    color: var(--system--alert-default);
+    @include desktop {
+      position: absolute;
+    }
+  }
+}
+
+.formSubmitContainer {
+  height: 3rem;
+
+  & :global(.vtex-button) {
+    height: 3rem;
+    border-radius: 4px;
+    border: 1px solid var(--primary--light);
+    background: var(--primary--dark);
+    outline: none;
+
+    @include mobile {
+      width: 100%;
+      border: 0;
+    }
+  }
+
+  @include mobile {
+    width: 100%;
+  }
+}
+
+.defaultSuccessMessage {
+  text-align: center;
+  font-size: var(--paragraph--large--bold);
+  color: var(--white);
+}

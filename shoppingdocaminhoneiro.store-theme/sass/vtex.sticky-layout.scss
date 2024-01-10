@@ -1,0 +1,39 @@
+.container {
+  &--headerMobile {
+    background: var(--bg-header);
+    z-index: 999;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.08);
+  }
+
+  &--sticky-header {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.08);
+  }
+}
+
+.wrapper--box {
+  position: absolute !important;
+  right: 0;
+  max-width: 364px;
+}
+
+.wrapper--box--stuck .container--box {
+  right: 0;
+  left: initial;
+  width: 364px;
+}
+
+.container--sticky-buy {
+  background: #fff;
+  padding: 8px 0;
+}
+
+.wrapper--sticky-buy {
+  height: 0 !important;
+  z-index: 999;
+}
+
+.container--sticky-buy :global(.vtex-button) {
+  height: 48px;
+  background: var(--serious-orange);
+  border: none;
+}
