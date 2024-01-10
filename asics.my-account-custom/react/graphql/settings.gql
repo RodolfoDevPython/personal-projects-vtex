@@ -1,0 +1,9 @@
+query MyAccountSettings {
+  settings: appSettings @context(provider: "beightone.my-account") {
+    cacheId
+    showGenders
+    showMyCards
+    showMyOrders
+    useMap
+  }
+}
