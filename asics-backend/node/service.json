@@ -1,0 +1,30 @@
+{
+  "memory": 256,
+  "ttl": 30,
+  "timeout": 10000,
+  "minReplicas": 1,
+  "maxReplicas": 4,
+  "workers": 4,
+  "routes": {
+    "checkExchangeProduct": {
+      "path": "/_v/app/checkExchangeProduct/orderId/:orderId/refer/:refId/",
+      "public": true
+    },
+    "exchangeProductByOrder": {
+      "path": "/_v/app/exchangeProductByOrder/:orderId/product/:productIds",
+      "public": true
+    },
+    "exchangeProduct": {
+      "path": "/_v/app/exchangeProduct/",
+      "public": true
+    },
+    "listenerStatus": {
+      "path": "/_v/app/listenerStatus/",
+      "public": true
+    },
+    "orders": {
+      "path": "/_v/app/orders/:email",
+      "public": true
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "name": "backend-course",
+  "vendor": "vtex",
+  "version": "0.0.2",
+  "title": "Backend Course",
+  "description": "Reference app for the Backend Course",
+  "builders": {
+    "node": "6.x"
+  },
+  "scripts": {
+    "prereleasy": "bash lint.sh"
+  },
+  "credentialType": "absolute",
+  "policies": [
+    {
+      "name": "ADMIN_DS"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "228bqi-dsv-protheus.totvscloud.com.br",
+        "path": "/rest/api/asicsChanges/v1/*"
+      }
+    },
+    {
+      "name": "OMSViewer"
+    },
+    {
+      "name": "colossus-fire-event"
+    },
+    {
+      "name": "colossus-write-logs"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.vtexcommercestable.com.br",
+        "path": "/api/oms/*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "portal.vtexcommercestable.com.br",
+        "path": "/api/oms/*"
+      }
+    }
+  ],
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}
