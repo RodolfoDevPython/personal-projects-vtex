@@ -1,0 +1,21 @@
+.buttonSelected {
+  background-color: red;
+  height: 32px;
+  width: 64px;
+  border-radius: 8px;
+  color: #FFFFFF;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: bold;
+}
+
+.buttonNotSelected {
+  background-color: #F5F5F5;
+  height: 32px;
+  width: 64px;
+  border-radius: 8px;
+  color: #524C4C;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: bold;
+}

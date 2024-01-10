@@ -1,0 +1,61 @@
+{
+  "name": "recommendation-dashboard",
+  "vendor": "colgateprobr",
+  "version": "0.0.1",
+  "title": "My Account Recommendation Dashboard",
+  "description": "Added Recommendation Dashboard to My Account Page",
+  "dependencies": {
+    "vtex.my-account-commons": "0.x",
+    "vtex.store-graphql": "2.x"
+  },
+  "builders": {
+    "react": "2.x",
+    "messages": "1.x",
+    "pages": "0.x",
+    "store": "0.x",
+    "node": "6.x"
+  },
+  "scripts": {
+    "postreleasy": "vtex publish --verbose"
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema",
+  "policies": [
+    {
+      "name": "POWER_USER_DS"
+    },
+    {
+      "name": "ADMIN_DS"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "api.vtex.com",
+        "path": "/api/dataentities/*"
+      }
+    },
+    {
+      "attrs": {
+        "host": "colgatedireto.vtexcommercestable.com.br",
+        "path": "/*"
+      },
+      "name": "outbound-access"
+    },
+    {
+      "attrs": {
+        "host": "colgateprobr.myvtex.com",
+        "path": "/*"
+      },
+      "name": "outbound-access"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "mailservice.vtex.com.br",
+        "path": "/api/mail-service/pvt/sendmail"
+      }
+    },
+    {
+      "name": "send-message"
+    }
+  ]
+}

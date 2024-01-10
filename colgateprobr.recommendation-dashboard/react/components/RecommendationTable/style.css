@@ -1,0 +1,100 @@
+.recommendationWrapper {
+  background-color: #FFF;
+  border-radius: 8px;
+  margin-left: 32px;
+}
+
+.recommendationWrapper div:nth-child(4){
+  padding: 32px;
+  padding-top: 0;
+}
+
+.recommendationWrapper__title {
+  font-size: 20px;
+  line-height: 28px;
+  color: #222121;
+  font-weight: bold;
+  padding-top: 20px;
+  padding-left: 32px;
+  padding-bottom: 12px;
+  margin: 0;
+}
+
+.recommendationWrapper__divider {
+  margin: 0 32px;
+}
+
+.recommendationTableWraper {
+  padding: 2rem;
+  padding-top: 1rem;
+  overflow-x: auto;
+}
+
+.recommendationTable {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.recommendationTable__title {
+  color: #8D8B87;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.recommendationTable__title th {
+  padding-right: 0px;
+  padding: 9px 16px;
+  font-weight: normal;
+  text-align: start;
+
+}
+
+.recommendationTable__contentRow {
+  color: #524C4C;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.recommendationTable__contentRow td {
+  padding-right: 0;
+  padding: 12px 16px;
+}
+
+.recommendationTable__contentRow:nth-child(2n) {
+  background-color: #F5F5F5;
+}
+
+.recommendationTable__button {
+  color: #01A292;
+  font-size: 12px;
+  line-height: 10px;
+  font-weight: bold;
+}
+
+.recommendationTable__resendText {
+  color: #01A292;
+  font-size: 12px;
+  line-height: 10px;
+  font-weight: bold;
+  cursor: default;
+}
+
+
+@media screen and (max-width: 850px) {
+  .recommendationWrapper {
+    margin-left: 0;
+    margin-top: 32px;
+  }
+
+  .recommendationTable {
+    border-right: 2rem solid #FFF;
+  }
+
+  .recommendationTable__title th:first-child, .recommendationTable__contentRow td:first-child {
+    padding: 0;
+  }
+
+  .recommendationTable__contentRow{
+    white-space: nowrap;
+  }
+}

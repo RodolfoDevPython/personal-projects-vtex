@@ -1,0 +1,11 @@
+{
+  "extensions": {
+    "my-account-portal/routes/checkout-button-example": {
+      "component": "ExtensionRouter"
+    },
+
+    "my-account-portal/menu-links-after/checkout-button-example": {
+      "component": "ExtensionLinks"
+    }
+  }
+}

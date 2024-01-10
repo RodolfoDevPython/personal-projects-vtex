@@ -1,0 +1,22 @@
+export interface sharedcartMD {
+  alreadyUsed: boolean,
+  couponCode: string,
+  dentistEmail: string,
+  dentistName: string,
+  patientEmail: string,
+  patientName: string,
+  urlCart: string,
+  id: string,
+  accountId: string,
+  accountName: string,
+  dataEntityId: string,
+  createdBy: string,
+  createdIn: string,
+  updatedBy: string,
+  updatedIn: string,
+  lastInteractionBy: string,
+  lastInteractionIn: string,
+  followers: string[],
+  tags: string[],
+  auto_filter: string
+}
