@@ -1,0 +1,65 @@
+<link href='https://virtual-fitting-room.sizebay.com/assets/plugin.css' rel='stylesheet' type='text/css'>
+<script src="https://virtual-fitting-room.sizebay.com/assets/plugin.js"></script>
+
+<script>!function(){
+
+    var settingsAppSizeBay = {
+      TenantId: "{{settings.TenantId}}",
+      RecommendationTextDefault: "{{settings.RecommendationTextDefault}}",
+      RecommendationTextSimplified: "{{settings.RecommendationTextSimplified}}",
+      RecommendationTextOrder: "{{settings.RecommendationTextOrder}}"
+    }
+
+    if (settingsAppSizeBay) {
+      localStorage?.setItem("@settingsAppSizeBay", JSON.stringify(settingsAppSizeBay));
+
+      window.SizebayPrescripts = () => ({
+
+        getPermalink() {
+          const permalink = document.querySelector("link[rel='canonical']").href
+
+          return permalink
+        },
+        getIntegration() {
+          const appUrl = `https://vfr-v3-production.sizebay.technology/V4/implantation/index.js`
+
+          let app = document.createElement('script')
+          app.id = 'szb-vfr__base'
+          app.setAttribute('src', appUrl)
+          document.querySelector('head').appendChild(app)
+        },
+        getAnchors() {
+          return {
+            mobile: '#szb_btn',
+            web: '#szb_btn'
+          }
+        },
+        getTenantId() {
+          return settingsAppSizeBay.TenantId //664
+        },
+        getButtons() {
+          return {
+            order: [
+              { name: 'vfr', text: 'PROVADOR VIRTUAL' },
+              { name: 'chart', text: 'GUIA DE MEDIDAS' }
+            ],
+            position: 'after',
+            class: 'vfr__button--clean'
+          }
+        },
+        getLanguage() {
+          return 'pt-BR'
+        },
+        getRecommendationText() {
+          return {
+            default: settingsAppSizeBay.RecommendationTextDefault, //'Recomendamos {size} para  {profileName}',
+            simplified:  settingsAppSizeBay.RecommendationTextSimplified, //'Recomendamos o tamanho {size}',
+            order: settingsAppSizeBay.RecommendationTextOrder //'before'
+          }
+        } 
+      })
+    }
+    
+    
+ 
+}()</script>
