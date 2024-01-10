@@ -1,0 +1,12 @@
+{
+  "extends": "vtex-react",
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true
+  },
+  "rules": {
+    "camelcase": [1, {"properties": "always"}
+    ]
+  }
+}

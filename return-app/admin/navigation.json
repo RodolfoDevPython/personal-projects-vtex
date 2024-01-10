@@ -1,0 +1,15 @@
+{
+  "section": "orders",
+  "titleId": "navigation.label",
+  "path": "/admin/returns/requests",
+  "subSectionItems": [
+    {
+      "labelId": "navigation.labelRequests",
+      "path": "/admin/returns/requests"
+    },
+    {
+      "labelId": "navigation.labelSettings",
+      "path": "/admin/returns/settings"
+    }
+  ]
+}
