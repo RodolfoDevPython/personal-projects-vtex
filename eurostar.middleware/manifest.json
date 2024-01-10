@@ -1,0 +1,86 @@
+{
+  "name": "backend-eurostar",
+  "vendor": "eurostar",
+  "version": "0.0.2",
+  "title": "Backend MarketPlace Eurostar",
+  "description": "Reference app for the Backend MarketPlaces Eurostar",
+  "builders": {
+    "node": "6.x"
+  },
+  "scripts": {
+    "prereleasy": "bash lint.sh"
+  },
+  "credentialType": "absolute",
+  "policies": [
+    {
+      "name": "ADMIN_DS"
+    },
+    {
+      "attrs": {
+        "host": "api.vtex.com",
+        "path": "/*"
+      },
+      "name": "outbound-access"
+    },
+    {
+      "attrs": {
+        "host": "eurostar.myvtex.com.br",
+        "path": "/*"
+      },
+      "name": "outbound-access"
+    },
+    {
+      "name": "ADMIN_DS"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "api.vtex.com",
+        "path": "/dataentities/*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "portal.vtexcommercestable.com.br",
+        "path": "/api/oms/*"
+      }
+    },
+    {
+      "name": "OMSViewer"
+    },
+    {
+      "name": "colossus-fire-event"
+    },
+    {
+      "name": "colossus-write-logs"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.vtexcommercestable.com.br",
+        "path": "/api/catalog_system/*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.vtexcommercestable.com.br",
+        "path": "/api/oms/*"
+      }
+    }
+  ],
+  "billingOptions": {
+    "termsURL": "https://compliance.vtex.com/gdpr/policies/vtex-privacy-policy",
+    "support": {
+      "url": "https://help-tickets.vtex.com/en/support?app=vtex.wish-list"
+    },
+    "free": true,
+    "type": "free",
+    "availableCountries": [
+      "*"
+    ]
+  },
+  "dependencies": {},
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}
