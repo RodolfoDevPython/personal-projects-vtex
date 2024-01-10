@@ -1,0 +1,164 @@
+.tbodyContainer tr {
+    display: grid;
+    grid-template-columns: 108px calc(100% - 378px) 270px;
+    padding: 21px 25px;
+}
+
+.tbodyImg img {
+    opacity: 1;
+    transform: none;
+}
+
+.tbodyInfos {
+    padding: 0px 26px;
+    display: flex;
+    flex-direction: column;
+}
+
+.tbodyBtns {
+
+}
+
+.tbodyRow + tr {
+    border-top: 1px solid #E3E4E6;
+}
+
+.tbodyRowNotAvailable {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.tbodyRowNotAvailable .checkItem {
+    display: none;
+}
+
+.tbodyCheckItems {
+    text-align: right;
+}
+
+.productName {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    color: #001E62;
+}
+
+.productPrice {
+
+}
+
+
+.buttonExchange {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    border: 1px solid #FF4C4C;
+    background-color: #fff;
+    color: #FF4C4C;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    cursor: pointer;
+}   
+
+.buttonFollowExchange {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    border: 1px solid #001A57;
+    background-color: #fff;
+    color: #001A57;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.buttonExchange svg, .buttonFollowExchange svg {
+    margin-right: 9px;
+}
+
+.buttonShowOrder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    background: #EEF3F7;
+    border: 0px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #001E62;
+    width: 100%;
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.checkItem {
+    position: relative;
+    height: 0;
+    width: 24px;
+}   
+
+.checkItem::before {
+    content: '';
+    height: 24px;
+    width: 24px;
+    border: 1px solid #E5E5E5;
+    background-color: transparent;
+    display: flex;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.checkItem:checked:before {
+    content: '';
+    background-color: #001E62;
+}
+
+#check-exchange-item {
+    display: none;
+}
+
+/* mobile */
+@media (max-width: 64rem) {
+
+    .tbodyContainer tr {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+    }
+
+    .tbodyInfos { 
+        /* max-width: calc(100% - 110px); */
+        padding: 0;
+    }
+
+    .tbodyBtns {
+        width: 100%;
+    }
+
+    .buttonExchange, .buttonFollowExchange { 
+        margin-top: 10px;
+        margin-bottom: .5rem;
+    }
+
+    .tbodyCheckItems {
+        position: absolute;
+        top: 6px;
+        right: 1rem;
+    }
+
+}

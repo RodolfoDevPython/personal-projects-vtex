@@ -1,0 +1,28 @@
+.headerTitle {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 41px;
+    color: #000066;
+}
+
+.headerSubTitle {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000066;
+}
+
+.headerContainer {
+    margin-bottom: 28px;
+    height: 95px;
+}
+
+/* mobile */
+@media (max-width: 64rem) {
+    .headerContainer {
+        padding: 0 1rem;
+        margin-bottom: 0px;
+        height: fit-content;
+    }
+}

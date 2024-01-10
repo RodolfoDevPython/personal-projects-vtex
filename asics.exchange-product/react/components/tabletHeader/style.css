@@ -1,0 +1,55 @@
+.containerThead {
+    padding: 1rem 28px;
+    background-color: #F2F4F5;
+    display: flex;
+    max-width: 100%;
+}
+
+.containerThead tr {
+    display: grid;
+    grid-template-columns: 193px calc(100% - 344px) 151px; /*344px é a soma dos espaços 193px + 151px */
+    width: 100%;
+}
+
+.containerThead div:not(div.alignRight) { 
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+.containerThead div.alignRight {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.containerThead span {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #727273;
+}
+
+.containerThead strong {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #3F3F40;
+}
+
+
+
+/* mobile */
+@media (max-width: 64rem) {
+    .containerThead tr {   
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .containerThead th:last-of-type {    
+        margin-top: 8px;
+    }
+}

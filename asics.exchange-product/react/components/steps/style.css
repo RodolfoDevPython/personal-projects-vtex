@@ -1,0 +1,244 @@
+.tableContainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+    border: 1px solid #E3E4E6;
+}
+
+.btnExchangeProduct, 
+.btnNext,
+.btnNextError {
+    background-color: #001E62;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    color: #fff;
+    height: 55px;
+    width: 270px;
+    border: 0px;
+    border-radius: 4px;
+    display: block;
+    margin-left: auto;
+    margin-right: 89px;
+    margin-top: 25px;
+    cursor: pointer;
+    transition: filter .3s ease-in-out;
+    position: relative;
+}
+
+.btnExchangeProduct {
+    margin-right: 0px;
+}
+
+.btnExchangeProductNotAllowed {
+
+}
+
+.btnNextError::after {
+    content: "Selecione o seu tamanho para prosseguir!";
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FF4C4C;
+    position: absolute;
+    bottom: -30px;
+    left: -10px;
+    width: 295px;
+}
+
+.btnExchangeProduct:hover , 
+.btnNext:hover, 
+.btnNextError:hover,
+.btnGoBack:hover,
+.containerInfo button:hover {
+    filter: brightness(125%);
+}
+
+.btnGoBack {
+    display: block;
+    height: 55px;
+    width: 270px;
+    border: 0px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    color: #001E62;
+    margin-top: 25px;
+    background-color: #EEF3F7;
+    cursor: pointer;
+    transition: filter .3s ease-in-out;
+}
+
+.containerButtons {
+    display: flex;
+    flex-direction: row;
+}
+
+.sendCode , .containerInfo {
+    padding: 48px 2rem 2rem 2rem;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F2F4F5;
+    border: 1px solid #E3E4E6;
+    border-radius: 4px;
+    margin-right: 113px;
+}
+
+.containerInfo {
+    flex-direction: column;
+    position: relative;
+}
+
+.containerInfo p {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #001E62;
+    max-width: 664px;
+}
+
+.containerInfo span {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 34px;
+    color: #001E62;
+    padding: 10px;
+    text-align: center;
+    margin: 2rem 0;
+    max-width: 664px;
+}
+
+.containerInfo span::selection {
+    background-color: #001E62;
+    color: #fff;
+}
+
+.containerInfo div {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 52px;
+}
+
+.containerInfo button {
+    border-radius: 4px;
+    width: 270px;
+    height: 51px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 19.2px;
+    border: 0px;
+    cursor: pointer;
+    transition: filter .3s ease-in-out;
+}
+
+.containerInfo .btnCancelExchange, 
+.containerInfo .btnCancelExchangeConfirm {
+    background: #FF4C4C;
+}
+
+.containerInfo .btnCopyExchange, 
+.containerInfo .btnCancelExchangeNotConfirm {
+    background: #001E62;
+}
+
+.sendCode p {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #001E62;
+    max-width: 434px;
+    margin: 0;
+}
+
+.containerInfo dialog {
+    bottom: -200px;
+    left: auto;
+    right: 2rem;
+    background-color: #E4E5F3;
+    border: 0px;
+    border-radius: 4px;
+    padding: 14px;
+    max-width: 242px;
+    width: 270px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    z-index: -1;
+    transition: all .4s ease-in-out;
+}
+
+.containerInfo .dialogFloat {
+    bottom: -70px;
+    z-index: 1;
+    opacity: 1;
+}
+
+.containerInfo dialog p {
+    margin: 0;
+}
+
+/* mobile */
+@media (max-width: 64rem) { 
+    .tableContainer {
+        margin: 1rem;
+    }   
+
+    .btnExchangeProduct {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 3rem;
+    }
+
+    .containerButtons   {
+        padding: 0 1rem 2rem;
+    }
+
+    .btnGoBack {
+        margin-top: 0;
+        margin-right: 8px;
+    }
+
+    .btnNext, .btnNextError {
+        margin-right: 0;
+        margin-top: 0;
+        margin-left: 8px;
+    }
+
+    .btnNextError::after {
+        left: -100%;
+    }
+
+    .sendCode , .containerInfo  {
+        margin-right: auto;
+        margin-left: auto;
+        max-width: calc(100% - 2rem);
+        padding: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .containerInfo button {
+        font-size: 14px;
+    }
+
+    .containerInfo .btnCancelExchange, 
+    .containerInfo .btnCancelExchangeConfirm {
+        margin-right: 5px;
+    }
+
+    .containerInfo .btnCopyExchange, 
+    .containerInfo .btnCancelExchangeNotConfirm {
+        margin-left: 5px;
+    }
+
+}

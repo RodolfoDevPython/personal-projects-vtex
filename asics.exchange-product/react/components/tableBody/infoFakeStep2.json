@@ -1,0 +1,114 @@
+{
+    "items": {
+        "uniqueId": "DE913D0DEB4A42ED8752BBF037AC3EF0",
+        "id": "40",
+        "productId": "35",
+        "ean": "2907.29.00",
+        "lockId": null,
+        "itemAttachment": {
+            "content": {},
+            "name": null
+        },
+        "attachments": [],
+        "quantity": 1,
+        "seller": "eurostar",
+        "name": "Medix CBD Oil  500 MG",
+        "refId": "50064",
+        "price": 38000,
+        "listPrice": 38000,
+        "manualPrice": null,
+        "priceTags": [
+            {
+                "name": "TAXHUB@Tax",
+                "value": 26372,
+                "isPercentual": false,
+                "identifier": null,
+                "rawValue": 263.72,
+                "rate": null,
+                "jurisCode": null,
+                "jurisType": null,
+                "jurisName": null
+            },
+            {
+                "name": "TAXHUB@Insurance",
+                "value": 0,
+                "isPercentual": false,
+                "identifier": null,
+                "rawValue": 0,
+                "rate": null,
+                "jurisCode": null,
+                "jurisType": null,
+                "jurisName": null
+            },
+            {
+                "name": "TAXHUB@Courier Service",
+                "value": 5954,
+                "isPercentual": false,
+                "identifier": null,
+                "rawValue": 59.54,
+                "rate": null,
+                "jurisCode": null,
+                "jurisType": null,
+                "jurisName": null
+            }
+        ],
+        "imageUrl": "https://beightone.vteximg.com.br/arquivos/ids/155572-55-55/image-df693098ac2448e99819341fe7c717dc.jpg?v=637623896718430000",
+        "detailUrl": "/medix-cbd-oil--500-mg-35/p",
+        "components": [],
+        "bundleItems": [],
+        "params": [],
+        "offerings": [],
+        "sellerSku": "3",
+        "priceValidUntil": "2022-12-06T17:43:35.0000000+00:00",
+        "commission": 100,
+        "tax": 0,
+        "preSaleDate": null,
+        "additionalInfo": {
+            "brandName": "Medix",
+            "brandId": "2000002",
+            "categoriesIds": "/3/",
+            "categories": [
+                {
+                    "id": 3,
+                    "name": "Oil"
+                }
+            ],
+            "productClusterId": "",
+            "commercialConditionId": "1",
+            "dimension": {
+                "cubicweight": 0.0009,
+                "height": 0.27,
+                "length": 4,
+                "weight": 0.27,
+                "width": 4
+            },
+            "offeringInfo": null,
+            "offeringType": null,
+            "offeringTypeId": null
+        },
+        "measurementUnit": "un",
+        "unitMultiplier": 1,
+        "sellingPrice": 38000,
+        "isGift": false,
+        "shippingPrice": null,
+        "rewardValue": 0,
+        "freightCommission": 0,
+        "priceDefinition": {
+            "sellingPrices": [
+                {
+                    "value": 38000,
+                    "quantity": 1
+                }
+            ],
+            "calculatedSellingPrice": 38000,
+            "total": 38000
+        },
+        "taxCode": "",
+        "parentItemIndex": null,
+        "parentAssemblyBinding": null,
+        "callCenterOperator": null,
+        "serialNumbers": null,
+        "assemblies": [],
+        "costPrice": null
+    }
+}
