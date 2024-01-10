@@ -1,0 +1,80 @@
+.sliderLayoutContainer--bannerSliderShopNow {
+  padding: 20px 30px;
+  margin-bottom: 20px;
+  .paginationDot--bannerSliderShopNow {
+    border-radius: 0;
+    max-height: 3px;
+    min-width: 84px;
+    padding: 0;
+    background-color: var(--primary-light);
+    &--isActive {
+      background-color: var(--darkgrey-medium);
+    }
+  }
+}
+
+.sliderLeftArrow--shelfStyle1 {
+  &:disabled {
+    &::before, &::after {
+      opacity: 0.4;
+    }
+  }
+  .caretIcon--shelfStyle1 {
+    display: none;
+  }
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 11px;
+    height: 16px;
+    position: absolute;
+    transform: rotate(180deg);
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.498 15.02 8.501 8 1.498.98' stroke='%23000' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  }
+  &::after {
+    content: '';
+    background-color: var(--white);
+    width: 32px;
+    height: 42px;
+  }
+}
+.sliderRightArrow--shelfStyle1 {
+  &:disabled {
+    &::before, &::after {
+      opacity: 0.4;
+    }
+  }
+  .caretIcon--shelfStyle1 {
+    display: none;
+  }
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 11px;
+    height: 16px;
+    position: absolute;
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.498 15.02 8.501 8 1.498.98' stroke='%23000' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  }
+  &::after {
+    content: '';
+    background-color: var(--white);
+    width: 32px;
+    height: 42px;
+  }
+}
+.sliderLayoutContainer--shelfStyle1 {
+  margin-bottom: 30px;
+  .paginationDot--shelfStyle1 {
+    border-radius: 0;
+    max-height: 3px;
+    min-width: 20px;
+    padding: 0;
+    background-color: var(--primary-light);
+    &--isActive {
+      background-color: var(--darkgrey-medium);
+    }
+  }
+  .paginationDotsContainer--shelfStyle1 {
+    bottom: -5px;
+  }
+}

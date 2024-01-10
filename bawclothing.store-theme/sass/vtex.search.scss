@@ -1,0 +1,133 @@
+@import './media-queries';
+@import './atomic/atoms/autocomplete';
+
+@include autocomplete;
+
+.itemListLink,
+.itemListSubItemLink {
+  padding: 0 !important;
+}
+
+.itemListLink {
+  height: initial !important;
+  border-radius: 4px;
+  padding: 0 8px !important;
+}
+
+.itemListSubItemLink {
+  background: none !important;
+  height: initial !important;
+  font-size: var(--paragraph--medium--medium) !important;
+  color: var(--primary--default) !important;
+  line-height: 1.25rem !important;
+  font-weight: 500 !important;
+  text-transform: uppercase;
+}
+
+.itemListSubItem {
+  padding: 8px !important;
+  border-radius: 4px;
+
+  &:hover {
+    background: var(--gray-light);
+  }
+}
+
+.tileListItem  {
+
+  .element {
+    align-items: flex-start;    
+
+    @include desktop() {
+      padding: 5px;
+    }
+  }
+
+  .productBrand {
+    font-size: 1rem;
+    color: var(--darkgrey-dark);
+    line-height: 18px;
+    font-style: normal;
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+
+  .imageContainer {
+    min-height: 119px;
+  }
+
+  .image {
+    width: 80px;
+    height: 119px;
+    display: block;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .priceContainer {
+    margin-top: 8px;
+
+    .currencyContainer {
+      font-size: 1rem;
+      color: var(--darkgrey-dark);
+      line-height: 18px;
+      font-weight: 600;
+    }
+
+  }
+
+}
+
+.tileList {
+  .tileListTitle  {
+    position: absolute;
+    top: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--primary-default);
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.itemList--suggestion {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-top: 1rem;
+
+  .itemListTitle {
+    font-weight: 700;
+    font-size: 14px; 
+    line-height: 20px;
+    color: var(--primary-default);
+    margin-bottom: 1rem;
+    padding: 0;
+  }
+
+  .itemListList {
+    margin-top: 20px;
+  }
+
+  .itemListItem {
+
+    .itemListLink {
+      padding-left: 0 !important;
+      
+      .itemListLinkTitle   {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--darkgrey-medium);
+        text-transform: uppercase;
+      }
+
+    }
+
+    .itemListSubItem {
+      display: none;
+    }
+
+  }
+}

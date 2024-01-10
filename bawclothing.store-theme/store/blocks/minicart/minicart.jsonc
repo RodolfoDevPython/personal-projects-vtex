@@ -1,0 +1,122 @@
+// This is the default blocks implementation for the minicart-layout
+{
+  "minicart.v2": {
+    "children": ["minicart-base-content"],
+    "props": {
+      "variation": "popup"
+    }
+  },
+  "minicart-base-content": {
+    "blocks": ["minicart-empty-state"],
+    "children": [
+      "free-shipping-minicart-baw",
+      "minicart-product-list",
+      "discount-coupon-minicart-baw",
+      "flex-layout.row#minicart-footer"
+    ]
+  },
+  "flex-layout.row#minicart-footer": {
+    "props": {
+      "blockClass": "minicart-footer"
+    },
+    "children": ["flex-layout.col#minicart-footer"]
+  },
+  "flex-layout.col#minicart-footer": {
+    "children": [
+      "minicart-summary",
+      "cta-minicart-baw",
+      "link#keepBuying",
+      "rich-text#empty-state-footer"
+    ]
+  },
+  "minicart-product-list": {
+    "blocks": ["product-list#minicart"]
+  },
+  "minicart-summary": {
+    "blocks": ["checkout-summary.compact#minicart"]
+  },
+  "link#keepBuying": {
+    "props": {
+      "href": "/",
+      "label": "Continuar comprando",
+      "blockClass": "minicart-footer-keepBuying"
+    }
+  },
+  "checkout-summary.compact#minicart": {
+    "children": ["summary-totalizers#minicart"],
+    "props": {
+      "totalizersToShow": ["Items", "Discounts"]
+    }
+  },
+
+  "summary-totalizers#minicart": {
+    "props": {
+      "showTotal": true,
+      "showDeliveryTotal": false
+    }
+  },
+  "minicart-empty-state": {
+    "children": [
+      "free-shipping-minicart-baw",
+      "flex-layout.row#empty-state",
+      "rich-text#empty-state-footer"
+    ]
+  },
+  "flex-layout.row#empty-state": {
+    "children": [
+      "flex-layout.col#empty-state",
+      "flex-layout.col#empty-container-total"
+    ],
+    "props": {
+      "blockClass": "empty-state"
+    }
+  },
+
+  "flex-layout.col#empty-state": {
+    "children": [
+      "rich-text#empty-state",
+      "link#continueBuy",
+      "discount-coupon-minicart-baw"
+    ],
+    "props": {
+      "width": "100%",
+      "blockClass": "empty-content"
+    }
+  },
+  "flex-layout.col#empty-container-total": {
+    "children": ["rich-text#empty-total", "rich-text#empty-total-value"],
+    "props": {
+      "blockClass": "empty-container-total",
+      "width": "100%"
+    }
+  },
+  "rich-text#empty-state": {
+    "props": {
+      "text": "Seu carrinho está vazio :(",
+      "blockClass": "empty-container-text-1"
+    }
+  },
+  "link#continueBuy": {
+    "props": {
+      "href": "/",
+      "label": "continue comprando",
+      "blockClass": "empty-container-link-1"
+    }
+  },
+  "rich-text#empty-total": {
+    "props": {
+      "text": "Total"
+    }
+  },
+  "rich-text#empty-total-value": {
+    "props": {
+      "text": "R$ 0,00"
+    }
+  },
+  "rich-text#empty-state-footer": {
+    "props": {
+      "text": "(11) 96317-5011 \n sac@bawclothing.com.br \n Rua Doutor Leonardo Pinto, 31 - Bom Retiro, SP",
+      "blockClass": "empty-state-footer"
+    }
+  }
+}

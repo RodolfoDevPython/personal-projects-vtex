@@ -1,0 +1,51 @@
+@import 'media-queries';
+
+.newsletterForm {
+  position: relative;
+
+  .emailInputContainer {
+
+    :global(.vtex-input-prefix__group) {
+      border: 0;
+      border-radius: 0 !important;
+      border-bottom: 1px solid #000;
+      height: 48px;
+
+      :global(.vtex-styleguide-9-x-input) {
+        border-radius: 0;
+        padding: 0 20px;
+        font-size: 1rem;
+        line-height: 20px;
+        font-weight: 500;
+        color: var(--darkgrey-light);
+      }
+
+    }
+
+  }
+
+  .formSubmitContainer {
+
+    :global(.vtex-button) { 
+      position: absolute;
+      top: 0;
+      right: 17px;
+      background-color: transparent;
+      border: 0;
+      height: 48px;
+
+      :global(.vtex-button__label) {
+        background-image: url('assets/icons/btn-submit-newsletter.svg');
+        width: 8px;
+        height: 16px;
+        background-repeat: no-repeat;
+        margin: 0;
+        padding: 0;
+        background-size: contain;
+      }
+      
+    }
+    
+  }
+  
+}

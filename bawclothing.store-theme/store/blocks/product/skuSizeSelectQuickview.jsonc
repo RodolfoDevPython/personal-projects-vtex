@@ -1,0 +1,14 @@
+{
+  "disclosure-layout#sku-size-select-quickview": {
+    "children": [
+      "disclosure-trigger#sku-size-select",
+      "disclosure-content#sku-size-select-quickview"
+    ]
+  },
+  "disclosure-content#sku-size-select-quickview": {
+    "children": ["product-summary-sku-selector"],
+    "props": {
+      "blockClass": "sku-size-select"
+    }
+  }
+}

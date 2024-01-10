@@ -1,0 +1,199 @@
+{
+  "disclosure-layout#menu-mobile-item-1": {
+    "children": ["disclosure-trigger#item1", "disclosure-content#item1"],
+    "props": {
+      "blockClass": "disclosureMenu"
+    }
+  },
+  "disclosure-layout#menu-mobile-item-2": {
+    "children": ["disclosure-trigger#item2", "disclosure-content#item2"],
+    "props": {
+      "blockClass": "disclosureMenu"
+    }
+  },
+  "disclosure-layout#menu-mobile-item-3": {
+    "children": ["disclosure-trigger#item3", "disclosure-content#item3"],
+    "props": {
+      "blockClass": "disclosureMenu"
+    }
+  },
+  "disclosure-layout#menu-mobile-item-4": {
+    "children": ["disclosure-trigger#item4", "disclosure-content#item4"],
+    "props": {
+      "blockClass": "disclosureMenu"
+    }
+  },
+  "disclosure-layout#menu-mobile-item-5": {
+    "children": ["disclosure-trigger#item5", "disclosure-content#item5"],
+    "props": {
+      "blockClass": "disclosureMenu"
+    }
+  },
+  "disclosure-layout#menu-mobile-item-6": {
+    "children": ["disclosure-trigger#item6", "disclosure-content#item6"],
+    "props": {
+      "blockClass": "disclosureMenu"
+    }
+  },
+  "disclosure-content#item1": {
+    "children": [
+      "flex-layout.row#subMenuHeader",
+      "vtex.menu@2.x:submenu#MobileItem1"
+    ],
+    "props": {
+      "blockClass": "disclosureMenuContent"
+    }
+  },
+
+  "vtex.menu@2.x:submenu#MobileItem1": {
+    "children": ["vtex.menu@2.x:menu#submenuMobile-1"],
+    "props": {
+      "blockClass": "stripeSubMenuMobile"
+    }
+  },
+  "vtex.menu@2.x:menu#submenuMobile-1": {
+    "props": {
+      "isOpen": true,
+      "orientation": "vertical",
+      "blockClass": "containerItem"
+    }
+  },
+
+  "disclosure-content#item2": {
+    "children": [
+      "flex-layout.row#subMenuHeader",
+      "vtex.menu@2.x:submenu#MobileItem1"
+    ],
+    "props": {
+      "blockClass": "disclosureMenuContent"
+    }
+  },
+  "disclosure-content#item3": {
+    "children": [
+      "flex-layout.row#subMenuHeader",
+      "vtex.menu@2.x:submenu#MobileItem1"
+    ],
+    "props": {
+      "blockClass": "disclosureMenuContent"
+    }
+  },
+  "disclosure-content#item4": {
+    "children": [
+      "flex-layout.row#subMenuHeader",
+      "vtex.menu@2.x:submenu#MobileItem1"
+    ],
+    "props": {
+      "blockClass": "disclosureMenuContent"
+    }
+  },
+  "disclosure-content#item5": {
+    "children": [
+      "flex-layout.row#subMenuHeader",
+      "vtex.menu@2.x:submenu#MobileItem1"
+    ],
+    "props": {
+      "blockClass": ["disclosureMenuContent"]
+    }
+  },
+  "disclosure-content#item6": {
+    "children": [
+      "flex-layout.row#subMenuHeader",
+      "vtex.menu@2.x:submenu#MobileItem1"
+    ],
+    "props": {
+      "blockClass": ["disclosureMenuContent"]
+    }
+  },
+  "disclosure-trigger#item1": {
+    "children": ["rich-text#trigger-item-1"],
+    "props": {
+      "blockClass": "disclosureMenuTrigger"
+    }
+  },
+  "disclosure-trigger#item2": {
+    "children": ["rich-text#trigger-item-2"],
+    "props": {
+      "blockClass": "disclosureMenuTrigger"
+    }
+  },
+  "disclosure-trigger#item3": {
+    "children": ["rich-text#trigger-item-3"],
+    "props": {
+      "blockClass": "disclosureMenuTrigger"
+    }
+  },
+  "disclosure-trigger#item4": {
+    "children": ["rich-text#trigger-item-4"],
+    "props": {
+      "blockClass": "disclosureMenuTrigger"
+    }
+  },
+  "disclosure-trigger#item5": {
+    "children": ["rich-text#trigger-item-5"],
+    "props": {
+      "blockClass": "disclosureMenuTrigger"
+    }
+  },
+  "disclosure-trigger#item6": {
+    "children": ["rich-text#trigger-item-6"],
+    "props": {
+      "blockClass": "disclosureMenuTrigger"
+    }
+  },
+  "rich-text#trigger-item-1": {
+    "props": {
+      "text": "Masculino"
+    }
+  },
+  "rich-text#trigger-item-2": {
+    "props": {
+      "text": "Feminino"
+    }
+  },
+  "rich-text#trigger-item-3": {
+    "props": {
+      "text": "Kids"
+    }
+  },
+  "rich-text#trigger-item-4": {
+    "props": {
+      "text": "Calçados"
+    }
+  },
+  "rich-text#trigger-item-5": {
+    "props": {
+      "text": "Acessórios"
+    }
+  },
+  "rich-text#trigger-item-6": {
+    "props": {
+      "text": "Bawtlet"
+    }
+  },
+  "disclosure-trigger#close1": {
+    "children": ["image#closeIcon"],
+    "props": {
+      "blockClass": "closeButton"
+    }
+  },
+  "image#closeIcon": {
+    "props": {
+      "src": "assets/icons/icon-menu-comeback.svg"
+    }
+  },
+  "flex-layout.row#subMenuHeader": {
+    "children": ["disclosure-trigger#close1", "link#subMenuHeaderLink"],
+    "props": {
+      "blockClass": ["subMenuHeaderRow"],
+      "preventHorizontalStretch": true,
+      "horizontalAlign": "left"
+    }
+  },
+  "link#subMenuHeaderLink": {
+    "props": {
+      "label": "Masculino",
+      "href": "#",
+      "blockClass": "subMenuHeaderLink"
+    }
+  }
+}

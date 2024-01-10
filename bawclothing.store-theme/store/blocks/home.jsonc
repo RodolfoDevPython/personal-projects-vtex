@@ -1,0 +1,368 @@
+{
+  "store.home": {
+    "blocks": ["responsive-layout.desktop", "responsive-layout.mobile"]
+  },
+  //Desktop:
+  "responsive-layout.desktop": {
+    "children": [
+      "flex-layout.row#bannerMosaico",
+      "flex-layout.row#bannerBenefits",
+      "__fold__",
+      "flex-layout.row#shelfLancamento",
+      "flex-layout.row#shelfRecomendados",
+      "__fold__",
+      "flex-layout.row#bannerShopNow"
+    ]
+  },
+  "flex-layout.row#bannerMosaico": {
+    "children": ["flex-layout.col#colLeft", "flex-layout.col#colRight"]
+  },
+  "flex-layout.col#colLeft": {
+    "props": {
+      "blockClass": "colLeft",
+      "width": "60% !important"
+    },
+    "children": ["image#banner1", "flex-layout.row#bannersTwoHalf"]
+  },
+  "flex-layout.col#colRight": {
+    "props": {
+      "blockClass": "colRight",
+      "width": "40% !important"
+    },
+    "children": ["image#banner4", "image#banner5"]
+  },
+  "flex-layout.row#bannersTwoHalf": {
+    "props": {
+      "blockClass": "bannerTwoHalf"
+    },
+    "children": [
+      "flex-layout.col#bannerTwoHalfOne",
+      "flex-layout.col#bannerTwoHalfTwo"
+    ]
+  },
+  "flex-layout.col#bannerTwoHalfOne": {
+    "props": {
+      "blockClass": "bannerTwoHalfOne"
+    },
+    "children": ["image#banner2"]
+  },
+  "flex-layout.col#bannerTwoHalfTwo": {
+    "props": {
+      "blockClass": "bannerTwoHalfTwo"
+    },
+    "children": ["image#banner3"]
+  },
+  "flex-layout.row#bannerShopNow": {
+    "props": {
+      "blockClass": "bannerShopNow"
+    },
+    "children": [
+      "flex-layout.col#bannerShopNow01",
+      "flex-layout.col#bannerShopNow02",
+      "flex-layout.col#bannerShopNow03"
+    ]
+  },
+  "flex-layout.col#bannerShopNow01": {
+    "props": {
+      "blockClass": "threeHalves"
+    },
+    "children": ["image#banner6"]
+  },
+  "flex-layout.col#bannerShopNow02": {
+    "props": {
+      "blockClass": "threeHalves"
+    },
+    "children": ["image#banner7"]
+  },
+  "flex-layout.col#bannerShopNow03": {
+    "props": {
+      "blockClass": "threeHalves"
+    },
+    "children": ["image#banner8"]
+  },
+  //Benefits Desktop
+  "flex-layout.row#bannerBenefits": {
+    "props": {
+      "blockClass": "bannerBenefits"
+    },
+    "children": [
+      "rich-text#benefitsTexto1",
+      "rich-text#benefitsTexto2",
+      "rich-text#benefitsTexto3"
+    ]
+  },
+  "rich-text#benefitsTexto1": {
+    "props": {
+      "text": "###### Primeira \n ##### TROCA GRÁTIS",
+      "textPosition": "LEFT",
+      "textAlignment": "LEFT"
+    }
+  },
+  "rich-text#benefitsTexto2": {
+    "props": {
+      "text": "###### Entrega para \n ##### TOOOODO O BRASIL",
+      "textPosition": "CENTER",
+      "textAlignment": "LEFT"
+    }
+  },
+  "rich-text#benefitsTexto3": {
+    "props": {
+      "text": "###### Frete GRÁTIS \n ##### nas compras acima de R$199,90",
+      "textPosition": "RIGHT",
+      "textAlignment": "LEFT"
+    }
+  },
+  //Banners Desktop
+  "image#banner1": {
+    "title": "Banner 01",
+    "props": {
+      "src": "assets/banners/home-banner-01.png",
+      "width": "100%"
+    }
+  },
+  "image#banner2": {
+    "title": "Banner 02",
+    "props": {
+      "src": "assets/banners/home-banner-02.png",
+      "width": "100%"
+    }
+  },
+  "image#banner3": {
+    "title": "Banner 03",
+    "props": {
+      "src": "assets/banners/home-banner-03.png",
+      "width": "100%"
+    }
+  },
+  "image#banner4": {
+    "title": "Banner 04",
+    "props": {
+      "src": "assets/banners/home-banner-04.png",
+      "width": "100%",
+      "maxHeight": "auto"
+    }
+  },
+  "image#banner5": {
+    "title": "Banner 05",
+    "props": {
+      "src": "assets/banners/home-banner-05.png",
+      "width": "100%"
+    }
+  },
+  "image#banner6": {
+    "title": "Banner 06",
+    "props": {
+      "src": "assets/banners/home-banner-06-shopNow.png",
+      "width": "100%"
+    }
+  },
+  "image#banner7": {
+    "title": "Banner 07",
+    "props": {
+      "src": "assets/banners/home-banner-07-shopNow.png",
+      "width": "100%"
+    }
+  },
+  "image#banner8": {
+    "title": "Banner 08",
+    "props": {
+      "src": "assets/banners/home-banner-08-shopNow.png",
+      "width": "100%"
+    }
+  },
+  //Shelf
+  "flex-layout.row#shelfLancamento": {
+    "title": "Prateleira 1",
+    "children": ["flex-layout.col#shelfContainerCol1"],
+    "props": {
+      "blockClass": "fullContainer"
+    }
+  },
+  "flex-layout.row#shelfRecomendados": {
+    "title": "Prateleira 2",
+    "children": ["flex-layout.col#shelfContainerCol2"],
+    "props": {
+      "blockClass": "fullContainer"
+    }
+  },
+  "flex-layout.row#shelfDestaques": {
+    "title": "Prateleira 3",
+    "children": ["flex-layout.col#shelfContainerCol3"],
+    "props": {
+      "blockClass": "fullContainer"
+    }
+  },
+  "flex-layout.col#shelfContainerCol1": {
+    "children": ["flex-layout.row#shelfControls1", "flex-layout.row#shelf1"]
+  },
+  "flex-layout.col#shelfContainerCol2": {
+    "children": ["flex-layout.row#shelfControls2", "flex-layout.row#shelf1"]
+  },
+  "flex-layout.col#shelfContainerCol3": {
+    "children": ["flex-layout.row#shelfControls3", "flex-layout.row#shelf1"]
+  },
+  "flex-layout.row#shelfControls1": {
+    "children": ["rich-text#shelfTitle1"],
+    "props": {
+      "preventVerticalStretch": true,
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "blockClass": "shelfControls"
+    }
+  },
+  "flex-layout.row#shelfControls2": {
+    "children": ["rich-text#shelfTitle2"],
+    "props": {
+      "preventVerticalStretch": true,
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "blockClass": "shelfControls"
+    }
+  },
+  "flex-layout.row#shelfControls3": {
+    "children": ["rich-text#shelfTitle3"],
+    "props": {
+      "preventVerticalStretch": true,
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "blockClass": "shelfControls"
+    }
+  },
+  "rich-text#shelfTitle1": {
+    "props": {
+      "text": "### Lançamentos",
+      "blockClass": "shelfTitle"
+    }
+  },
+  "rich-text#shelfTitle2": {
+    "props": {
+      "text": "### Recomendados",
+      "blockClass": "shelfTitle"
+    }
+  },
+  "rich-text#shelfTitle3": {
+    "props": {
+      "text": "### DESTAQUES",
+      "blockClass": "shelfTitle"
+    }
+  },
+  "flex-layout.row#shelf1": {
+    "children": ["list-context.product-list#productSlider"],
+    "props": {
+      "blockClass": "shelfComplete"
+    }
+  },
+  "list-context.product-list#productSlider": {
+    "blocks": ["product-summary.shelf#normal"],
+    "children": ["slider-layout#products"],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC"
+    }
+  },
+  "slider-layout#products": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 6,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": false,
+      "fullWidth": true,
+      "showPaginationDots": "mobileOnly",
+      "showNavigationArrows": "desktopOnly",
+      "blockClass": "shelfStyle1"
+    }
+  },
+  //Mobile:
+  "responsive-layout.mobile": {
+    "children": ["flex-layout.row#fullContainerMobile"]
+  },
+  "flex-layout.row#fullContainerMobile": {
+    "props": {
+      "blockClass": "fullContainerMobile"
+    },
+    "children": [
+      "flex-layout.row#bannerMobile1",
+      "flex-layout.row#bannerMobile2",
+      "flex-layout.row#shelfDestaques",
+      "flex-layout.row#bannerMobile3",
+      "slider-layout#bannerSliderShopNow"
+    ]
+  },
+  "flex-layout.row#bannerMobile1": {
+    "props": {
+      "width": "100%"
+    },
+    "children": ["image#bannerMobile1"]
+  },
+  "flex-layout.row#bannerMobile2": {
+    "props": {
+      "width": "100%"
+    },
+    "children": ["image#bannerMobile2"]
+  },
+  "flex-layout.row#bannerMobile3": {
+    "props": {
+      "width": "100%"
+    },
+    "children": ["image#bannerMobile3"]
+  },
+  "slider-layout#bannerSliderShopNow": {
+    "children": [
+      "image#bannerMobile4",
+      "image#bannerMobile5",
+      "image#bannerMobile6"
+    ],
+    "props": {
+      "blockClass": "bannerSliderShopNow",
+      "showNavigationArrows": "ever",
+      "autoplay": {
+        "timeout": 5000,
+        "stopOnHover": false
+      }
+    }
+  },
+  //Banners Mobile
+  "image#bannerMobile1": {
+    "title": "Banner Mobile 01",
+    "props": {
+      "src": "assets/banners/home-banner-01.png",
+      "width": "100%"
+    }
+  },
+  "image#bannerMobile2": {
+    "title": "Banner Mobile 02",
+    "props": {
+      "src": "assets/banners/home-banner-04.png",
+      "width": "100%"
+    }
+  },
+  "image#bannerMobile3": {
+    "title": "Banner Mobile 03",
+    "props": {
+      "src": "assets/banners/home-banner-05.png",
+      "width": "100%"
+    }
+  },
+  "image#bannerMobile4": {
+    "title": "Banner Mobile 04",
+    "props": {
+      "src": "assets/banners/home-banner-06-shopNow.png",
+      "width": "100%"
+    }
+  },
+  "image#bannerMobile5": {
+    "title": "Banner Mobile 05",
+    "props": {
+      "src": "assets/banners/home-banner-07-shopNow.png",
+      "width": "100%"
+    }
+  },
+  "image#bannerMobile6": {
+    "title": "Banner Mobile 06",
+    "props": {
+      "src": "assets/banners/home-banner-08-shopNow.png",
+      "width": "100%"
+    }
+  }
+}

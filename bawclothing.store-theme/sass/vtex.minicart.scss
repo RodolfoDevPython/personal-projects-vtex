@@ -1,0 +1,432 @@
+@import './media-queries';
+
+
+.openIconContainer {
+
+    @include mobile() {
+        :global(.vtex-button__label), & {
+            padding: 0;
+        }   
+    }
+    
+}
+
+
+.minicartContentContainer  {
+    max-height: calc(100vh - 80px);
+}
+
+.popupBoxPosition {
+    right: 14px;
+    width: 364px;
+    top: -59px;
+}
+
+.minicartIconContainer  {
+    display: flex;
+    position: relative;
+
+    &:hover {
+        &::before {
+            transform: scale(1.25);
+        }
+        
+    }
+
+    &::before {
+        content: "";
+        height: 24px;
+        width: 24px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M15.75 6.15H15.9V6V5.25C15.9 4.21566 15.4891 3.22368 14.7577 2.49228C14.0263 1.76089 13.0343 1.35 12 1.35C10.9657 1.35 9.97368 1.76089 9.24228 2.49228C8.51089 3.22368 8.1 4.21566 8.1 5.25V6V6.15H8.25H15.75ZM17.1 6V6.15H17.25H22.35V21C22.35 21.7559 22.0497 22.4808 21.5153 23.0153C20.9808 23.5497 20.2559 23.85 19.5 23.85H4.5C3.74413 23.85 3.01922 23.5497 2.48475 23.0153C1.95027 22.4808 1.65 21.7559 1.65 21V6.15H6.75H6.9V6V5.25C6.9 3.8974 7.43732 2.60019 8.39376 1.64376C9.35019 0.68732 10.6474 0.15 12 0.15C13.3526 0.15 14.6498 0.68732 15.6062 1.64376C16.5627 2.60019 17.1 3.8974 17.1 5.25V6ZM3 7.35H2.85V7.5V21C2.85 21.4376 3.02384 21.8573 3.33327 22.1667C3.64271 22.4762 4.06239 22.65 4.5 22.65H19.5C19.9376 22.65 20.3573 22.4762 20.6667 22.1667C20.9762 21.8573 21.15 21.4376 21.15 21V7.5V7.35H21H3Z' fill='black' stroke='white' stroke-width='0.3'/%3E%3C/svg%3E");
+        transition: all 0.2s cubic-bezier(1, -4, 0, 3) 0s; 
+    }
+
+    &::after {
+        content: "0";
+        height: 20px;
+        width: 20px;
+        background-color: var(--darkgrey-dark);
+        color: var(--white);
+        position: absolute;
+        top: -4px;
+        font-size: 12px;
+        right: -10px;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cartIcon {
+        display: none;
+    }
+
+    .minicartQuantityBadge  {
+        background-color: var(--primary-dark);
+        left: 14px;
+        top: -4px;
+        z-index: 1;
+    }
+    
+}
+
+.portalContainer {
+    .portalWrapper {
+        .popupWrapper  {
+            &::before {
+                content: "";                
+                position: fixed;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                background-color: rgba(0,0,0, 0.7);
+                z-index: 9;
+                pointer-events: none;
+            }
+        }
+    }    
+}
+
+.portalWrapper {
+    :not(:global(.vtex-fake)) {
+        z-index: 100;
+    }
+
+}
+
+.popupArrowUp  {
+    background: var(--primary-dark);
+    top: 31px;
+    transform: rotate(224deg);
+    right: -10px;
+}
+
+@include mobile() {
+    
+    .minicartContentContainer  {
+        max-height: 100vh;
+        height: 100vh;
+    }
+
+    .minicartEmptyStateContainer {
+        justify-content: space-between;
+
+        @include mobile() {
+            :global(.vtex-countdown-0-x-couponContainerMinicartBaw),
+            :global(.vtex-flex-layout-0-x-flexCol--empty-container-total) {
+                display: none;       
+            }
+        }
+    }
+
+    .opened {
+        width: 100% !important;
+        max-width: 100vw !important;
+        z-index: 99999;
+    }
+
+    .minicartTitle {
+        display: flex !important;
+        font-size: 0;
+        height: 25px;
+        margin: 12px 0;
+        
+
+        &::before {
+            content: "";
+            width: 180px;
+            height: 23px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='24' viewBox='0 0 180 24' fill='none'%3E%3Cg clip-path='url(%23clip0_5476:62801)'%3E%3Cpath d='M19.8183 12.8159C20.1981 13.2438 20.388 13.8801 20.388 14.7248C20.388 15.8479 20.068 16.6929 19.4281 17.2599C18.7882 17.827 17.7245 18.1101 16.2369 18.1094H4.26758V6.65611H16.112C17.4644 6.65611 18.4449 6.90745 19.0536 7.41013C19.6622 7.91281 19.9665 8.63994 19.9665 9.59153C19.9665 10.2013 19.8209 10.696 19.5295 11.0756C19.2382 11.4551 18.8117 11.709 18.2499 11.8374V11.9658C18.9157 12.1048 19.4385 12.3881 19.8183 12.8159ZM14.5048 10.3455C14.5048 9.77892 14.177 9.49556 13.5216 9.49546H9.3861V11.1958H13.5216C14.1769 11.1958 14.5047 10.9124 14.5048 10.3455ZM14.7856 14.4522C14.7856 13.832 14.4266 13.5219 13.7088 13.5219H9.3861V15.3825H13.7088C14.4266 15.3825 14.7856 15.0723 14.7856 14.452V14.4522Z' fill='black'/%3E%3Cpath d='M35.5489 17.5078C35.5614 17.6834 35.6063 17.855 35.6813 18.0133V18.1094H30.7188C30.6147 17.9598 30.5626 17.6711 30.5627 17.2433V16.9544C30.1362 17.4358 29.5068 17.8155 28.6745 18.0934C27.8422 18.3713 26.8434 18.5103 25.6781 18.5104C24.2839 18.5104 23.1473 18.2831 22.2683 17.8285C21.3892 17.3738 20.9497 16.6279 20.9497 15.5907C20.9497 14.607 21.2382 13.9012 21.8151 13.4734C22.392 13.0455 23.2634 12.7942 24.4292 12.7195L29.3604 12.3825C29.6933 12.3612 29.9352 12.313 30.0861 12.2381C30.2369 12.1632 30.3124 12.0347 30.3124 11.8527C30.3124 11.6497 30.1825 11.5026 29.9229 11.4116C29.6633 11.3206 29.2628 11.2751 28.7214 11.2751C28.2324 11.2751 27.8318 11.3366 27.5195 11.4598C27.2072 11.5829 26.9888 11.7834 26.8643 12.0613H21.5278C21.5692 11.2379 21.8657 10.6042 22.4172 10.1603C22.9688 9.71647 23.7436 9.41196 24.7418 9.2468C25.7406 9.08105 27.0359 8.99813 28.6276 8.99803C30.2611 8.99803 31.5642 9.07023 32.5369 9.21463C33.5097 9.35903 34.251 9.6371 34.7608 10.0489C35.2704 10.4607 35.5252 11.0622 35.5252 11.8534V16.7299C35.5253 17.0614 35.5332 17.3207 35.5489 17.5078ZM30.4848 14.1312C30.3286 14.2275 30.0633 14.2971 29.6888 14.3398L27.2701 14.6606C26.8746 14.7141 26.591 14.805 26.4192 14.9334C26.2473 15.0618 26.1616 15.2487 26.162 15.4942C26.162 15.7512 26.2712 15.933 26.4897 16.0395C26.7082 16.146 27.0463 16.1995 27.5041 16.1998C28.3571 16.1998 29.0672 16.0475 29.6343 15.7428C30.2014 15.4382 30.4851 14.9757 30.4853 14.3552L30.4848 14.1312Z' fill='black'/%3E%3Cpath d='M53.3776 18.1094H48.0249L46.4801 13.7783H46.3863L44.8575 18.1094H39.3017L35.3848 9.41582H40.8933L42.4221 13.6187H42.5159L44.0145 9.41582H48.7116L50.2877 13.5699H50.3814L51.8328 9.41582H57.2789L53.3776 18.1094Z' fill='black'/%3E%3Cpath d='M73.5869 10.3376C73.1291 10.0221 72.4893 9.86439 71.6676 9.86439C70.6792 9.86439 69.9171 10.081 69.3813 10.5142C68.8454 10.9474 68.5776 11.5701 68.5777 12.3822C68.5777 13.1951 68.8455 13.8181 69.3813 14.2511C69.917 14.6841 70.6791 14.9008 71.6676 14.9012C72.5101 14.9012 73.1577 14.7328 73.6103 14.3961C74.0629 14.0593 74.3202 13.6181 74.3822 13.0725H80.4371C80.3955 14.9333 79.6672 16.3129 78.2522 17.2111C76.8373 18.1093 74.6632 18.5585 71.73 18.5586C68.7543 18.5586 66.5513 18.056 65.121 17.0507C63.6906 16.0454 62.9755 14.4894 62.9755 12.3826C62.9755 10.2759 63.6906 8.72002 65.121 7.71486C66.5513 6.7097 68.7543 6.20707 71.73 6.20697C74.653 6.20697 76.8221 6.64274 78.2372 7.51427C79.6524 8.38581 80.3755 9.6985 80.4066 11.4523H74.3678C74.3048 11.0246 74.0445 10.653 73.5869 10.3376Z' fill='black'/%3E%3Cpath d='M81.1557 6.49513H86.2119V18.1093H81.1557V6.49513Z' fill='black'/%3E%3Cpath d='M100.186 10.1931C101.346 10.99 101.926 12.1798 101.926 13.7623C101.926 15.3449 101.344 16.5319 100.178 17.3234C99.0133 18.1141 97.0938 18.5098 94.4201 18.5104C91.7359 18.5104 89.8113 18.1148 88.6461 17.3234C87.4809 16.532 86.8983 15.345 86.8982 13.7623C86.8982 12.1798 87.4808 10.99 88.6461 10.1931C89.8114 9.39619 91.736 8.99783 94.4201 8.99803C97.1042 8.99803 99.0263 9.39639 100.186 10.1931ZM96.7141 13.7623C96.7141 13.217 96.532 12.8026 96.1677 12.5191C95.8035 12.2355 95.221 12.0938 94.4201 12.094C93.6191 12.094 93.0364 12.2357 92.6722 12.5191C92.308 12.8024 92.1259 13.2168 92.126 13.7623C92.126 14.2969 92.3081 14.706 92.6722 14.9894C93.0364 15.2729 93.619 15.4146 94.4201 15.4145C95.9494 15.4145 96.7141 14.8637 96.7141 13.7623Z' fill='black'/%3E%3Cpath d='M111.29 14.5323V18.1094C111.009 18.1414 110.593 18.1735 110.042 18.2057C109.491 18.2379 108.955 18.2539 108.435 18.2536C107.176 18.2536 106.203 18.1494 105.516 17.9409C104.83 17.7325 104.346 17.3957 104.064 16.9304C103.784 16.4654 103.643 15.8103 103.643 14.9652V11.9497H102.02V9.41572H103.643V7.10518H108.699V9.41572H111.306V11.9509H108.699V13.9388C108.699 14.1958 108.772 14.3668 108.917 14.4519C109.063 14.537 109.339 14.5798 109.745 14.5802C110.369 14.5802 110.884 14.5642 111.29 14.5323Z' fill='black'/%3E%3Cpath d='M124.945 10.0246C125.725 10.5915 126.115 11.4524 126.115 12.6072V18.1093H121.059V14.4039C121.059 13.8373 120.91 13.4309 120.614 13.1848C120.317 12.9387 119.872 12.8157 119.28 12.8158C118.655 12.8158 118.14 12.9602 117.735 13.249C117.329 13.5378 117.126 14.0404 117.126 14.7567V18.1093H112.086V6.49513H117.126V10.5217H117.22C118.281 9.62329 119.742 9.17413 121.604 9.17423C123.051 9.17443 124.164 9.45789 124.945 10.0246Z' fill='black'/%3E%3Cpath d='M126.926 6.43143H132.045V8.5006H126.926V6.43143ZM126.957 9.41577H132.013V18.1094H126.957V9.41577Z' fill='black'/%3E%3Cpath d='M137.819 10.5381H137.912C138.463 10.0998 139.101 9.76297 139.824 9.52764C140.547 9.29232 141.403 9.17465 142.391 9.17465C143.837 9.17465 144.95 9.45801 145.731 10.0247C146.511 10.5915 146.901 11.4577 146.901 12.6233V18.1087H141.845V14.404C141.845 13.848 141.694 13.4443 141.392 13.1929C141.09 12.9415 140.648 12.8158 140.065 12.8159C139.441 12.8159 138.926 12.963 138.52 13.2571C138.114 13.5512 137.912 14.0565 137.912 14.7728V18.1094H132.856V9.41586H137.819V10.5381Z' fill='black'/%3E%3Cpath d='M162.428 9.41586V17.4036C162.428 18.4303 162.267 19.203 161.945 19.7217C161.622 20.2404 160.946 20.6227 159.916 20.8686C158.886 21.1144 157.289 21.2373 155.125 21.2373C153.065 21.2373 151.51 21.1144 150.459 20.8686C149.408 20.6228 148.704 20.2778 148.344 19.8338C147.986 19.3899 147.775 18.7884 147.712 18.0294H153.222C153.336 18.2962 153.534 18.5048 153.815 18.6552C154.096 18.8055 154.533 18.8803 155.126 18.8796C155.729 18.8796 156.195 18.8315 156.522 18.7352C156.85 18.6389 157.076 18.4865 157.201 18.278C157.326 18.0696 157.389 17.778 157.389 17.4033V16.3128H157.279C156.322 17.0401 155.022 17.4037 153.378 17.4036C151.443 17.4036 149.994 17.0668 149.032 16.3931C148.069 15.7194 147.588 14.6875 147.588 13.2973C147.588 11.8856 148.069 10.8456 149.031 10.1771C149.993 9.50872 151.442 9.17455 153.377 9.17465C154.241 9.17465 154.998 9.27092 155.648 9.46345C156.298 9.65598 156.873 9.94468 157.372 10.3295H157.481V9.41586H162.428ZM156.959 14.2922C157.349 14.0571 157.544 13.7256 157.544 13.2979C157.544 12.8701 157.349 12.5386 156.959 12.3034C156.569 12.068 155.957 11.9503 155.125 11.9504C154.303 11.9504 153.713 12.0626 153.354 12.2871C152.995 12.5115 152.816 12.8485 152.815 13.2979C152.815 13.747 152.995 14.0838 153.354 14.3082C153.713 14.5327 154.303 14.645 155.125 14.6451C155.957 14.6447 156.568 14.5268 156.959 14.2916V14.2922Z' fill='black'/%3E%3Cpath d='M174.538 7.1772C175.381 7.68532 176.049 8.36976 176.543 9.23052C177.036 10.0913 177.284 11.0352 177.284 12.0622C177.284 13.0781 177.037 14.0192 176.543 14.8854C176.048 15.7516 175.38 16.4385 174.538 16.9461C173.695 17.4541 172.78 17.7081 171.791 17.708C170.803 17.7079 169.885 17.4539 169.037 16.9461C168.189 16.4382 167.518 15.7513 167.024 14.8854C166.53 14.0195 166.282 13.0784 166.282 12.0622C166.282 11.0356 166.529 10.0917 167.024 9.23052C167.518 8.36936 168.186 7.68492 169.028 7.1772C169.871 6.66928 170.792 6.41528 171.791 6.41518C172.78 6.41537 173.695 6.66938 174.538 7.1772ZM173.953 15.9036C174.604 15.5128 175.144 14.9544 175.521 14.2835C175.906 13.6043 176.098 12.8637 176.098 12.0617C176.098 11.2705 175.906 10.5352 175.521 9.85601C175.144 9.18525 174.603 8.62692 173.953 8.23589C173.292 7.83481 172.572 7.63427 171.791 7.63427C171.011 7.63427 170.291 7.83491 169.631 8.23618C168.979 8.62825 168.436 9.18619 168.054 9.8563C167.664 10.5354 167.469 11.2706 167.469 12.062C167.469 12.8641 167.664 13.6047 168.054 14.2838C168.436 14.954 168.979 15.512 169.631 15.9039C170.291 16.3049 171.012 16.5054 171.792 16.5054C172.572 16.5054 173.292 16.3049 173.953 15.9039V15.9036ZM174.015 12.2061C173.854 12.4842 173.617 12.6927 173.305 12.8316L174.445 14.7565H172.556L171.667 13.0562H171.027V14.7568H169.388V9.33489H172.198C172.843 9.33489 173.347 9.49797 173.711 9.82413C174.075 10.1503 174.257 10.6075 174.258 11.1958C174.257 11.5913 174.176 11.9282 174.015 12.2064V12.2061ZM171.027 11.7889H171.885C172.114 11.7889 172.288 11.7355 172.408 11.6285C172.527 11.5216 172.587 11.3772 172.587 11.1955C172.587 11.0139 172.527 10.8696 172.408 10.7624C172.288 10.6553 172.114 10.6018 171.885 10.6019H171.027V11.7889Z' fill='black'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_5476:62801'%3E%3Crect width='173.017' height='15.0304' fill='white' transform='translate(4.26758 6.20697)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+            margin-right: 34px;
+        }
+
+        &::after {
+            content: "Sacola";
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 20px;
+            color: var(--darkgrey-medium);
+            border-left: 1px solid var(--primary-light);
+            padding-left: 22px;
+        }       
+
+    }
+
+    .drawerContent {
+        position: relative;
+        height: 100vh;
+
+        .closeIconContainer {
+            position: absolute;
+            top: 0;
+            right: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 49px;
+            
+
+            .closeIconButton  {
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M16.8748 3.125L3.12479 16.875' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M3.12479 3.125L16.8748 16.875' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+                height: 20px;
+                width: 20px;
+                background-repeat: no-repeat;
+            }
+            
+            .closeIcon {
+                display: none;
+            }
+
+        }
+    }
+
+}
+
+.popupChildrenContainer, .drawerContent  {
+    margin: 0;
+    padding: 0;
+
+    
+    .minicartTitle, 
+    :global(.vtex-checkout-summary-0-x-summarySmallDisclaimer) {
+        display: none;
+    }
+
+    @include desktop() {
+        :global(.vtex-rich-text-0-x-paragraph--empty-state-footer) {
+            display: none;
+        }
+    }
+
+    .minicartProductListContainer  {
+        padding: 19px 1rem 0;
+
+        @include mobile() {
+            min-height: 35vh;
+        }
+
+        &::-webkit-scrollbar {
+            width: 8px;               /* width of the entire scrollbar */
+        }
+        
+        &::-webkit-scrollbar-track {
+            background: transparent;        /* color of the tracking area */
+            padding: 4px;
+        }   
+          
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--primary-dark);    /* color of the scroll thumb */
+            border-radius: 4px;       /* roundness of the scroll thumb */
+        }
+           
+
+        :global(.vtex-flex-layout-0-x-flexRow--list-row) {
+            margin-bottom: 20px;
+        }
+
+        //img product
+        :global(.vtex-product-list-0-x-productImageContainer) {
+            margin-right: 12px;
+        }
+
+        :global(.vtex-product-list-0-x-productImageAnchor) {
+            max-height: 120px;
+            max-width: 80px;
+            height: 100%;
+            width: 100%;
+        }
+        :global(.vtex-product-list-0-x-productImage) {
+            border-radius: 0;
+            max-height: 120px;
+            max-width: 80px;
+        }
+
+        //price
+        :global(.vtex-product-list-0-x-price) {
+            font-weight: 600;
+            font-size: 1rem;
+            line-height: 14px;
+            color: var(--darkgrey-dark);
+        }
+
+        //name
+        :global(.vtex-product-list-0-x-productName) {
+            font-weight: 400;
+            color: var(--darkgrey-dark);
+            font-size: 1rem;
+            line-height: 18px;
+            text-transform: uppercase;
+
+            @include mobile() {
+                font-size: 14px;
+            }
+        }
+
+        //select quantity
+        :global(.vtex-dropdown__container) {
+            border: 0;
+            border-bottom: 1px solid var(--darkgrey-dark) !important;
+            border-radius: 0;
+            min-width: 130px;
+
+            :global(.vtex-dropdown__caption) {
+                font-size: 20px;
+                line-height: 20px;
+                color: var(--darkgrey-dark);
+                font-weight: 500;
+            }
+        }
+
+        //delete product
+        :global(.vtex-product-list-0-x-removeButton) {
+            max-height: 22px;
+            max-width: 20px;
+            height: 22px;
+            width: 20px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='24' viewBox='0 0 22 24' fill='none'%3E%3Cpath d='M0.6875 5.25H2.97917H21.3125' stroke='black' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M6.41699 5.25V3C6.41699 2.40326 6.65844 1.83097 7.08821 1.40901C7.51798 0.987053 8.10087 0.75 8.70866 0.75H13.292C13.8998 0.75 14.4827 0.987053 14.9124 1.40901C15.3422 1.83097 15.5837 2.40326 15.5837 3V5.25M19.0212 5.25V21C19.0212 21.5967 18.7797 22.169 18.3499 22.591C17.9202 23.0129 17.3373 23.25 16.7295 23.25H5.27116C4.66337 23.25 4.08048 23.0129 3.65071 22.591C3.22093 22.169 2.97949 21.5967 2.97949 21V5.25H19.0212Z' stroke='black' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8.70898 10.875V17.625' stroke='black' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M13.292 10.875V17.625' stroke='black' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+            background-size: cover;
+            margin-top: 32px;
+            
+
+            :global(.vtex-product-list-0-x-deleteIcon) {
+                display: none;
+            }
+        }
+
+    }
+
+    //footer minicart
+    :global(.vtex-flex-layout-0-x-flexRow--minicart-footer) {
+        box-shadow: none;
+
+        :global(.vtex-flex-layout-0-x-flexCol) {
+            padding: .5rem 1rem 1rem;
+        }
+
+        .minicartSummary {
+            padding: 0;
+            margin-bottom: 20px;
+
+            :global(.vtex-checkout-summary-0-x-summaryItemLabel),
+            :global(.vtex-checkout-summary-0-x-price) {
+                font-size: 1rem;
+                font-weight: 500;
+                line-height: 20px;
+                color: var(--darkgrey-medium);
+                text-transform: uppercase;
+            }
+
+            :global(.vtex-checkout-summary-0-x-summaryItemContainer) {
+                margin-top: 8px;
+            }
+
+        }
+    }
+
+    //empty 
+
+    .minicartEmptyStateContainer  {
+        :global(.vtex-flex-layout-0-x-flexRowContent--empty-state) {
+            flex-direction: column;
+            align-items: center;
+
+
+            :global(.vtex-flex-layout-0-x-flexCol--empty-content) {
+                align-items: center;
+                justify-content: center;
+
+                :global(.vtex-flex-layout-0-x-flexColChild--empty-content) {
+                    width: 100%;
+                    align-items: center;
+                    justify-content: center;
+                    display: flex;
+
+                }
+
+                //text empty 1
+                :global(.vtex-rich-text-0-x-paragraph--empty-container-text-1) {
+                    font-size: 20px;
+                    line-height: 24px;
+                    margin-top: 48px;
+                    margin-bottom: 40px;
+                    font-weight: 600;
+                    color: var(--darkgrey-light);
+                    text-transform: uppercase;
+                }
+
+                //link empty 1
+                :global(.vtex-store-link-0-x-label--empty-container-link-1) {
+                    font-style: normal;
+                    font-weight: 800;
+                    font-size: 16px;
+                    line-height: 20px;
+                    color: var(--darkgrey-medium);
+                    text-transform: uppercase;
+                }
+                :global(.vtex-store-link-0-x-link--empty-container-link-1) {
+                    text-decoration: none;
+                    padding-bottom: 28px;
+                    display: block;
+                }
+
+            }
+
+            :global(.vtex-flex-layout-0-x-flexCol--empty-container-total) {
+                flex-direction: row;
+                justify-content: space-between;
+
+                :global(.vtex-rich-text-0-x-paragraph) {
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 20px;
+                    color: var(--darkgrey-medium);
+                    text-transform: uppercase;
+                    padding: 0 1rem;
+                }
+
+            }
+        }
+    }
+
+}
+
+
+:global(.vtex-store-link-0-x-link--minicart-footer-keepBuying) {
+    display: none;
+
+    @include mobile() {
+        display: flex;
+        width: 100%;
+        font-weight: 800;
+        font-size: 1rem;
+        line-height: 20px;
+        color: var(--darkgrey-medium);
+        margin-top: 8px;
+        text-transform: uppercase;
+        text-align: center;
+        justify-content: center;
+        text-decoration: none;
+        margin-bottom: 26px;
+    }
+
+
+}
+
+
+@include mobile() {
+    //text footer  minicart
+    :global(.vtex-rich-text-0-x-wrapper--empty-state-footer) {
+        width: 100%;
+        :global(.vtex-rich-text-0-x-paragraph--empty-state-footer) {
+            text-align: center;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            color: var(--darkgrey-medium);
+            width: 100%;
+        }
+    }
+    
+
+}

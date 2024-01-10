@@ -1,0 +1,42 @@
+{
+  "flex-layout.row#menu-category-mobile": {
+    "children": [
+      "vtex.menu@2.x:menu#menu1",
+      "vtex.menu@2.x:menu#menu2",
+      "vtex.menu@2.x:menu#menu3",
+      "vtex.menu@2.x:menu#menu4",
+      "vtex.menu@2.x:menu#menu5",
+      "vtex.menu@2.x:menu#menu6"
+    ],
+    "props": {
+      "blockClass": "menu-list-category--mobile"
+    }
+  },
+  "vtex.menu@2.x:menu#menu1": {
+    "children": ["disclosure-layout#menu-mobile-item-1"],
+    "title": "Menu - Mobile - 1"
+  },
+  "vtex.menu@2.x:menu#menu2": {
+    "children": ["disclosure-layout#menu-mobile-item-2"],
+    "title": "Menu - Mobile - 2"
+  },
+  "vtex.menu@2.x:menu#menu3": {
+    "children": ["disclosure-layout#menu-mobile-item-3"],
+    "title": "Menu - Mobile - 3"
+  },
+
+  "vtex.menu@2.x:menu#menu4": {
+    "children": ["disclosure-layout#menu-mobile-item-4"],
+    "title": "Menu - Mobile - 4"
+  },
+
+  "vtex.menu@2.x:menu#menu5": {
+    "children": ["disclosure-layout#menu-mobile-item-5"],
+    "title": "Menu - Mobile - 5"
+  },
+
+  "vtex.menu@2.x:menu#menu6": {
+    "children": ["disclosure-layout#menu-mobile-item-6"],
+    "title": "Menu - Mobile - 6"
+  }
+}

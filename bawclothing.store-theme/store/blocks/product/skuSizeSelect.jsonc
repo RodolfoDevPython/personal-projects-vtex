@@ -1,0 +1,26 @@
+{
+  "disclosure-layout#sku-size-select": {
+    "children": [
+      "disclosure-trigger#sku-size-select",
+      "disclosure-content#sku-size-select"
+    ]
+  },
+  "disclosure-trigger#sku-size-select": {
+    "children": ["rich-text#sku-size-select-title"],
+    "props": {
+      "blockClass": "sku-size-select"
+    }
+  },
+  "disclosure-content#sku-size-select": {
+    "children": ["sku-selector#default"],
+    "props": {
+      "blockClass": "sku-size-select"
+    }
+  },
+  "rich-text#sku-size-select-title": {
+    "props": {
+      "text": "Tam.",
+      "blockClass": ["sku-size-select-title"]
+    }
+  }
+}

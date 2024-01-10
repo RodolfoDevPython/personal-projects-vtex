@@ -1,0 +1,30 @@
+{
+  "header-layout.mobile": {
+    "children": ["sticky-layout#mobile", "shopper-location"]
+  },
+  "sticky-layout#mobile": {
+    "children": ["flex-layout.row#mobileHeader"],
+    "props": {
+      "blockClass": "headerMobile"
+    }
+  },
+  "flex-layout.row#mobileHeader": {
+    "children": ["flex-layout.col#mobileHeader"]
+  },
+  "flex-layout.col#mobileHeader": {
+    "children": ["flex-layout.row#mobile"],
+    "props": {
+      "blockClass": "main-header-mobile"
+    }
+  },
+  "flex-layout.row#mobile": {
+    "children": ["drawer#mobile", "logo#mobile", "minicart.v2"],
+    "props": {
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "colSizing": "auto",
+      "fullWidth": true
+    }
+  }
+}

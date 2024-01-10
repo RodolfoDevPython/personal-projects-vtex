@@ -1,0 +1,8 @@
+{
+  "modal-header#quickview": {
+    "children": ["header-layout.mobile#quickview"],
+    "props": {
+      "showCloseButton": false
+    }
+  }
+}

@@ -1,0 +1,19 @@
+// OrderBy Category mobile
+.container--orderByTriggerText {
+    background-color: var(--white);
+    border-bottom: 1px solid var(--darkgrey-dark);
+    padding: 10px 15px;
+    height: 3rem;
+  
+    .paragraph--orderByTriggerText {
+          font-size: 0;
+  
+          &::before {
+              content: 'Ordenar';
+              display: block;
+              font-size: 14px;
+              font-weight: 500;
+              text-transform: uppercase;
+          }
+    }
+}

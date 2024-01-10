@@ -1,0 +1,24 @@
+{
+  "flex-layout.col#right-col-mobile-quickview": {
+    "props": {
+      "preventVerticalStretch": true,
+      "rowGap": 0
+    },
+    "children": [
+      "flex-layout.row#row-1-info-mobile",
+      "flex-layout.row#row-2-info-mobile",
+      "flex-layout.row#infoBox-float-mobile-quickview"
+    ]
+  },
+  "flex-layout.row#infoBox-float-mobile-quickview": {
+    "props": {
+      "blockClass": "infoBox-float-mobile",
+      "preventHorizontalStretch": true,
+      "horizontalAlign": "center"
+    },
+    "children": [
+      "disclosure-layout#sku-size-select-quickview",
+      "flex-layout.row#buy-button-mobile"
+    ]
+  }
+}

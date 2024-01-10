@@ -1,0 +1,217 @@
+@import './media-queries';
+@import './variables';
+
+.container {
+  border-radius: 0;
+  margin: 0 0.7rem;
+  position: relative;
+
+  @include desktop() {
+    max-width: 100% !important;
+    width: fit-content;
+  }
+
+  @include breakpoint('mobile') {
+    margin: 0;
+  }
+  
+  .element {
+    padding-top: 0;
+  }
+
+  .imageNormal {
+    max-height: 100%;
+  }
+  .image--hover {
+    z-index: 99;
+  }
+  .nameContainer {
+    display: block;
+    margin: 5px 0 3px;
+    padding: 0;
+    text-align: left;
+    width: 100%;
+    .productBrand {
+      display: block;
+      font-size: 16px;
+      font-weight: 400;
+      height: 35px;
+      overflow: hidden;
+      text-transform: uppercase;
+    }
+  }
+  .priceContainer {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    .listPriceLabel,
+    .sellingPriceLabel {
+      display: none;
+    }
+    .listPriceContainer {
+      .listPrice {
+        margin: 0;
+        margin-right: 5px;
+        padding: 0;
+        transform: translateY(-2px);
+      }
+    }
+    .productPriceClass {
+      display: flex;
+      flex-direction: initial;
+      padding: 0;
+      text-align: left;
+      width: 100%;
+      .sellingPriceContainer {
+        padding: 0;
+      }
+      .sellingPrice {
+        font-size: 16px;
+        font-weight: 700;
+        padding: 0;
+      }
+      .installmentContainer {
+        display: none;
+      }
+    }
+  }
+  :global(.vtex-store-components-3-x-discountInsideContainer),
+  :global(.vtex-reviews-and-ratings-2-x-summaryContainer) {
+    display: none;
+  }
+  :global(.vtex-store-components-3-x-discountContainer),
+  :global(.vtex-product-summary-2-x-imageContainer),
+  :global(.vtex-product-summary-2-x-image) {
+    width: 100%;
+    max-width: 100%;
+  }
+  :global(.vtex-wish-list-1-x-wishlistIconContainer) {
+    position: absolute;
+    right: 2px;
+    top: 0;
+    z-index: 99;
+
+    @include desktop() {
+      z-index: 999;
+    }
+
+    :global(.vtex-button) {
+      background-color: transparent;
+      margin: 0;
+      padding: 0;
+      :global(.vtex-button__label) {
+        padding: 0;
+        margin: 0;
+        :global(.vtex-wish-list-1-x-wishlistIcon) {
+          background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20.246 5.275a5.127 5.127 0 0 0-1.665-1.129 5.068 5.068 0 0 0-3.928 0 5.127 5.127 0 0 0-1.664 1.129l-.99 1.003-.988-1.003a5.096 5.096 0 0 0-3.629-1.524 5.096 5.096 0 0 0-3.629 1.524 5.243 5.243 0 0 0-1.503 3.68c0 1.381.54 2.705 1.503 3.681l.989 1.003L12 21l7.258-7.361.988-1.003a5.21 5.21 0 0 0 1.113-1.688 5.268 5.268 0 0 0 0-3.984 5.21 5.21 0 0 0-1.113-1.689v0Z' stroke='%23000' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+        }
+
+        :global(.vtex-wish-list-1-x-fill) {
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='24' viewBox='0 0 28 24' fill='%23000'%3E%3Cpath d='M24.9952 2.53337C24.3599 1.88873 23.6056 1.37736 22.7754 1.02847C21.9451 0.679575 21.0553 0.5 20.1566 0.5C19.258 0.5 18.3681 0.679575 17.5379 1.02847C16.7077 1.37736 15.9534 1.88873 15.3181 2.53337L13.9997 3.87059L12.6812 2.53337C11.398 1.23186 9.65749 0.500675 7.84269 0.500675C6.0279 0.500675 4.28743 1.23186 3.00418 2.53337C1.72092 3.83488 1 5.6001 1 7.44072C1 9.28133 1.72092 11.0466 3.00418 12.3481L4.32264 13.6853L13.9997 23.5L23.6767 13.6853L24.9952 12.3481C25.6307 11.7037 26.1349 10.9387 26.4789 10.0967C26.8229 9.25467 27 8.35216 27 7.44072C27 6.52928 26.8229 5.62677 26.4789 4.78475C26.1349 3.94273 25.6307 3.1777 24.9952 2.53337V2.53337Z' stroke='black' fill='black' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") !important;
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+
+      }
+    }
+  }
+  .SKUSelectorContainer {
+    background-color: white;
+    bottom: 140px;
+    display: none;
+    left: 20px;
+    position: absolute;
+    width: calc(100% - 40px);
+    z-index: 9999;
+    :global(.vtex-store-components-3-x-skuSelectorSubcontainer) {
+      margin-bottom: 5px;
+    }
+    :global(.vtex-store-components-3-x-skuSelectorOptionsList) {
+      justify-content: center;
+      margin-left: 0;
+    }
+    .skuSelectorItem {
+      .frameAround {
+        border: 0;
+      }
+      .skuSelectorInternalBox {
+        border-color: transparent;
+        .valueWrapper {
+          color: var(--darkgrey-dark);
+          font-size: 18px;
+          font-weight: 600;
+          line-height: 13px;
+        }
+        &:hover {
+          .valueWrapper {
+            transform: scale(1.25);
+            -webkit-transition: all 0.2s cubic-bezier(1, -4, 0, 3);
+            -moz-transition: all 0.2s cubic-bezier(1, -4, 0, 3);
+            -ms-transition: all 0.2s cubic-bezier(1, -4, 0, 3);
+            -o-transition: all 0.2s cubic-bezier(1, -4, 0, 3);
+            transition: all 0.2s cubic-bezier(1, -4, 0, 3);
+          }
+        }
+      }
+      &.skuSelectorItem--selected {
+        background-color: var(--darkgrey-dark);
+        .valueWrapper {
+          color: var(--white);
+        }
+        &:hover {
+          .valueWrapper {
+            transform: scale(1);
+          }
+        }
+      }
+    }
+  }
+  :global(.vtex-flex-layout-0-x-flexCol--buyButtonContainer) {
+    bottom: 100px;
+    display: none;
+    height: auto;
+    left: 20px;
+    position: absolute;
+    width: calc(100% - 40px);
+    z-index: 9999;
+
+    :global(.vtex-button) {
+      border-radius: 0;
+      border: 0;
+      font-size: 21px;
+      font-weight: 600;
+      background-color: var(--secondary-default);
+
+      &:hover {
+        background-color: var(--secondary-light);
+      }
+
+      :global(.vtex-add-to-cart-button-0-x-buttonText) {
+        color: var(--white);
+      }
+    }
+  }
+
+
+  @include desktop() {
+    &:hover {
+      .SKUSelectorContainer {
+        display: block;
+      }
+      :global(.vtex-flex-layout-0-x-flexCol--buyButtonContainer) {
+        display: block;
+        :global(.vtex-button) {
+          -webkit-transition: background 0.1s ease-in-out;
+          -moz-transition: background 0.1s ease-in-out;
+          -ms-transition: background 0.1s ease-in-out;
+          -o-transition: background 0.1s ease-in-out;
+          transition: background 0.1s ease-in-out;
+        }
+      }
+
+    }
+  
+    
+  }
+  
+}

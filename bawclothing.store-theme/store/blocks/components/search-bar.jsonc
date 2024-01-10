@@ -1,0 +1,28 @@
+{
+  "search-bar#default": {
+    "blocks": ["autocomplete-result-list.v2#desktop"],
+    "props": {
+      "placeholder": "O que você está procurando?",
+      "openAutocompleteOnFocus": false,
+      "maxWidth": "100%",
+      "autocompleteAlignment": "center",
+      "autocompleteFullWidth": true,
+      "displayMode": "search-button",
+      "containerMode": "container",
+      "blockClass": "searchInputDesktop"
+    }
+  },
+  "search-bar#mobile": {
+    "blocks": ["autocomplete-result-list.v2#mobile"],
+    "props": {
+      "placeholder": "O que você está procurando?",
+      "autoFocus": false,
+      "openAutocompleteOnFocus": false,
+      "maxWidth": "100%",
+      "autocompleteAlignment": "center",
+      "displayMode": "search-button",
+      "containerMode": "container",
+      "blockClass": "searchInputMobile"
+    }
+  }
+}

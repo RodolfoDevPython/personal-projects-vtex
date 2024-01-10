@@ -1,0 +1,82 @@
+@import '../media-queries';
+
+// Category Full Banner Desk
+.flexRow--full-banner-search {
+    :global(.vtex-store-components-3-x-container) {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+// Category title
+.flexRowContent--titleSubTitleSeo {
+    justify-content: center;
+  
+    @include desktop() {
+      
+        padding: {
+            top: 1rem;
+            bottom: 44px;
+        };
+  
+        max-width: 1000px;
+        margin: 0 auto;
+  
+    }
+  
+    .stretchChildrenWidth {
+        width: fit-content !important;
+
+        :global(.vtex-rich-text-0-x-paragraph--subTitleSeo) {
+            font-size: 14px;
+            font-weight: 400;
+            margin: 0;
+            margin-left: 24px;
+            transform: translateY(2px);
+        }
+    }
+}
+  
+.flexRowContent--searchInfoMobile {
+    :global(.vtex-rich-text-0-x-paragraph--subTitleSeo) {
+        text-align: center;
+        padding: 0 1rem;
+        margin: 0 0 12px 0;
+        line-height: 20px;
+        color: var(--primary-dark);
+    }
+}
+  
+// Category head Info
+.flexRow--searchHeadInfo {
+    padding-left: 20px;
+}
+
+.flexRow--switcherOrder {
+    width: auto;
+}
+
+// Filter
+.flexRow--filterRow {
+    min-width: 260px;
+}
+
+.flexRowContent--searchControlsMobile {
+    background-color: var(--primary-light);
+}
+
+
+//Botão de ver menos
+.flexRowContent--fetchprevious {
+
+    @include mobile() {
+        padding-top: 12px;
+        margin: 0;
+    }
+
+    :global(.vtex-button__label) {
+        &::after {
+            content: "ver menos" !important;
+        }
+    }
+}

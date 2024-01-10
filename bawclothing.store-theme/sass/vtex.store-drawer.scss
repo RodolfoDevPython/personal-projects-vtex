@@ -1,0 +1,63 @@
+@import './media-queries';
+
+.openIconConta7iner--menuDrawer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+
+  :global(.vtex-store-drawer0-x-drawerTriggerContainer) {
+    display: flex;
+  }
+}
+
+.opened--menuDrawer {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .drawerContent--menuDrawer {
+    max-width: calc(100vw - 1rem);
+    background-color: #fff;
+    height: 100%;
+    max-height: calc(100vh - 20px);
+
+    @include breakpoint('tablet') {
+      width: 100%;
+    }
+  }
+}
+
+.overlay--menuDrawer {
+  // top: 63px;
+}
+
+.drawerHeader {
+  padding: 1rem;
+  background-color: var(--primary-light);
+  flex-direction: column;
+
+  .main-header-drawer {
+    display: flex;
+  }
+
+  .closeIconButton {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 6px;
+
+    :global(.vtex-store-drawer-0-x-closeIcon) {
+      max-width: 20px;
+      min-width: 20px;
+      max-height: 20px;
+      min-height: 20px;
+    }
+  }
+}
+
+.drawerContent--orderByDrawer {
+  height: 100%;
+}

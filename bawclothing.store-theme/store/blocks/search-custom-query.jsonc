@@ -1,0 +1,145 @@
+{
+  "store.custom#custom-search-result": {
+    "blocks": ["search-result-layout.customQuery#search"]
+  },
+  "search-result-layout.customQuery#search": {
+    "props": {
+      "querySchema": {
+        "orderByField": "OrderByReleaseDateDESC",
+        "hideUnavailableItems": true,
+        "maxItemsPerPage": 12,
+        "queryField": "camiseta",
+        "mapField": "ft"
+      },
+      "fullWidth": true
+    },
+    "blocks": [
+      "search-result-layout.desktop#customQuery",
+      "search-result-layout.mobile#customQuery",
+      "search-not-found-layout"
+    ]
+  },
+  "search-result-layout.desktop#customQuery": {
+    "children": [
+      "flex-layout.row#searchBannerDesktopCustomQuery",
+      "flex-layout.row#searchtitleCustomQuery",
+      "flex-layout.row#searchLayout"
+    ],
+    "props": {
+      "blockClass": "fullContainer",
+      "pagination": "show-more",
+      "preventRouteChange": false,
+      "mobileLayout": {
+        "mode1": "small",
+        "mode2": "normal"
+      },
+      "fullWidth": true
+    }
+  },
+  "flex-layout.row#searchbread": {
+    "children": ["breadcrumb.search#default"],
+    "props": {
+      "blockClass": "searchbread",
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    }
+  },
+  "breadcrumb.search#default": {
+    "props": {
+      "blockClass": ["default"],
+      "showOnMobile": true,
+      "homeIconSize": 18
+    }
+  },
+  "flex-layout.row#searchtitleCustomQuery": {
+    "props": {
+      "blockClass": "titleSubTitleSeo"
+    },
+    "children": [
+      "flex-layout.col#CategoryNameCustomSearch",
+      "flex-layout.col#CategoryTextSeoCustomSearch"
+    ]
+  },
+  "flex-layout.col#CategoryNameCustomSearch": {
+    "props": {
+      "verticalAlign": "middle"
+    },
+    "children": ["rich-text#CategoryTitleCustomSearch"]
+  },
+  "flex-layout.col#CategoryTextSeoCustomSearch": {
+    "props": {
+      "verticalAlign": "middle"
+    },
+    "children": ["rich-text#CategorySubTitleSeoCustomSearch"]
+  },
+  "rich-text#CategoryTitleCustomSearch": {
+    "props": {
+      "blockClass": "categoryTitleCustomQuery",
+      "text": "# Custom Search !"
+    }
+  },
+  "rich-text#CategorySubTitleSeoCustomSearch": {
+    "props": {
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+      "blockClass": "subTitleSeo"
+    }
+  },
+
+  //MOBILE
+  "search-result-layout.mobile#customQuery": {
+    "children": [
+      "flex-layout.row#searchBannerMobileCustomQuery",
+      "flex-layout.row#searchInfoMobileCustomSearch",
+      "flex-layout.row#searchControlsMobile",
+      "flex-layout.row#fetchprevious",
+      "flex-layout.row#contentmobile",
+      "flex-layout.row#fetchmore"
+    ],
+    "props": {
+      "pagination": "show-more",
+      "mobileLayout": {
+        "mode1": "small",
+        "mode2": "normal"
+      }
+    }
+  },
+  "flex-layout.row#searchInfoMobileCustomSearch": {
+    "children": [
+      "rich-text#CategoryTitleCustomSearch",
+      "rich-text#CategorySubTitleSeoCustomSearch"
+    ],
+    "props": {
+      "preserveLayoutOnMobile": false,
+      "preventHorizontalStretch": false,
+      "blockClass": "searchInfoMobile"
+    }
+  },
+
+  "flex-layout.row#searchBannerDesktopCustomQuery": {
+    "props": {
+      "blockClass": "full-banner-search"
+    },
+    "children": ["image#bannerFullCategoryDesktopCustomSearch"]
+  },
+  "flex-layout.row#searchBannerMobileCustomQuery": {
+    "props": {
+      "blockClass": "full-banner-search"
+    },
+    "children": ["image#bannerFullCategoryMobileCustomSearch"]
+  },
+
+  "image#bannerFullCategoryDesktopCustomSearch": {
+    "title": "Banner Full Category",
+    "props": {
+      "src": "assets/banners/category-banner-01.png",
+      "width": "100%"
+    }
+  },
+  "image#bannerFullCategoryMobileCustomSearch": {
+    "title": "Banner Full Category",
+    "props": {
+      "src": "assets/banners/category-banner-01-mobile.png",
+      "width": "100%"
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "header-layout.desktop": {
+    "children": ["sticky-layout#desktop"]
+  },
+
+  "sticky-layout#desktop": {
+    "props": {
+      "blockClass": "sticky-header"
+    },
+    "children": ["flex-layout.row#desktop"]
+  },
+
+  "flex-layout.row#desktop": {
+    "props": {
+      "verticalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "blockClass": "container-header",
+      "colGap": 1,
+      "fullWidth": true,
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#logo-and-menu",
+      "flex-layout.col#searchBar",
+      "flex-layout.col#containerFloat"
+    ]
+  },
+  "flex-layout.col#logo-and-menu": {
+    "children": ["logo#default", "flex-layout.col#headerStripe"],
+    "props": {
+      "width": "60%",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "blockClass": ["logo-and-menu-60vw"]
+    }
+  },
+  "flex-layout.col#searchBar": {
+    "children": ["search-bar#default"],
+    "props": {
+      "width": "100%",
+      "blockClass": ["containerSearchBar-40vw"]
+    }
+  },
+  "flex-layout.col#headerStripe": {
+    "props": {
+      "blockClass": "headerStripe",
+      "horizontalAlign": "left",
+      "verticalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "width": "40%"
+    },
+    "children": ["vtex.menu@2.x:menu#stripeMenu", "shopper-location"]
+  },
+  "flex-layout.col#containerFloat": {
+    "children": [
+      "minicart.v2",
+      "login#desktop",
+      "link#myOrders",
+      "link#wishlist"
+    ],
+    "props": {
+      "preventHorizontalStretch": true,
+      "blockClass": ["header-float--right"]
+    }
+  }
+}

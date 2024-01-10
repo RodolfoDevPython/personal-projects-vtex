@@ -1,0 +1,136 @@
+{
+  "flex-layout.row#pdpShelfContainer1": {
+    "children": [
+      "flex-layout.col#pdpShelfContainer1",
+      "flex-layout.col#pdpShelf1"
+    ],
+    "props": {
+      "blockClass": "shelfControlsPdp"
+    }
+  },
+  "flex-layout.row#pdpShelfContainer2": {
+    "children": [
+      "flex-layout.col#pdpShelfContainer2",
+      "flex-layout.col#pdpShelf2"
+    ],
+    "props": {
+      "blockClass": "shelfControlsPdp"
+    }
+  },
+  "flex-layout.row#pdpShelfContainerMobile": {
+    "children": [
+      "flex-layout.col#pdpShelfContainerMobile",
+      "flex-layout.col#pdpShelfMobile"
+    ],
+    "props": {
+      "blockClass": "shelfControlsPdp"
+    }
+  },
+  "flex-layout.col#pdpShelfContainer1": {
+    "children": ["rich-text#shelfTitle1"],
+    "props": {
+      "blockClass": "shelfControls",
+      "fullWidth": true,
+      "width": "100%"
+    }
+  },
+  "flex-layout.col#pdpShelfContainer2": {
+    "children": ["rich-text#shelfTitle2"],
+    "props": {
+      "blockClass": "shelfControls",
+      "fullWidth": true,
+      "width": "100%"
+    }
+  },
+  "flex-layout.col#pdpShelfContainerMobile": {
+    "children": ["rich-text#shelfTitleMobile"],
+    "props": {
+      "blockClass": "shelfControls",
+      "fullWidth": true,
+      "width": "100%"
+    }
+  },
+  "rich-text#shelfTitle1": {
+    "title": "Titulo - Vittine 1",
+    "props": {
+      "text": "### Quem comprou, comprou também!",
+      "blockClass": "shelfTitle"
+    }
+  },
+  "rich-text#shelfTitle2": {
+    "title": "Titulo - Vittine 2",
+    "props": {
+      "text": "### Quem viu, viu também",
+      "blockClass": "shelfTitle"
+    }
+  },
+  "rich-text#shelfTitleMobile": {
+    "title": "Titulo - Vittine Mobile",
+    "props": {
+      "text": "### VC VAI GOSTAR",
+      "blockClass": "shelfTitle"
+    }
+  },
+  "flex-layout.col#pdpShelf1": {
+    "children": ["list-context.product-list#pdpProductSlider1"],
+    "props": {
+      "blockClass": "shelfComplete",
+      "fullWidth": true,
+      "width": "100%"
+    }
+  },
+  "flex-layout.col#pdpShelf2": {
+    "children": ["list-context.product-list#pdpProductSlider2"],
+    "props": {
+      "blockClass": "shelfComplete",
+      "fullWidth": true,
+      "width": "100%"
+    }
+  },
+  "flex-layout.col#pdpShelfMobile": {
+    "children": ["list-context.product-list#pdpProductSliderMobile"],
+    "props": {
+      "blockClass": "shelfComplete",
+      "fullWidth": true,
+      "width": "100%"
+    }
+  },
+  "list-context.product-list#pdpProductSlider1": {
+    "title": "Config - Vittine 1",
+    "blocks": ["product-summary.shelf#normal"],
+    "children": ["slider-layout#pdpProducts"],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC"
+    }
+  },
+  "list-context.product-list#pdpProductSlider2": {
+    "title": "Config - Vittine 2",
+    "blocks": ["product-summary.shelf#normal"],
+    "children": ["slider-layout#pdpProducts"],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC"
+    }
+  },
+  "list-context.product-list#pdpProductSliderMobile": {
+    "title": "Config - Vittine 3",
+    "blocks": ["product-summary.shelf#normal"],
+    "children": ["slider-layout#pdpProducts"],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC"
+    }
+  },
+  "slider-layout#pdpProducts": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 6,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": false,
+      "fullWidth": true,
+      "showPaginationDots": "mobileOnly",
+      "showNavigationArrows": "desktopOnly",
+      "blockClass": "shelfStyle1"
+    }
+  }
+}

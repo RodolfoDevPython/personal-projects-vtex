@@ -1,0 +1,30 @@
+{
+  "drawer": {
+    "children": ["flex-layout.row#menu-category-mobile"],
+    "blocks": ["drawer-trigger"],
+    "props": {
+      "blockClass": "menuDrawer",
+      "maxWidth": 364,
+      "isFullWidth": true
+    }
+  },
+  "drawer#mobile": {
+    "children": ["flex-layout.row#menu-category-mobile"],
+    "blocks": ["drawer-trigger", "drawer-header#my-drawer"],
+    "props": {
+      "blockClass": "menuDrawer",
+      "maxWidth": "100%",
+      "isFullWidth": true
+    }
+  },
+  "drawer-trigger": {
+    "children": ["image#icon-menu"]
+  },
+  "image#icon-menu": {
+    "props": {
+      "src": "assets/icons/menu-icon.svg",
+      "width": 27,
+      "height": 27
+    }
+  }
+}

@@ -1,0 +1,43 @@
+@import './media-queries';
+
+
+@include desktop() {
+    :global(.vtex-account) {
+        margin-left: calc(60px / 2);
+        width: calc(100% - 90px);
+    }
+
+    //WISHLIST - Result List
+    :global(.vtex-slider-layout-0-x-sliderTrack--shelfWishList) {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+        :global(.vtex-slider-layout-0-x-slide--shelfWishList) {
+            width: 100% !important;
+        }
+    }
+
+}
+
+@include mobile() {
+
+    :global(.vtex-flex-layout-0-x-flexColChild--titleWishlist) {
+        padding-left: 2.1rem;
+    }
+
+    :global(.vtex-slider-layout-0-x-sliderTrack--shelfWishList) {
+
+        :global(.vtex-product-summary-2-x-containerNormal) {
+            max-width: calc(100% - 4.2rem) !important;
+        }
+        
+    }
+
+    :global(.vtex-slider-layout-0-x-paginationDotsContainer--shelfWishList) {
+        bottom: -1rem;
+
+        :global(.vtex-slider-layout-0-x-paginationDot--shelfWishList--isActive) {
+            background-color: #000;
+        }
+    }
+}

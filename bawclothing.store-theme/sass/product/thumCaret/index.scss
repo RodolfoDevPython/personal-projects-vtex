@@ -1,0 +1,36 @@
+@import '../../media-queries';
+
+.carouselGaleryCursor  {
+    position: relative;
+
+    @include mobile() {
+        margin-bottom: 23px;
+        &::after {
+            content: "";
+            width: calc(100% - 2rem);
+            margin: 0 auto;
+            background: #EFEFEF;
+            height: 1px;
+            display: block;
+        }
+    }
+    
+
+    .productImagesGallerySwiperContainer  {
+
+        @include desktop() {
+            // padding-bottom: 137px;
+        }
+        
+    }
+
+    .carouselCursorDefault {
+        opacity: .5;
+    }
+
+    .caretIcon--pdp {
+        display: none;
+    }
+    
+
+}

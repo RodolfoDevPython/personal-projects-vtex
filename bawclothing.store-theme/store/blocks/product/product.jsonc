@@ -1,0 +1,74 @@
+{
+  "store.product": {
+    "children": [
+      "responsive-layout.desktop#product-page",
+      "responsive-layout.tablet#product-page",
+      "responsive-layout.phone#product-page"
+    ]
+  },
+  "responsive-layout.desktop#product-page": {
+    "children": [
+      "flex-layout.row#product-main-desktop",
+      "flex-layout.row#pdpShelfContainer1",
+      "flex-layout.row#pdpShelfContainer2"
+    ]
+  },
+  "responsive-layout.tablet#product-page": {
+    "children": [
+      "flex-layout.row#product-main-desktop",
+      "flex-layout.row#pdpShelfContainer1",
+      "flex-layout.row#pdpShelfContainer2"
+    ]
+  },
+  "responsive-layout.phone#product-page": {
+    "children": [
+      "flex-layout.row#product-main-mobile",
+      "flex-layout.row#pdpShelfContainerMobile"
+    ]
+  },
+  "flex-layout.row#product-breadcrumb": {
+    "props": {
+      "marginTop": 20
+    },
+    "children": ["breadcrumb"]
+  },
+  "flex-layout.row#product-main-desktop": {
+    "props": {
+      "colGap": 0,
+      "rowGap": 0,
+      "marginTop": 4,
+      "paddingTop": 1,
+      "paddingBottom": 1,
+      "blockClass": "product-main"
+    },
+    "children": [
+      "flex-layout.col#left-col-desktop",
+      "flex-layout.col#right-col-desktop"
+    ]
+  },
+  "flex-layout.row#product-main-mobile": {
+    "props": {
+      "colGap": 0,
+      "rowGap": 0,
+      "marginTop": 4,
+      "blockClass": "product-main"
+    },
+    "children": [
+      "flex-layout.col#left-col-mobile",
+      "flex-layout.col#right-col-mobile"
+    ]
+  },
+  "product-images": {
+    "props": {
+      "displayThumbnailsArrows": true,
+      "thumbnailsOrientation": "vertical"
+    }
+  },
+  "rich-text#iconDisclaimerMobile": {
+    "title": "Title - Frete Grátis",
+    "props": {
+      "text": "Frete grátis nas compras acima de R$199,90 \n A primeira troca é por nossa conta :)",
+      "blockClass": "iconDisclaimerMobileFreteGratis"
+    }
+  }
+}

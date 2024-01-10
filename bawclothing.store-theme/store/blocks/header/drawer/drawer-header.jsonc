@@ -1,0 +1,73 @@
+{
+  "drawer-header#my-drawer": {
+    "children": [
+      // you need to include the block `drawer-close-button` somewhere inside here
+      "flex-layout.row#headerTop",
+      "flex-layout.row#headerMiddle",
+      "flex-layout.row#headerBottom"
+    ]
+  },
+
+  "flex-layout.row#headerTop": {
+    "children": ["drawer-close-button", "logo#mobile", "minicart.v2"],
+    "props": {
+      "blockClass": "main-header-drawer",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "colSizing": "auto",
+      "fullWidth": true
+    }
+  },
+  "flex-layout.row#headerMiddle": {
+    "children": ["login#mobile", "link#myOrders", "link#wishlist-mobile"],
+    "props": {
+      "blockClass": ["main-header-drawer--middle"],
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "colSizing": "auto",
+      "fullWidth": true
+    }
+  },
+  "flex-layout.row#headerBottom": {
+    "children": ["search-bar#mobile"],
+    "props": {
+      "blockClass": ["main-header-drawer--bottom"],
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "colSizing": "auto",
+      "fullWidth": true
+    }
+  },
+  "login#mobile": {
+    "props": {
+      "iconLabel": "Minha Conta",
+      "blockClass": "loginWrapper",
+      "showIconProfile": false
+    }
+  },
+  "link#wishlist-mobile": {
+    "children": ["image#wishlist-mobile"],
+    "props": {
+      "href": "/account/#/wishlist",
+      "label": "Meus Likes",
+      "blockClass": "wishList"
+    }
+  },
+  "image#myOrders": {
+    "props": {
+      "src": "assets/icons/iconMyOrders.svg",
+      "blockClass": "wishlist__icon"
+    }
+  },
+  "image#wishlist-mobile": {
+    "props": {
+      "src": "assets/icons/icon-wishlist-desktop.svg",
+      "blockClass": "wishlist__icon",
+      "width": 22,
+      "height": 37
+    }
+  }
+}

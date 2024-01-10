@@ -1,0 +1,27 @@
+{
+  "gallery-layout-switcher": {
+    "children": [
+      "gallery-layout-option#grid",
+      "gallery-layout-option#grid-4",
+      "gallery-layout-option#grid-6"
+    ]
+  },
+  "gallery-layout-option#grid": {
+    "props": {
+      "name": "grid",
+      "blockClass": ["grid"]
+    }
+  },
+  "gallery-layout-option#grid-4": {
+    "props": {
+      "name": "grid-4",
+      "blockClass": ["grid-4"]
+    }
+  },
+  "gallery-layout-option#grid-6": {
+    "props": {
+      "name": "grid-6",
+      "blockClass": ["grid-6"]
+    }
+  }
+}

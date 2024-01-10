@@ -1,0 +1,218 @@
+{
+  "vtex.menu@2.x:menu#stripeMenu": {
+    "title": "Menu Header",
+    "children": [
+      "menu-item#stripeItem-1",
+      "menu-item#stripeItem-2",
+      "menu-item#stripeItem-3",
+      "menu-item#stripeItem-4",
+      "menu-item#stripeItem-5",
+      "menu-item#stripeItem-highlight"
+    ],
+    "props": {
+      "blockClass": "stripeMenu"
+    }
+  },
+  "menu-item#stripeItem-1": {
+    "props": {
+      "id": "stripe-menu-item-1",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/#",
+        "noFollow": false,
+        "tagTitle": "Masculino",
+        "text": "Masculino"
+      },
+      "blockClass": "stripeItem",
+      "iconProps": {
+        "id": "arrows-menu",
+        "size": 11,
+        "viewBox": "0 0 11 6",
+        "activeClassName": "arrow-menu--active",
+        "mutedClassName": "arrow-menu--close"
+      },
+      "iconPosition": "right"
+    },
+    "blocks": ["vtex.menu@2.x:submenu#item1"]
+  },
+  "menu-item#stripeItem-2": {
+    "props": {
+      "id": "stripe-menu-item-2",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/account#/orders",
+        "noFollow": false,
+        "tagTitle": "Feminino",
+        "text": "Feminino"
+      },
+      "blockClass": "stripeItem",
+      "iconProps": {
+        "id": "arrows-menu",
+        "size": 11,
+        "viewBox": "0 0 11 6",
+        "activeClassName": "arrow-menu--active",
+        "mutedClassName": "arrow-menu--close"
+      },
+      "iconPosition": "right"
+    },
+    "blocks": ["vtex.menu@2.x:submenu#item2"]
+  },
+  "menu-item#stripeItem-3": {
+    "props": {
+      "id": "stripe-menu-item-3",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/account#/orders",
+        "noFollow": false,
+        "tagTitle": "kids",
+        "text": "kids"
+      },
+      "blockClass": "stripeItem",
+      "iconProps": {
+        "id": "arrows-menu",
+        "size": 11,
+        "viewBox": "0 0 11 6",
+        "activeClassName": "arrow-menu--active",
+        "mutedClassName": "arrow-menu--close"
+      },
+      "iconPosition": "right"
+    },
+    "blocks": ["vtex.menu@2.x:submenu#item3"]
+  },
+  "menu-item#stripeItem-4": {
+    "props": {
+      "id": "stripe-menu-item-1",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/#",
+        "noFollow": false,
+        "tagTitle": "Acessórios",
+        "text": "Acessórios"
+      },
+      "blockClass": "stripeItem",
+      "iconProps": {
+        "id": "arrows-menu",
+        "size": 11,
+        "viewBox": "0 0 11 6",
+        "activeClassName": "arrow-menu--active",
+        "mutedClassName": "arrow-menu--close"
+      },
+      "iconPosition": "right"
+    },
+    "blocks": ["vtex.menu@2.x:submenu#item1"]
+  },
+  "menu-item#stripeItem-5": {
+    "props": {
+      "id": "stripe-menu-item-1",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/#",
+        "noFollow": false,
+        "tagTitle": "Calçados",
+        "text": "Calçados"
+      },
+      "blockClass": "stripeItem",
+      "iconProps": {
+        "id": "arrows-menu",
+        "size": 11,
+        "viewBox": "0 0 11 6",
+        "activeClassName": "arrow-menu--active",
+        "mutedClassName": "arrow-menu--close"
+      },
+      "iconPosition": "right"
+    }
+    // "blocks": ["vtex.menu@2.x:submenu#item1"]
+  },
+  "menu-item#stripeItem-highlight": {
+    "props": {
+      "id": "stripe-menu-item-1",
+      "type": "custom",
+      "iconId": null,
+      "highlight": true,
+      "itemProps": {
+        "type": "internal",
+        "href": "/#",
+        "noFollow": false,
+        "tagTitle": "Bawtlet",
+        "text": "Bawtlet"
+      },
+      "blockClass": ["stripeItem", "stripeItem-highlight"]
+    }
+  },
+  "vtex.menu@2.x:submenu#item1": {
+    "children": ["vtex.menu@2.x:menu#submenu-1"],
+    "props": {
+      "blockClass": "stripeSubMenu"
+    }
+  },
+  "vtex.menu@2.x:submenu#item2": {
+    "children": ["vtex.menu@2.x:menu#submenu-1"],
+    "props": {
+      "blockClass": "stripeSubMenu"
+    }
+  },
+  "vtex.menu@2.x:submenu#item3": {
+    "children": ["vtex.menu@2.x:menu#submenu-1"],
+    "props": {
+      "blockClass": "stripeSubMenu",
+      "iconPosition": "right"
+    }
+  },
+  "vtex.menu@2.x:submenu#item4": {
+    "children": ["vtex.menu@2.x:menu#submenu-1"],
+    "props": {
+      "blockClass": "stripeSubMenu",
+      "iconPosition": "right"
+    }
+  },
+  "vtex.menu@2.x:submenu#item5": {
+    "children": ["vtex.menu@2.x:menu#submenu-1"],
+    "props": {
+      "blockClass": "stripeSubMenu"
+    }
+  },
+  "vtex.menu@2.x:submenu#item6": {
+    "children": ["vtex.menu@2.x:menu#submenu-1"],
+    "props": {
+      "blockClass": "stripeSubMenu"
+    }
+  },
+  "vtex.menu@2.x:menu#submenu-1": {
+    // "children": ["menu-item#submenuItem-default"],
+    "props": {
+      "isOpen": true,
+      "orientation": "vertical",
+      "blockClass": "containerItem"
+    }
+  },
+  "menu-item#submenuItem-default": {
+    "props": {
+      "id": "stripe-submenu-item-default",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/pneu",
+        "noFollow": false,
+        "tagTitle": "Pneus",
+        "text": "Pneus"
+      }
+    }
+  }
+}

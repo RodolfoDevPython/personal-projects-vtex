@@ -1,0 +1,27 @@
+{
+  "footer-layout.mobile": {
+    "children": [
+      "flex-layout.row#newsletter",
+      "flex-layout.row#upperFooterRow",
+      "flex-layout.row#lowerFooterRow"
+    ]
+  },
+
+  "flex-layout.row#upperFooterRow": {
+    "children": ["flex-layout.col#upperFooterCol"]
+  },
+
+  "flex-layout.col#upperFooterCol": {
+    "children": ["flex-layout.row#socials"]
+  },
+
+  "flex-layout.row#lowerFooterRow": {
+    "children": ["flex-layout.col#lowerFooterCol"],
+    "props": {
+      "blockClass": "lowerFooter"
+    }
+  },
+  "flex-layout.col#lowerFooterCol": {
+    "children": ["rich-text#rightReserved", "rich-text#LocalText"]
+  }
+}

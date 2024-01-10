@@ -1,0 +1,24 @@
+{
+  "logo#default": {
+    "title": "Logo Baw Clothing",
+    "props": {
+      "title": "Logo Baw Clothing",
+      "href": "/",
+      "url": "assets/icons/logo.svg",
+      "width": 223,
+      "height": 39,
+      "mobileWidth": 76,
+      "mobileHeight": 30
+    }
+  },
+  "logo#mobile": {
+    "title": "Logo Baw Clothing",
+    "props": {
+      "title": "Logo Baw Clothing",
+      "href": "/",
+      "url": "assets/icons/logo.svg",
+      "width": 223,
+      "height": 39
+    }
+  }
+}

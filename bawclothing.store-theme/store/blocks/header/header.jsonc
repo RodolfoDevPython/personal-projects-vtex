@@ -1,0 +1,58 @@
+{
+  "header": {
+    "blocks": ["header-layout.desktop", "header-layout.mobile"]
+  },
+
+  "header.full": {
+    "blocks": ["header-layout.desktop", "header-layout.mobile"]
+  },
+
+  "link#orderQuote": {
+    "props": {
+      "label": "Order quote",
+      "href": "/orderquote",
+      "blockClass": "orderQuote"
+    }
+  },
+
+  "link#profile": {
+    "children": ["icon-profile"],
+    "props": {
+      "href": "/account",
+      "blockClass": "accountLink"
+    }
+  },
+
+  "login#desktop": {
+    "props": {
+      "iconLabel": "",
+      "blockClass": "loginWrapper",
+      "showIconProfile": true,
+      "hideIconLabel": true,
+      "logInButtonBehavior": "link",
+      "accountOptionsButtonBehavior": "link"
+    }
+  },
+  "link#wishlist": {
+    "children": ["image#wishlist"],
+    "props": {
+      "href": "/account/#/wishlist",
+      "label": "",
+      "blockClass": "wishList"
+    }
+  },
+  "image#wishlist": {
+    "props": {
+      "src": "assets/icons/icon-wishlist-desktop.svg",
+      "blockClass": "wishlist__icon"
+    }
+  },
+  "link#myOrders": {
+    "children": ["image#myOrders"],
+    "props": {
+      "href": "/account#/orders",
+      "label": "Meus Pedidos",
+      "blockClass": "orders"
+    }
+  }
+}

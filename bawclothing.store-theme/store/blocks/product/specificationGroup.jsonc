@@ -1,0 +1,58 @@
+{
+  "disclosure-layout-group#specificationGroup": {
+    "children": [
+      "disclosure-layout#product-description",
+      "disclosure-layout#takeback"
+    ]
+  },
+  "disclosure-layout#product-description": {
+    "children": [
+      "disclosure-trigger#product-description",
+      "disclosure-content#product-description"
+    ]
+  },
+  "disclosure-trigger#product-description": {
+    "children": ["rich-text#product-description"],
+    "props": {
+      "blockClass": ["specificationGroup-title", "product-description"]
+    }
+  },
+  "disclosure-content#product-description": {
+    "children": ["product-description"]
+  },
+  "rich-text#product-description": {
+    "props": {
+      "text": "Descrição da Peça",
+      "blockClass": ["specificationGroup-title"]
+    }
+  },
+  "disclosure-layout#takeback": {
+    "children": ["disclosure-trigger#takeback", "disclosure-content#takeback"]
+  },
+  "disclosure-trigger#takeback": {
+    "children": ["rich-text#takeback"],
+    "props": {
+      "blockClass": ["specificationGroup-title", "takeback"]
+    }
+  },
+  "disclosure-content#takeback": {
+    "children": ["rich-text#content-takeback"]
+  },
+  "rich-text#takeback": {
+    "props": {
+      "text": "Troca e Devolução",
+      "blockClass": ["specificationGroup-title"]
+    }
+  },
+  "rich-text#content-takeback": {
+    "props": {
+      "text": "Visando a sua total satisfação, a BAW Clothing possui uma Política de Trocas e Devolução alinhada às mais recentes normas do Código de Defesa do Consumidor. \n \n Nosso objetivo é fornecer um atendimento personalizado, que atenda a sua necessidade com excelência e rapidez. \n \n [Clique aqui e acesse o Minha troca para solicitar uma troca ou devolução](https://bawclothing.minhatroca.com.br?&amp;utmi_p=_moletom-basic-logo-burgundy_p&amp;utmi_pc=Html&amp;utmi_cp=Troque+F%c3%a1cil)",
+      "blockClass": ["specificationGroup-content"]
+    }
+  },
+  "product-specifications#takeback": {
+    "props": {
+      "visibleSpecifications": ["takeback"]
+    }
+  }
+}

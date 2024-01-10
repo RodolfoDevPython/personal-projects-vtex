@@ -1,0 +1,11 @@
+.container--headerMobile {
+    background-color: transparent;
+
+    :global(.vtex-store-components-3-x-container) {
+        margin: 12px 8px;
+        padding: 6px 12px;
+        background-color: var(--white);
+        max-width: calc(100% - 1rem);
+    }
+
+}

@@ -1,0 +1,22 @@
+{
+  "condition-layout.product#showShippingSimulator": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "isProductAvailable"
+        }
+      ],
+      "Then": "shipping-simulator"
+    }
+  },
+  "condition-layout.product#buyButtonProductAvailable": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "isProductAvailable"
+        }
+      ],
+      "Then": "flex-layout.row#buy-button-desktop"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "sandbox#footer-security-seal": {
+    "props": {
+      "width": "70px",
+      "height": "95px",
+      "initialContent": "<a id='seloEbit' rel='noreferrer noopener' href='http://www.ebit.com.br/#baw-clothing' target='_blank' onclick='redir(this.href);'>Avaliação de Lojas e-bit</a><script type='text/javascript' id='getSelo' src='https://imgs.ebit.com.br/ebitBR/selo-ebit/js/getSelo.js?73810'></script>",
+      "allowCookies": true
+    }
+  }
+}

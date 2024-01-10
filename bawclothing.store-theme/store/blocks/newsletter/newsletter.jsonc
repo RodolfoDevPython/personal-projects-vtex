@@ -1,0 +1,48 @@
+{
+  "flex-layout.row#newsletter": {
+    "title": "Newsletter",
+    "children": ["flex-layout.col#newsletter", "newsletter-form"],
+    "props": {
+      "blockClass": "newsletterRow"
+    }
+  },
+  "flex-layout.col#newsletter": {
+    "children": ["rich-text#newsTitle", "rich-text#newsSubTitle"],
+    "props": {
+      "blockClass": "newsletterCol",
+      "width": "100%"
+    }
+  },
+  "newsletter-form": {
+    "children": ["newsletter-input-email", "newsletter-submit"],
+    "props": {
+      "width": "100%"
+    }
+  },
+  "newsletter-input-email": {
+    "props": {
+      "placeholderText": "e-mail"
+    }
+  },
+  "newsletter-submit": {
+    "props": {
+      "submitButtonLabel": ""
+    }
+  },
+  "rich-text#newsTitle": {
+    "props": {
+      "text": "## Hey!",
+      "textPosition": "LEFT",
+      "textAlignment": "LEFT",
+      "blockClass": "newsTitle"
+    }
+  },
+  "rich-text#newsSubTitle": {
+    "props": {
+      "text": "Para receber novidades e conteúdo exclusivo da BAW, assine nossa newsletter!",
+      "textPosition": "LEFT",
+      "textAlignment": "LEFT",
+      "blockClass": "newsSubTitle"
+    }
+  }
+}

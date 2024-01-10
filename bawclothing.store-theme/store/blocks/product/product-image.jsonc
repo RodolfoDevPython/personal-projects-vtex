@@ -1,0 +1,52 @@
+{
+  "flex-layout.col#left-col-desktop": {
+    "children": [
+      "image#iconDisclaimerDesktop",
+      "product-images#desktop",
+      "add-to-list-btn"
+    ],
+    "props": {
+      "blockClass": "container-info-left",
+      "width": "60%"
+    }
+  },
+  "product-images#desktop": {
+    "props": {
+      "blockClass": "pdp",
+      "aspectRatio": "auto",
+      "displayThumbnailsArrows": true,
+      "showNavigationArrows": false,
+      "showPaginationDots": false,
+      "thumbnailsOrientation": "vertical",
+      "thumbnailAspectRatio": "2:3",
+      "zoomMode": "in-place-hover",
+      "thumbnailMaxHeight": 190,
+      "width": 448
+    }
+  },
+  "image#iconDisclaimerDesktop": {
+    "title": "Banner - Frete Grátis",
+    "props": {
+      "src": "assets/img/freeshippingDesktop.png",
+      "maxWidth": 193,
+      "blockClass": ["iconDisclaimerDesktopFreteGratis"]
+    }
+  },
+  "flex-layout.col#left-col-mobile": {
+    "children": ["product-images#mobile", "add-to-list-btn"],
+    "props": {
+      "blockClass": ["product-images", "product-icon-wishlist"],
+      "marginBottom": 6
+    }
+  },
+
+  "product-images#mobile": {
+    "props": {
+      "blockClass": ["dots-around"],
+      "aspectRatio": "2:3",
+      "showNavigationArrows": false,
+      "showPaginationDots": true,
+      "displayThumbnailsArrows": true
+    }
+  }
+}

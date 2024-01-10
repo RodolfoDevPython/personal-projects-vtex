@@ -1,0 +1,702 @@
+@import '../media-queries';
+
+
+.flexRowContent--container-info-left {
+    flex-direction: column;
+  
+    :global(.vtex-flex-layout-0-x-stretchChildrenWidth) {
+      width: 100%;
+    }
+  
+}
+  
+.flexCol--container-info-left {
+    position: relative;
+  
+    .flexColChild--container-info-left {
+      height: fit-content !important;
+    }
+    
+}
+  
+// Page Product - info
+.flexCol--product-info {
+    margin-top: 3.2rem;
+
+    //productName
+    :global(.vtex-store-components-3-x-productBrand) {
+      color: var(--darkgrey-dark);
+      font-size: 26px;
+      line-height: 28px;
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+  
+    :global(.vtex-store-components-3-x-skuSelectorSubcontainer) {
+      margin-top: 24px;
+      margin-bottom: 1rem;
+    }
+  
+    :global(.vtex-store-components-3-x-skuSelectorOptionsList) {
+      margin: 0;
+    }
+  
+    :global(.vtex-store-components-3-x-skuSelectorInternalBox) {
+      border: 0;
+    }
+  
+    :global(.vtex-store-components-3-x-skuSelectorName) {
+      font-size: 1rem;
+      line-height: 20px;
+      font-weight: 400;
+      color: var(--darkgrey-light);
+      text-transform: lowercase;
+  
+      &::before {
+        content: "selecione um";
+        margin-right: 4px;
+      }
+    }
+  
+    :global(.vtex-store-components-3-x-frameAround) {
+      border: 0;
+    }
+  
+    :global(.vtex-store-components-3-x-skuSelectorItem) {
+      margin: 2px;
+    }
+  
+    :global(.vtex-store-components-3-x-skuSelectorItemTextValue) {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 17px;
+      color: var(--darkgrey-dark);
+      transition: all .2s cubic-bezier(1,-4,0,3);
+  
+      &:hover {
+        transform: scale(1.25);
+      }
+  
+    }
+  
+    //seleted sku
+    :global(.vtex-store-components-3-x-skuSelectorItem--selected) {
+      background-color: var(--darkgrey-dark);
+  
+      :global(.vtex-store-components-3-x-skuSelectorItemTextValue) {
+        color: var(--white);
+      }
+  
+    }
+ 
+    //ShippingContainer
+    :global(.vtex-store-components-3-x-shippingContainer) {
+        display: flex;
+        background-color: var(--primary-lighter);
+        padding: 1rem;
+        position: relative;
+        align-items: center;
+        margin-top: 1.5rem;
+
+        :global(.vtex-input) {
+            display: flex;
+            width: 100%;
+            position: relative;
+        }
+  
+        :global(.vtex-input__error) {
+            position: absolute;
+            right: 115px;
+            top: 3px;
+        }
+  
+        :global(.vtex-input__label) {
+            width: fit-content;
+            display: flex;
+            align-items: center;
+            margin: 0;
+            font-size: 0;
+
+            &::before {
+                content: "FRETE E PRAZO";
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 24px;
+                color: var(--darkgrey-medium);
+                width: 90px;
+            }
+        }
+      
+        :global(.vtex-address-form__postalCode-forgottenURL) {
+            display: none;
+        }
+  
+        :global(.vtex-address-form__postalCode) {
+            padding: 0;
+            width: 100%;
+        }
+
+        :global(.vtex-input-prefix__group) {
+            background-color: var(--white);
+            border: none;
+            border-bottom: 1px solid var(--darkgrey-dark);
+            margin-left: 28px;
+            border-radius: 0;
+            width: 100%;
+        }
+
+        :global(.vtex-input__suffix) {
+            display: none;
+        }
+
+        :global(.vtex-address-form-4-x-input) {
+            background-color: var(--white) !important;
+            border: 0;
+        }
+
+        :global(.vtex-button) {
+            position: absolute;
+            width: fit-content;
+            right: 2rem;
+            background-color: transparent;
+            padding: 10px;
+            max-height: 38px;
+            border: 0;
+
+            :global(.vtex-button__label) {
+                font-size: 0;
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='15' viewBox='0 0 8 15' fill='none'%3E%3Cpath d='M0.999756 13.689L6.99976 7.68896L0.999756 1.68896' stroke='%232D2D2D' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+                background-repeat: no-repeat;
+                height: 21px;
+                width: 13px;
+                padding: 0;
+                cursor: pointer;
+            }
+        }
+  
+    }
+
+    //Result shipping
+    :global(.vtex-store-components-3-x-shippingTable) {
+        margin-top: 0;
+        background-color: var(--primary-lighter);
+        padding: 6px;
+        padding-bottom: 1rem;
+        border: 0;
+        
+
+        :global(.vtex-store-components-3-x-shippingTableBody) {
+            display: block;
+            max-width: calc(100% - 126px);
+            margin-left: auto;
+        }
+
+        :global(.vtex-store-components-3-x-shippingTableLabel) {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 24px;
+            color: var(--darkgrey-medium);
+        }
+
+        :global(.vtex-store-components-3-x-shippingTableCellDeliveryName) {
+            padding: 0;
+            padding-right: 4px;
+        }
+
+        :global(.vtex-store-components-3-x-shippingTableCellDeliveryEstimate) {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 24px;
+            color: var(--darkgrey-medium);
+            padding: 0;
+        }
+
+        :global(.vtex-store-components-3-x-shippingTableRow) {
+            display: flex;
+            align-items: center; 
+        }
+        
+        :global(.vtex-store-components-3-x-shippingTableCellDeliveryPrice) {
+            margin-left: auto;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 24px;
+            color: var(--darkgrey-medium);
+        }
+
+        :global(.vtex-store-components-3-x-shippingTableRadioBtn) {
+            display: none;
+        }
+
+    }
+
+    //Form availability
+    :global(.vtex-store-components-3-x-subscriberContainer) {
+
+        :global(.vtex-store-components-3-x-title) {
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        :global(.vtex-store-components-3-x-subscribeLabel) {
+            font-weight: 500;
+        }
+
+        :global(.vtex-store-components-3-x-content) {
+            flex-direction: column;
+
+            :global(.vtex-input-prefix__group) {
+                border-radius: 0;
+            }
+
+            :global(.vtex-button) {
+                border: 0;
+                background-color: var(--darkgrey-dark);
+                padding: .5rem;
+                color: #fff;
+                cursor: pointer;
+                border-radius: 0;
+            }
+        }
+    }
+  
+}
+  
+.flexRow--buy-button, 
+.flexRow--info-mobile {
+  
+    //quantity
+    :global(.vtex-product-quantity-1-x-quantitySelectorContainer) {
+        margin-bottom: 0;
+        background-color: var(--white);
+    }
+    
+    :global(.vtex-numeric-stepper-container) {
+        border-bottom: 1px solid var(--primary-default);
+        height: 40px;
+        width: 177px;
+    }
+    
+    :global(.vtex-numeric-stepper__input) {
+        width: 100%;
+        border: 0;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 100%;
+        color: var(--darkgrey-dark);
+        margin-bottom: 4px;
+        height: auto;
+    }
+
+    :global(.vtex-numeric-stepper__plus-button-container),
+    :global(.vtex-numeric-stepper__minus-button-container)  {
+        display: flex;
+        align-items: center;
+    }
+
+    :global(.vtex-numeric-stepper__minus-button) {
+        border: 0;
+        background-color: transparent;
+
+        :global(.vtex-numeric-stepper__minus-button__text) {
+            font-size: 0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='12' viewBox='0 0 13 12' fill='none'%3E%3Cpath d='M2 6H11' stroke='%23999999' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+            height: 13px;
+            width: 13px;
+            background-repeat: no-repeat;
+        }
+
+    }
+    
+    :global(.vtex-numeric-stepper__plus-button) {
+        border: 0;
+        background-color: transparent;
+    
+        :global(.vtex-numeric-stepper__plus-button__text) {
+            font-size: 0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='12' viewBox='0 0 13 12' fill='none'%3E%3Cpath d='M6.5 1.5V10.5' stroke='%23999999' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M2 6H11' stroke='%23999999' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+            height: 13px;
+            width: 13px;
+            background-repeat: no-repeat;
+        }
+    }
+
+    
+    //ShippingContainer
+    :global(.vtex-store-components-3-x-shippingContainer) {
+        display: flex;
+        background-color: var(--primary-lighter);
+        padding: 1rem;
+        position: relative;
+        align-items: center;
+        margin-top: 1.5rem;
+
+        :global(.vtex-input) {
+            display: flex;
+            width: 100%;
+            position: relative;
+        }
+  
+        :global(.vtex-input__error) {
+            position: absolute;
+            right: 115px;
+            top: 3px;
+        }
+  
+        :global(.vtex-input__label) {
+            width: fit-content;
+            display: flex;
+            align-items: center;
+            margin: 0;
+            font-size: 0;
+
+            &::before {
+                content: "FRETE E PRAZO";
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 24px;
+                color: var(--darkgrey-medium);
+                width: 90px;
+            }
+        }
+      
+        :global(.vtex-address-form__postalCode-forgottenURL) {
+            display: none;
+        }
+  
+        :global(.vtex-address-form__postalCode) {
+            padding: 0;
+            width: 100%;
+        }
+
+        :global(.vtex-input-prefix__group) {
+            background-color: var(--white);
+            border: none;
+            border-bottom: 1px solid var(--darkgrey-dark);
+            margin-left: 0;
+            border-radius: 0;
+            width: 100%;
+        }
+
+        :global(.vtex-address-form-4-x-input) {
+            background-color: var(--white) !important;
+            border: 0;
+        }
+
+        :global(.vtex-button) {
+            position: absolute;
+            width: fit-content;
+            right: 2rem;
+            background-color: transparent;
+            padding: 10px;
+            max-height: 38px;
+            border: 0;
+
+            :global(.vtex-button__label) {
+                font-size: 0;
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='15' viewBox='0 0 8 15' fill='none'%3E%3Cpath d='M0.999756 13.689L6.99976 7.68896L0.999756 1.68896' stroke='%232D2D2D' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+                background-repeat: no-repeat;
+                height: 21px;
+                width: 13px;
+                padding: 0;
+                cursor: pointer;
+            }
+        }
+  
+    }
+
+    //Result shipping
+    :global(.vtex-store-components-3-x-shippingTable) {
+        margin-top: 0;
+        background-color: var(--primary-lighter);
+        padding: 1rem;
+        border: 0;
+        
+        :global(.vtex-store-components-3-x-shippingTableBody) {
+            display: block;
+        }
+
+        :global(.vtex-store-components-3-x-shippingTableLabel) {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 24px;
+            color: var(--darkgrey-medium);
+        }
+
+        :global(.vtex-store-components-3-x-shippingTableCellDeliveryName) {
+            padding: 0;
+            padding-right: 4px;
+        }
+
+        :global(.vtex-store-components-3-x-shippingTableCellDeliveryEstimate) {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 24px;
+            color: var(--darkgrey-medium);
+            padding: 0;
+        }
+
+        :global(.vtex-store-components-3-x-shippingTableRow) {
+            display: flex;
+            align-items: center; 
+        }
+        
+        :global(.vtex-store-components-3-x-shippingTableCellDeliveryPrice) {
+            margin-left: auto;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 24px;
+            color: var(--darkgrey-medium);
+        }
+
+        :global(.vtex-store-components-3-x-shippingTableRadioBtn) {
+            display: none;
+        }
+
+    }
+
+    //Form availability
+    :global(.vtex-store-components-3-x-subscriberContainer) {
+
+        :global(.vtex-store-components-3-x-title) {
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        :global(.vtex-store-components-3-x-subscribeLabel) {
+            font-weight: 500;
+        }
+
+        :global(.vtex-store-components-3-x-content) {
+            flex-direction: column;
+
+            :global(.vtex-input-prefix__group) {
+                border-radius: 0;
+            }
+
+            :global(.vtex-button) {
+                border: 0;
+                background-color: var(--darkgrey-dark);
+                padding: .5rem;
+                color: #fff;
+                cursor: pointer;
+                border-radius: 0;
+            }
+        }
+    }
+
+}
+
+//Price
+.flexCol--product-container-price {
+    margin-top: 12px;
+  
+    :global(.vtex-product-price-1-x-listPrice) {
+        font-size: 1rem;
+        line-height: 20px;
+        color: var(--darkgrey-dark);
+        font-weight: 400;
+    }
+  
+    :global(.vtex-product-price-1-x-sellingPrice--hasListPrice) {
+        font-weight: 600;
+        font-size: 26px;
+        line-height: 28px;
+        color: var(--red-text-highlight);
+    }
+  
+}
+  
+//Buy Button
+.flexRowContent--buy-button {
+  
+    :global(.vtex-button) {
+        position: relative;
+        height: 100%;
+        width: 288px;
+        border-radius: 0;
+        border: 0;
+        margin-right: auto;
+        margin-left: 36px;
+        background-color: #1BA14E;
+
+        &:disabled {
+            display: none;
+        }
+
+        :global(.vtex-add-to-cart-button-0-x-buttonText) {
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 16px;
+        }
+
+    }
+  
+}
+// =----------------------=
+
+
+//AME e PIX
+.flexRowContent--container-ame-and-pix {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.flexRowContent--shelfControlsPdp {
+    flex-direction: column;
+}
+
+// DESKTOP 
+@include desktop() {
+
+    //AME e PIX
+    .flexRowContent--container-ame-and-pix {
+        margin-top: 1rem;
+    }
+
+    .flexRow--product-main {
+        :global(.vtex-store-components-3-x-container) {
+            border-bottom: 1px solid var(--lightgrey-light);
+            padding-bottom: 10px;
+            margin-bottom: 23px;
+        }
+    }
+
+
+}
+
+// MOBILE 
+@include mobile() {
+
+    .flexRow--product-main { 
+        margin-bottom: 50px;
+    }
+
+    .flexRow--info-mobile {
+        background-color: var(--primary-lighter);
+        padding: 1rem;
+
+        //Product Name
+        :global(.vtex-store-components-3-x-productBrand) {
+            font-size: 30px;
+            font-weight: 500;
+            line-height: 28px;
+            color: var(--darkgrey-dark);
+            text-transform: uppercase;
+        }
+
+
+        //Quantity
+        :global(.vtex-product-quantity-1-x-quantitySelectorContainer) {
+            justify-content: flex-start;
+        }
+
+        :global(.vtex-numeric-stepper-container) { 
+            height: 48px;
+            max-width: 177px;
+            width: 100%;
+        }
+
+    }
+
+    .flexRow--row-2-info-mobile {
+        padding: 0 1rem 1rem;
+        background-color: var(--white);
+
+        :global(.vtex-flex-layout-0-x-stretchChildrenWidth) {
+            flex-direction: column;
+        }
+
+        //ShippingContainer
+        :global(.vtex-store-components-3-x-shippingContainer) { 
+            :global(.vtex-input__label) {
+
+                &::before {
+                    width: fit-content;
+                    line-height: 1rem;
+                }
+            }
+
+            :global(.vtex-input__error) {
+                right: 25%;
+                bottom: -28px;
+                top: auto;
+                font-weight: 600;
+            }
+
+            :global(.vtex-button) {
+                right: 1rem;
+            }
+
+        }
+    }
+
+    //Price
+    .flexCol--product-container-price {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+
+        :global(.vtex-product-price-1-x-sellingPrice--hasListPrice) {
+            font-size: 20px;
+            line-height: 20px;
+            font-weight: bold;
+        }
+    }
+
+    //Box FLoat
+    .flexRow--infoBox-float-mobile {
+        position: fixed;
+        bottom: 0;
+        z-index: 999;
+        width: 100vw;
+        padding: .5rem;
+        background-color: var(--white);
+
+        .flexRowContent--infoBox-float-mobile {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+        }    
+    }
+
+    //Buy button 
+    .flexRowContent--buy-button {
+        margin: 0;
+
+        :global(.vtex-button) {
+            margin-left: 24px;
+            max-width: calc(100vw - 156px);
+            width: calc(100vw - 156px);
+
+            &::before {
+                display: none;
+            }
+
+            :global(.vtex-store-components-3-x-buyButtonText) {
+    
+                &::after {
+                    font-size: 1rem;
+                    line-height: 1rem;
+                    font-weight: 700
+                }
+            }
+        }
+    }
+
+    //AME e PIX
+    .flexRowContent--container-ame-and-pix {
+        margin-bottom: 17px;
+    }
+
+    .flexRowContent--shelfControlsPdp {
+        :global(.vtex-product-summary-2-x-element) {
+            margin: 0 auto;
+            position: relative;
+        }
+    }
+    
+}   
+

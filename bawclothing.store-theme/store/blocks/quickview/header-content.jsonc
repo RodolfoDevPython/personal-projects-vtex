@@ -1,0 +1,36 @@
+{
+  "header-layout.mobile#quickview": {
+    "children": ["sticky-layout#mobile-quickview"]
+  },
+  "sticky-layout#mobile-quickview": {
+    "children": ["flex-layout.row#mobileHeader-quickview"],
+    "props": {
+      "blockClass": "headerMobile"
+    }
+  },
+  "flex-layout.row#mobileHeader-quickview": {
+    "children": ["flex-layout.col#mobileHeader-quickview"]
+  },
+  "flex-layout.col#mobileHeader-quickview": {
+    "children": ["flex-layout.row#mobile-quickview"],
+    "props": {
+      "blockClass": "main-header-mobile"
+    }
+  },
+  "flex-layout.row#mobile-quickview": {
+    "children": ["modal-actions.close#quickview", "logo#mobile", "minicart.v2"],
+    "props": {
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "colSizing": "auto",
+      "fullWidth": true
+    }
+  },
+  "modal-actions.close#quickview": {
+    "props": {
+      "label": "Voltar",
+      "blockClass": "close-quickview"
+    }
+  }
+}

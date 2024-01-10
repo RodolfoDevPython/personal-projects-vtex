@@ -1,0 +1,37 @@
+@import '../media-queries';
+
+
+
+@include desktop() {
+    .wrapper--categoryTitleCustomQuery {
+        .headingLevel1--categoryTitleCustomQuery { 
+            font-weight: bold;
+            font-size: 40px;
+            line-height: 40px;
+            text-transform: uppercase;
+            margin: 0;
+            color: var(--darkgrey-dark);
+        }
+    }
+    
+}
+
+@include mobile() {
+
+    .wrapper--categoryTitleCustomQuery {
+        width: 100%;
+        padding: 0 1rem;
+        margin-top: 10px;
+
+        .headingLevel1--categoryTitleCustomQuery {
+            margin: 0;    
+            font-size: 32px;
+            font-weight: bold;
+            line-height: 40px;
+            text-transform: uppercase;
+            text-align: center;
+            color: var(--darkgrey-dark);
+        }
+    }
+    
+}

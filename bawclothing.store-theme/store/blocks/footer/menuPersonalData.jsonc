@@ -1,0 +1,49 @@
+{
+  "vtex.menu@2.x:menu#PersonalData": {
+    "title": "Menu de Links do Rodapé",
+    "props": {
+      "blockClass": ["footerMenu", "footerMenuCategories"],
+      "items": [
+        {
+          "id": "footer-item-1",
+          "type": "custom",
+          "iconId": null,
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/#",
+            "noFollow": false,
+            "tagTitle": "Minha Conta",
+            "text": "Minha Conta"
+          }
+        },
+        {
+          "id": "footer-item-2",
+          "type": "custom",
+          "iconId": null,
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/account#/orders",
+            "noFollow": false,
+            "tagTitle": "Meus Pedidos",
+            "text": "Meus Pedidos"
+          }
+        },
+        {
+          "id": "footer-item-3",
+          "type": "custom",
+          "iconId": null,
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/cart",
+            "noFollow": false,
+            "tagTitle": "Meu carrinho",
+            "text": "Meu carrinho"
+          }
+        }
+      ]
+    }
+  }
+}

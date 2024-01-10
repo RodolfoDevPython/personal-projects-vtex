@@ -1,0 +1,6 @@
+.content {
+    :global(.vtex-button),
+    :global(.vtex-input-prefix__group) {
+        border-radius: 0;
+    }
+}

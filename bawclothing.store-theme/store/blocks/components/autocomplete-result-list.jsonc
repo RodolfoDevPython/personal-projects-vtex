@@ -1,0 +1,45 @@
+{
+  "autocomplete-result-list.v2#desktop": {
+    "blocks": ["product-summary.shelf#autocomplete"],
+    "props": {
+      "customSearchPageUrl": "/search?_query=${term}",
+      "simulationBehavior": "skip",
+      "maxSuggestedProducts": 2,
+      "maxSuggestedTerms": 3,
+      "maxTopSearches": 3,
+      "autocompleteWidth": 90,
+      "isMobile": true,
+      "customBreakpoints": {
+        "md": {
+          "maxSuggestedProducts": 6
+        }
+      }
+    }
+  },
+  "autocomplete-result-list.v2#mobile": {
+    "blocks": ["product-summary.shelf#autocomplete"],
+    "props": {
+      "customSearchPageUrl": "/search?_query=${term}",
+      "simulationBehavior": "skip",
+      "maxSuggestedProducts": 1,
+      "maxSuggestedTerms": 3,
+      "maxTopSearches": 3,
+      "autocompleteWidth": 90,
+      "isMobile": true,
+      "customBreakpoints": {
+        "md": {
+          "maxSuggestedProducts": 6
+        }
+      }
+    }
+  },
+  "product-summary.shelf#autocomplete": {
+    "children": ["product-summary-image#autocomplete", "product-summary-name"]
+  },
+  "product-summary-image#autocomplete": {
+    "props": {
+      "height": 48,
+      "width": 48
+    }
+  }
+}

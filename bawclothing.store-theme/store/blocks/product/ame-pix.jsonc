@@ -1,0 +1,32 @@
+{
+  "flex-layout.row#ame-and-pix": {
+    "props": {
+      "marginTop": 0,
+      "marginBottom": 0,
+      "colGap": 0,
+      "fullWidth": true,
+      "blockClass": "container-ame-and-pix",
+      "width": "100%"
+    },
+    "children": ["rich-text#text-ame", "rich-text#text-pix"]
+  },
+  "rich-text#text-ame": {
+    "props": {
+      "width": "100%",
+      "text": "Pague com **Ame** e ganhe **5% de cashback** ",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": "text-ame",
+      "marginBottom": 1
+    }
+  },
+  "rich-text#text-pix": {
+    "props": {
+      "text": "Pague com **PIX** e ganhe mais **10% de desconto** ",
+      "width": "100%",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": "text-pix"
+    }
+  }
+}

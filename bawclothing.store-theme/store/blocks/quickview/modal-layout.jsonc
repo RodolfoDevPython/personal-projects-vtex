@@ -1,0 +1,18 @@
+{
+  //quickview - btn voltar
+  "modal-trigger#quickview": {
+    "children": ["flex-layout.row#stackSavings", "modal-layout#quickview"]
+  },
+  "modal-layout#quickview": {
+    "children": [
+      "modal-header#quickview",
+      "flex-layout.col#left-col-mobile",
+      "flex-layout.col#right-col-mobile-quickview",
+      "flex-layout.row#pdpShelfContainerMobile",
+      "footer"
+    ],
+    "props": {
+      "blockClass": "quickViewContainerMobile"
+    }
+  }
+}

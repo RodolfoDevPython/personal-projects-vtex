@@ -1,0 +1,62 @@
+{
+  "menu-item#menu-item-1": {
+    "props": {
+      "id": "menu-item-mobile-category",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Masculino",
+        "text": "Masculino"
+      },
+      "blockClass": "drawerMobileMenuItem"
+    }
+  },
+  "menu-item#menu-item-2": {
+    "props": {
+      "id": "menu-item-mobile-category",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Feminino",
+        "text": "Feminino"
+      },
+      "blockClass": "drawerMobileMenuItem"
+    }
+  },
+  "menu-item#menu-item-3": {
+    "props": {
+      "id": "menu-item-mobile-category",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Kids",
+        "text": "Kids"
+      },
+      "blockClass": "drawerMobileMenuItem"
+    }
+  },
+  "menu-item#menu-item-4": {
+    "props": {
+      "id": "menu-item-mobile-category",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Accessories",
+        "text": "Accessories"
+      },
+      "blockClass": ["drawerMobileMenuItem", "last"]
+    }
+  }
+}
