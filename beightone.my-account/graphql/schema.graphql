@@ -1,0 +1,11 @@
+type Query {
+  appSettings: AppSettings
+}
+
+type AppSettings {
+  cacheId: ID
+  useMap: Boolean
+  showGenders: Boolean
+  showMyCards: Boolean
+  showMyOrders: Boolean
+}
