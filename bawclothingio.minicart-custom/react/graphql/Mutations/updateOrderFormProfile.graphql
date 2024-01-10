@@ -1,0 +1,28 @@
+mutation UpdateOrderFormProfile($ID: ID, $email: String) {
+    updateOrderFormProfile(
+		orderFormId: $ID, 
+		input: {
+			email: $email
+		}
+	)
+	@context(provider: "vtex.checkout-graphql") {
+		clientProfileData {
+			email
+			firstName
+			lastName
+			document
+			documentType
+			phone
+			corporateName
+			tradeName
+			corporateDocument
+			stateInscription
+			corporatePhone
+			isCorporate
+			profileCompleteOnLoading
+			profileErrorOnLoading
+			customerClass
+		}	
+	}
+
+}

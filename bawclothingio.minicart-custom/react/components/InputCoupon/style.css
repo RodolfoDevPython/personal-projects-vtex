@@ -1,0 +1,125 @@
+.couponContainerMinicartBaw {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--gray-light);
+    padding: 12px 1rem;
+}
+
+.couponContainerMinicartBaw label { 
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--darkgrey-light);
+    text-transform: uppercase;
+}
+
+.couponInputMinicartBaw {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+    border-bottom: 1px solid var(--primary-dark);
+    height: 48px;
+    position: relative;
+    width: 100%;
+    margin-top: 8px;
+}
+
+.couponInputMinicartBaw input {
+    height: 100%;
+    border: 0px;
+    width: 100%;
+    padding-left: 20px;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 20px;
+    color: var(--primary-default);
+    font-family: 'Darker Grotesque';  
+    padding-right: 40px;   
+}
+
+.couponInputMinicartBaw input::placeholder {
+    color: var(--darkgrey-light);
+}
+
+.couponInputMinicartBaw button[type='submit'] {  
+    position: absolute;
+    right: 0px;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='18' viewBox='0 0 10 18' fill='none'%3E%3Cpath d='M1.06201 16.8751L8.93701 9.00006L1.06201 1.12505' stroke='%232D2D2D' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-position: center;
+    border: 0px;
+    background-color: transparent;
+    height: 42px;
+    width: 42px;
+    cursor: pointer;
+    transition: all .2s cubic-bezier(1,-4,0,3); 
+}
+
+.couponInputMinicartBaw button[type='submit']:hover {
+    transform: scale(1.25);
+}
+
+/* REMOVER CUPOM */
+.RemoveCouponInputMinicartBaw {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border-bottom: 1px solid var(--primary-dark);
+    height: 48px;
+    position: relative;
+    width: 100%;
+    margin-top: 8px;
+}
+
+.RemoveCouponInputMinicartBaw input {
+    height: 100%;
+    border: 0px;
+    width: 100%;
+    padding-left: 20px;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 20px;
+    color: var(--primary-default);
+    font-family: 'Darker Grotesque';  
+    padding-right: 40px;   
+    background-color: transparent;
+    text-transform: lowercase;
+}
+
+.RemoveCouponInputMinicartBaw button {
+    border: 0px;
+    font-weight: 400;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+/* MOBILE */
+@media screen and (max-width: 64rem) {
+    .couponInputMinicartBaw button[type='submit'] { 
+        background: none;
+        width: fit-content;
+        padding: 0;
+        margin-right: 1rem;
+    }
+
+    .couponInputMinicartBaw button[type='submit']::after {
+        content: "APLICAR";
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+        color: var(--darkgrey-dark);
+        width: fit-content;
+        font-family: 'Darker Grotesque';
+    }
+
+    .couponInputMinicartBaw button[type='submit']:hover {
+        transform: none;
+    }
+
+    .couponInputMinicartBaw input { 
+        padding-right: 100px;
+    }
+}

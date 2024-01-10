@@ -1,0 +1,13 @@
+{
+  "free-shipping-minicart-baw": {
+    "component": "FreeShipping",
+    "render": "lazy"
+  },
+  "cta-minicart-baw": {
+    "component": "CtaCheckout",
+    "render": "lazy"
+  },
+  "discount-coupon-minicart-baw": {
+    "component": "DiscountCoupon"
+  }
+}

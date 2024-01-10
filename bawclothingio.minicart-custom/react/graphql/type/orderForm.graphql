@@ -1,0 +1,19 @@
+type OrderForm {
+    id: ID!
+    items: [Item!]!
+    canEditData: Boolean!
+    loggedIn: Boolean!
+    userProfileId: String
+    userType: UserType
+    shipping: Shipping!
+    marketingData: MarketingData!
+    totalizers: [Totalizer!]!
+    value: Float!
+    messages: OrderFormMessages!
+    paymentData: PaymentData!
+    clientProfileData: ClientData
+    clientPreferencesData: ClientPreferencesData
+    allowManualPrice: Boolean
+    openTextField: OpenTextField
+    storePreferencesData: StorePreferencesData
+}

@@ -1,0 +1,35 @@
+.ButtonToast {
+    background-color: #ff9800;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    z-index: 4;
+    padding: 12px 24px;
+    color: #fff;
+    bottom: 10px;
+    -webkit-transition: all .2s cubic-bezier(1,-2,0,1);
+    -ms-transition: all .2s cubic-bezier(1,-2,0,1);
+    transition: all .2s cubic-bezier(1,-2,0,1);
+    transition-duration: .4s;
+    width: fit-content;
+}
+
+.ButtonToast img{
+    margin-right: 10px;
+}
+
+.ButtonToastHidden {    
+    bottom: -50px;
+}
+
+.ButtonToastSucess {
+    background-color: #4caf50; 
+}
